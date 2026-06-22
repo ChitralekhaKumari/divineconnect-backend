@@ -23,13 +23,16 @@ const path = require('path');
 // Adjust key names below if yours differ (e.g. DATABASE_URL vs DB_HOST).
 const pool = new Pool(
   process.env.DATABASE_URL
-    ? { connectionString: process.env.DATABASE_URL, ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false }
+    ? { connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } }
     : {
       host: process.env.DB_HOST || 'localhost',
       port: process.env.DB_PORT || 5432,
       database: process.env.DB_NAME || process.env.DB_DATABASE || 'divineconnect',
       user: process.env.DB_USER || 'postgres',
       password: process.env.DB_PASSWORD || '',
+      ssl: process.env.DB_HOST && process.env.DB_HOST.includes('neon.tech')
+        ? { rejectUnauthorized: false }
+        : false,
     }
 );
 
