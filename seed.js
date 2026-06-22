@@ -57,8 +57,7 @@ async function main() {
     }
 
     // ── Dry run ─────────────────────────────────────────────────────────────
-    // const sqlPath = path.join(__dirname, 'src', 'scripts', 'seed_temples.sql');
-    const sqlPath = path.join(__dirname, 'src', 'scripts', 'seed_temples_phase2.sql');
+    const sqlPath = path.join(__dirname, 'src', 'scripts', 'seed_temples.sql');
     if (!fs.existsSync(sqlPath)) {
       console.error(`❌  SQL file not found at: ${sqlPath}`);
       process.exit(1);
