@@ -3,16 +3,16 @@
 
 require('dotenv').config();
 const express = require('express');
-const cors    = require('cors');
-const helmet  = require('helmet');
-const morgan  = require('morgan');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
-const templeRoutes   = require('./routes/temples');
-const prayerRoutes   = require('./routes/prayers');
+const templeRoutes = require('./routes/temples');
+const prayerRoutes = require('./routes/prayers');
 const calendarRoutes = require('./routes/calendar');   // ← NEW LINE
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
-const app  = express();
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
@@ -21,6 +21,7 @@ app.use(cors({
   origin: [
     process.env.CLIENT_URL || 'http://localhost:5173',
     'http://localhost:3000',
+    'https://divineconnect-frontend.vercel.app',
   ],
   methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
@@ -34,8 +35,8 @@ app.get('/health', (req, res) => {
 });
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
-app.use('/api/temples',  templeRoutes);
-app.use('/api/prayers',  prayerRoutes);
+app.use('/api/temples', templeRoutes);
+app.use('/api/prayers', prayerRoutes);
 app.use('/api/calendar', calendarRoutes);   // ← NEW LINE
 
 // ─── Errors ───────────────────────────────────────────────────────────────────
