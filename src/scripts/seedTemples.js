@@ -1,12 +1,6 @@
 /**
  * seedTemples.js
  *
- * Strategy:
- *   1. Try to parse a Kaggle CSV if present at ./data/temples.csv
- *      (download from https://www.kaggle.com/datasets/... and place it there)
- *   2. If the CSV is absent / parse fails, fall back to the 50+ hardcoded
- *      famous Indian temples below so the app always has data.
- *
  * Run:  node src/scripts/seedTemples.js
  */
 
