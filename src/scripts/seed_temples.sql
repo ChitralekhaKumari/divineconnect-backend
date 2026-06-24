@@ -1325,26 +1325,7 @@ INSERT INTO temples (
 -- ===========================
 -- BIHAR (5 temples)
 -- ===========================
-(
-  'Mahabodhi Temple Bodh Gaya', 'Mahabodhi Mahavihar',
-  'Lord Buddha (Gautama)', ARRAY['N/A'],
-  'Buddhist',
-  'Bodh Gaya', 'Bihar',
-  'Bodh Gaya, Gaya, Bihar 824231',
-  '24.6969', '84.9912',
-  '5:00 AM – 9:00 PM', '5:00 AM', '7:00 PM',
-  'Rs 100 Indians, Rs 250 foreigners', 'Modest attire; no footwear inside',
-  'UNESCO World Heritage; place of Buddha''s enlightenment; 55m temple; sacred Bodhi tree',
-  'October to March',
-  ARRAY['Buddha Purnima', 'Losar', 'Japanese Bon Festival'],
-  '+91-631-2200742', 'https://www.mahabodhisociety.com',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mahabodhi_Temple.jpg/800px-Mahabodhi_Temple.jpg',
-  'UNESCO Heritage', '4.9', 188000,
-  '824231', 'Gaya Junction (13 km)', 'Gaya Airport (10 km)',
-  'The Mahabodhi Temple Complex is one of the four holy sites related to the life of the Lord Buddha, and particularly to the attainment of Enlightenment. The first temple was built by Emperor Ashoka in the 3rd century BC. A UNESCO World Heritage Site.',
-  'Meditation sessions available; Bodhi tree (descendant of original) in complex; multiple Buddhist temples in Bodh Gaya town',
-  'Open all days'
-),
+
 (
   'Vishnupad Temple Gaya', 'Vishnupad Mandir',
   'Lord Vishnu', ARRAY['Goddess Gaya Devi', 'Lord Ganesha'],
