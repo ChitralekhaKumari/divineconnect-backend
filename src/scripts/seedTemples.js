@@ -11,7 +11,7 @@
  */
 
 require('dotenv').config();
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 const pool = require('../config/db');
 const { parse } = require('csv-parse/sync');
@@ -445,7 +445,7 @@ const HARDCODED_TEMPLES = [
     pincode: '192101',
     latitude: 34.2133,
     longitude: 75.5013,
-    nearest_railway: 'Banihal Railway Station (150 km)',
+    nearest_railway: 'Anantnag Railway Station (55 km)',
     nearest_airport: 'Srinagar International Airport (141 km)',
     timings_general: '5:00 AM – 8:00 PM (Jun–Aug only)',
     timings_morning_aarti: '5:30 AM',
@@ -536,36 +536,36 @@ const HARDCODED_TEMPLES = [
 // ─────────────────────────────────────────────────────────────────────────────
 function csvRowToTemple(row, index) {
   return {
-    name:             row['Temple Name'] || row['name'] || `Temple ${index + 1}`,
-    alternate_name:   row['Also Known As'] || row['alternate_name'] || null,
-    deity:            row['Main Deity'] || row['deity'] || 'Unknown',
-    other_deities:    [],
-    category:         deriveCategory(row['Main Deity'] || row['deity'] || ''),
-    location_city:    row['City'] || row['city'] || '',
-    location_state:   row['State'] || row['state'] || '',
-    full_address:     row['Address'] || row['address'] || '',
-    pincode:          row['Pincode'] || row['pincode'] || null,
-    latitude:         parseFloat(row['Latitude'] || row['lat']) || null,
-    longitude:        parseFloat(row['Longitude'] || row['lng'] || row['long']) || null,
-    nearest_railway:  row['Nearest Railway'] || null,
-    nearest_airport:  row['Nearest Airport'] || null,
-    timings_general:  row['Timings'] || row['timings'] || '6:00 AM – 8:00 PM',
+    name: row['Temple Name'] || row['name'] || `Temple ${index + 1}`,
+    alternate_name: row['Also Known As'] || row['alternate_name'] || null,
+    deity: row['Main Deity'] || row['deity'] || 'Unknown',
+    other_deities: [],
+    category: deriveCategory(row['Main Deity'] || row['deity'] || ''),
+    location_city: row['City'] || row['city'] || '',
+    location_state: row['State'] || row['state'] || '',
+    full_address: row['Address'] || row['address'] || '',
+    pincode: row['Pincode'] || row['pincode'] || null,
+    latitude: parseFloat(row['Latitude'] || row['lat']) || null,
+    longitude: parseFloat(row['Longitude'] || row['lng'] || row['long']) || null,
+    nearest_railway: row['Nearest Railway'] || null,
+    nearest_airport: row['Nearest Airport'] || null,
+    timings_general: row['Timings'] || row['timings'] || '6:00 AM – 8:00 PM',
     timings_morning_aarti: row['Morning Aarti'] || null,
     timings_evening_aarti: row['Evening Aarti'] || null,
     timings_closed_on: row['Closed On'] || 'Open all days',
-    entry_fee:        row['Entry Fee'] || row['entry_fee'] || 'Free',
-    dress_code:       row['Dress Code'] || null,
-    special_darshan:  row['Special Darshan'] || null,
-    famous_for:       row['Famous For'] || row['description'] || '',
-    history:          row['History'] || row['history'] || '',
-    best_time_visit:  row['Best Time'] || row['best_time'] || 'October to March',
-    festivals:        (row['Festivals'] || '').split(',').map(s => s.trim()).filter(Boolean),
-    contact_phone:    row['Phone'] || row['phone'] || null,
-    website:          row['Website'] || row['website'] || null,
-    image_url:        row['Image URL'] || row['image'] || '/src/assets/images/hero-temple.jpg',
-    tag:              row['Tag'] || 'POPULAR',
-    rating:           parseFloat(row['Rating'] || row['rating']) || 4.5,
-    reviews:          parseInt(row['Reviews'] || row['reviews']) || 0,
+    entry_fee: row['Entry Fee'] || row['entry_fee'] || 'Free',
+    dress_code: row['Dress Code'] || null,
+    special_darshan: row['Special Darshan'] || null,
+    famous_for: row['Famous For'] || row['description'] || '',
+    history: row['History'] || row['history'] || '',
+    best_time_visit: row['Best Time'] || row['best_time'] || 'October to March',
+    festivals: (row['Festivals'] || '').split(',').map(s => s.trim()).filter(Boolean),
+    contact_phone: row['Phone'] || row['phone'] || null,
+    website: row['Website'] || row['website'] || null,
+    image_url: row['Image URL'] || row['image'] || '/src/assets/images/hero-temple.jpg',
+    tag: row['Tag'] || 'POPULAR',
+    rating: parseFloat(row['Rating'] || row['rating']) || 4.5,
+    reviews: parseInt(row['Reviews'] || row['reviews']) || 0,
   };
 }
 
