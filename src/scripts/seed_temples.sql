@@ -68,7 +68,7 @@ INSERT INTO temples (
   ARRAY['Maha Shivratri','Shravan Month','Dev Deepawali','Kartik Purnima'],
   '+91-542-2392305','https://shrikashivishwanath.org',
   'https://upload.wikimedia.org/wikipedia/commons/f/ff/Kashi_Vishwanath.jpg',
-  'Jyotirlinga',4.8,152000,'221001','Varanasi Junction (4 km)','Lal Bahadur Shastri International Airport (25 km)'
+  '',4.8,152000,'221001','Varanasi Junction (4 km)','Lal Bahadur Shastri International Airport (25 km)'
 ),
 (
   'Banke Bihari Temple','Thakur Banke Bihari Mandir',
@@ -85,7 +85,7 @@ INSERT INTO temples (
   ARRAY['Janmashtami','Holi','Radhashtami','Phool Bangla'],
   '+91-565-2442573','https://www.bankebiharimandir.in',
   'https://www.brajbhoomitourandtravels.com/images/temples-img/banke-bihari-temple.webp',
-  'Vaishnava',4.7,98500,'281121','Mathura Junction (12 km)','Agra Airport (70 km)'
+  '',4.7,98500,'281121','Mathura Junction (12 km)','Agra Airport (70 km)'
 ),
 (
   'Dwarkadhish Temple Mathura','Mathura Dwarkadhish Mandir',
@@ -102,7 +102,7 @@ INSERT INTO temples (
   ARRAY['Janmashtami','Holi','Annakut','Govardhan Puja'],
   '+91-565-2400227','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dwarkadhish_Temple_Mathura.jpg/800px-Dwarkadhish_Temple_Mathura.jpg',
-  'Vaishnava',4.6,72000,'281001','Mathura Junction (2 km)','Agra Airport (58 km)'
+  '',4.6,72000,'281001','Mathura Junction (2 km)','Agra Airport (58 km)'
 ),
 (
   'Ram Janmabhoomi Temple','Shri Ram Mandir Ayodhya',
@@ -119,7 +119,7 @@ INSERT INTO temples (
   ARRAY['Ram Navami','Diwali','Vivah Panchami','Kartik Purnima'],
   '+91-5278-232437','https://srjbtkshetra.org',
   'https://upload.wikimedia.org/wikipedia/commons/a/a4/Ram_Mandir_2024.jpg',
-  'Pilgrimage',4.9,250000,'224123','Ayodhya Dham Junction (2 km)','Maharishi Valmiki International Airport Ayodhya (10 km)'
+  '',4.9,250000,'224123','Ayodhya Dham Junction (2 km)','Maharishi Valmiki International Airport Ayodhya (10 km)'
 ),
 (
   'Hanuman Garhi','Hanuman Garhi Mandir',
