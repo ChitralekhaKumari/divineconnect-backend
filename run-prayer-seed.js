@@ -1,9 +1,9 @@
 /**
  * run-prayer-seed.js
- *
+
  * Runs src/scripts/seed_prayers.sql against your database using the
  * same connection settings your Express app already uses (.env).
- *
+ 
  * Usage:
  *   node run-prayer-seed.js
  */
