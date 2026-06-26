@@ -4,8 +4,8 @@
 
 const pool = require('../config/db');
 
-const API_URL  = 'https://panchang.devdarsha.com/v1/panchang/daily';
-const API_KEY  = process.env.DEVDARSHA_API_KEY; // put your key in .env, never hardcode it
+const API_URL = 'https://panchang.devdarsha.com/v1/panchang/daily';
+const API_KEY = process.env.DEVDARSHA_API_KEY; // put your key in .env, never hardcode it
 const DEFAULT_CITY = process.env.DEVDARSHA_DEFAULT_CITY || 'ujjain';
 
 // ─── Get panchang for one date, using cache first ────────────────────────────
