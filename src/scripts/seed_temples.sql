@@ -257,26 +257,6 @@ INSERT INTO temples (
   'https://www.trawell.in/admin/images/upload/941139367Vrindavan_ISKCON_Temple_Main.jpg',
   '',4.7,45200,'','Mathura Junction','Agra Airport'
 ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (
   'Mankameshwar Temple','Mankameshwar Mandir',
   'Lord Shiva',ARRAY['Parvati'],
@@ -486,19 +466,6 @@ INSERT INTO temples (
   '',4.7,98000,'','Chennai Central','Chennai International Airport'
 ),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 (
   'Ranganathaswamy Temple Srirangam','Shri Ranganathaswamy Temple',
   'Lord Vishnu',ARRAY['Goddess Ranganayaki','Lord Ganesha'],
@@ -530,7 +497,7 @@ INSERT INTO temples (
   'October to March (avoid public holidays)',
   ARRAY['Brahmotsavam','Vaikunta Ekadasi','Ugadi','Rathasapthami'],
   '','',
-  'https://www.cholantours.com/blog/wp-content/uploads/2026/05/Complete-Guide-to-Tirupati-Balaji-Darshan.webp',
+  'https://www.thomascook.in/blog/wp-content/uploads/2019/11/tirupati-balaji-temple-1.jpg-1.jpg',
   '',4.9,450000,'','Tirupati Railway Station','Tirupati Airport'
 ),
 (
@@ -556,7 +523,7 @@ INSERT INTO temples (
   'Devi','Kanchipuram','Tamil Nadu',
   'Kanchipuram, Tamil Nadu',
   12.8372,79.7036,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 12:15 PM, 4:00 PM – 8:15 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'One of the Shakti Peethas; seat of Adi Shankara''s Kamakoti Peetham',
@@ -573,7 +540,7 @@ INSERT INTO temples (
   'Divya Desam','Kanchipuram','Tamil Nadu',
   'West Mada St, Kanchipuram, Tamil Nadu',
   12.8454,79.7097,
-  '6:00 AM – 12:00 PM, 3:30 PM – 8:30 PM','6:00 AM','7:30 PM','Open all days',
+  '6:00 AM – 12:30 PM, 3:30 PM – 8:30 PM','6:00 AM','7:30 PM','Open all days',
   'Free','Traditional attire',
   'Athi Varadar darshan (rare, every 40 years); lizard pillar touch for blessings',
   'One of 108 Divya Desams; Devarajaswami form of Vishnu; Lizard pillar; 40-year rare darshan',
@@ -590,7 +557,7 @@ INSERT INTO temples (
   'Navagraha','Vaitheeswaran Koil','Tamil Nadu',
   'Vaitheeswaran Koil, Mayiladuthurai District, Tamil Nadu',
   11.1769,79.7917,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 1:00 PM, 4:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Healing temple of Lord Shiva as the divine physician; Navagraha temple for Mars (Angaraka)',
@@ -607,7 +574,7 @@ INSERT INTO temples (
   'Shiva','Tirunelveli','Tamil Nadu',
   'Tirunelveli, Tamil Nadu',
   8.7223,77.7016,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 12:30 PM, 4:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Famous musical pillars; twin temple complex joined by Sangili Mandapam',
@@ -624,7 +591,7 @@ INSERT INTO temples (
   'Pancha Bhuta Stala','Thiruvanaikaval','Tamil Nadu',
   'Thiruvanaikaval, Tiruchirappalli, Tamil Nadu',
   10.8550,78.7185,
-  '6:00 AM – 1:00 PM, 3:30 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 1:00 PM, 3:30 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Natural spring within sanctum (partially submerged linga); non-Hindus restricted in inner sanctum',
   'Represents Water among Pancha Bhuta Stalas; natural spring within sanctum; Akilandeswari',
@@ -641,7 +608,7 @@ INSERT INTO temples (
   'Shaiva-Vaishnava','Suchindram','Tamil Nadu',
   'Suchindram, Kanyakumari, Tamil Nadu',
   8.1553,77.4608,
-  '4:30 AM – 12:30 PM, 4:00 PM – 8:30 PM','4:30 AM','7:00 PM','Open all days',
+  '4:30 AM – 11:30 PM, 5:00 PM – 8:30 PM','4:30 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Musical pillars demonstration by temple priests; 22-ft Hanuman (Anjaneya) statue; Kanyakumari 13 km away',
   'Only temple for Trinity; 22-feet Hanuman idol; musical pillars; near Kanyakumari',
@@ -658,7 +625,7 @@ INSERT INTO temples (
   'Shaiva','Thiruparankundram','Tamil Nadu',
   'Thiruparankundram, Madurai, Tamil Nadu',
   9.8793,78.0820,
-  '6:00 AM – 12:30 PM, 4:00 PM – 9:30 PM','6:00 AM','7:30 PM','Open all days',
+  '5:00 AM – 1:00 PM, 4:00 PM – 9:00 PM','6:00 AM','5:30 PM','Open all days',
   'Free','Traditional South Indian attire',
   'Rock-cut architecture tour; Murugan married Devasena here per legend',
   'First of Six Abodes of Murugan; rock-cut cave temple; where Murugan married Devasena',
@@ -679,8 +646,8 @@ INSERT INTO temples (
   'Shakti Peeth','Vijayawada','Andhra Pradesh',
   'Indrakeeladri Hill, Vijayawada, Andhra Pradesh',
   16.5062,80.6234,
-  '5:00 AM – 9:00 PM','5:00 AM','7:30 PM','Open all days',
-  'Free (special darshan Rs 100–300)','Saree/dhoti recommended',
+  '4:00 AM – 10:00 PM','5:00 AM','7:30 PM','Open all days',
+  'Free ','Saree/dhoti recommended',
   'Sarvadarshanam, Seeghra Darshanam, Pratyeka Darshanam available; Navaratri processions grand',
   'Atop Indrakeeladri Hill on Krishna River; one of the most powerful Shakti temples',
   'Goddess Kanaka Durga is the presiding deity of Vijayawada, situated on Indrakeeladri Hill on the banks of the Krishna River. It is believed that Arjuna received the Pashupatastra boon from Lord Shiva here.',
@@ -696,7 +663,7 @@ INSERT INTO temples (
   'Vaishnava','Visakhapatnam','Andhra Pradesh',
   'Simhachalam, Visakhapatnam, Andhra Pradesh',
   17.7790,83.2770,
-  '6:30 AM – 1:00 PM, 3:00 PM – 8:30 PM','6:30 AM','7:00 PM','Open all days',
+  '4:00 AM – 1:00 PM, 3:30 PM – 9:00 PM','6:30 AM','7:00 PM','Open all days',
   'Free (special darshan available)','Traditional attire',
   'Chandana Yatra (Akshaya Tritiya) - icon uncovered; darshan ticket system in place',
   'Unique Varaha Narasimha idol; sandal paste covering deity; Akshaya Tritiya uncovering',
@@ -707,24 +674,6 @@ INSERT INTO temples (
   'https://holidaysdna.com/wp-content/uploads/simhachalam-temple-visakhapatnam-india-tourism-1.jpg',
   '',4.7,78000,'','Visakhapatnam Junction','Visakhapatnam Airport'
 ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 (
@@ -767,7 +716,7 @@ INSERT INTO temples (
   'Vaishnava','Yadagirigutta','Telangana',
   'Yadagirigutta, Yadadri Bhuvanagiri, Telangana',
   17.5803,79.0059,
-  '4:00 AM – 10:00 PM','4:00 AM','7:30 PM','Open all days',
+  '4:00 AM – 9:30 PM','4:00 AM','7:30 PM','Open all days',
   'Free (special darshan available)','Traditional attire',
   'Five forms of Narasimha visible; special darshan tickets available',
   'Newly renovated grand temple; five forms of Narasimha; hilltop location',
@@ -775,7 +724,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Vaikunta Ekadasi','Ugadi','Karthika Masam'],
   '','https://www.yadadritemple.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Yadagirigutta_Temple.jpg/800px-Yadagirigutta_Temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Yadadri_Temple_on_the_hilltop.jpg/500px-Yadadri_Temple_on_the_hilltop.jpg',
   '',4.8,98000,'','Bhongir Station','Hyderabad Rajiv Gandhi Airport'
 ),
 (
@@ -784,7 +733,7 @@ INSERT INTO temples (
   'Vayu Lingam','Srikalahasti','Andhra Pradesh',
   'Srikalahasti, Chittoor District, Andhra Pradesh',
   13.7505,79.7016,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 12:00 PM, 2:00 PM – 9:0 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days; Rahu-Ketu pariharam rituals',
   'Represents the element of Air among Pancha Bhuta Stalas; Rahu-Ketu pariharam',
@@ -792,7 +741,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Rahu Ketu Pooja Days'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1WNK3pwXONv0bqetTt2sP7vMxIJVv2d0W_gjtzWWqQA&s=10',
   '',4.6,38400,'','Srikalahasti Railway Station','Tirupati Airport'
 ),
 (
@@ -801,7 +750,7 @@ INSERT INTO temples (
   'Vaishnava','Annavaram','Andhra Pradesh',
   'Annavaram, East Godavari District, Andhra Pradesh',
   17.7574,82.4067,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 12:30 PM, 2:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free (special darshan tickets available)','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Hilltop temple on Ratnagiri hill overlooking Pampa river; Satyanarayana Vratam',
@@ -809,7 +758,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Kartika Masam','Ratha Saptami'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZB-8PvLYYwOvFoLDT_on1M59112zq2QKgJG1gbUTfx2YHKExpQgPfg1n&s=10',
   '',4.6,33200,'','Annavaram Railway Station','Visakhapatnam Airport'
 ),
 (
@@ -818,7 +767,7 @@ INSERT INTO temples (
   'Vaishnava','Tiruchanoor','Andhra Pradesh',
   'Tiruchanoor, Tirupati, Andhra Pradesh',
   13.6150,79.4067,
-  '6:00 AM – 1:00 PM, 3:00 PM – 8:00 PM','6:00 AM','7:00 PM','Open all days',
+  '6:30 AM – 11:30 PM, 12:30 AM – 4:45 PM, 7:00 PM – 8:45 PM','7:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Combined darshan ticket with Tirupati available; 5 km from Tirupati',
   'Consort temple of Tirupati; Padmavathi Devi; pilgrims visit after Tirupati',
@@ -826,7 +775,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Navaratri','Ugadi'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Padmavathi_temple_tirupati.jpg/800px-Padmavathi_temple_tirupati.jpg',
+  'https://images.deccanchronicle.com/dc-Cover-eifrtuo35lpquceh7lpvp35oc6-20181206013841.Medi.jpeg',
   '',4.7,85000,'517503','Tirupati Station','Tirupati Airport'
 ),
 (
@@ -835,7 +784,7 @@ INSERT INTO temples (
   'Vaishnava','Ahobilam','Andhra Pradesh',
   'Ahobilam, Nandyal District, Andhra Pradesh',
   15.1667,78.7167,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:30 AM – 1:00 PM, 3:00 PM – 8:00 PM','7:00 AM','7:00 PM','Open all days',
   'Free (special darshan tickets available)','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Nine forms of Narasimha shrines spread across the Nallamala hills',
@@ -843,16 +792,16 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Narasimha Jayanti'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTskpl2X3k6VOtn0KfqczahL3VlGxMUeIB5mq4k2u9Sgg&s=10',
   '',4.6,15200,'','Nandyal Railway Station','Tirupati Airport'
 ),
 (
-  'Subrahmanya Swamy Temple Srisailam','Kumararama Bhimeswara Temple',
+  'Subrahmanya Swamy Temple','Kumararama Bhimeswara Temple',
   'Lord Shiva',ARRAY['Goddess Bala Tripura Sundari','Lord Ganesha'],
   'Shaiva','Samalkot','Andhra Pradesh',
   'Samarlakota, East Godavari, Andhra Pradesh',
   17.0545,82.1679,
-  '5:30 AM – 1:00 PM, 3:30 PM – 8:30 PM','5:30 AM','7:00 PM','Open all days',
+  '6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Karthika Masam special abhishekam; Pradosha puja famous',
   'One of the Pancha Arama Kshetras; ancient Chalukya-Chola architecture',
@@ -860,7 +809,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Karthika Masam','Brahmotsavam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bhimesvara_temple.jpg/800px-Bhimesvara_temple.jpg',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcyGZ-gIvWj2fSXpHl8y2151x05r9GQJ_sX4VbUTF5hBVOxfXW4wRO9zSViUeD4PwASFIO1Tzg14uOgYd8Es4KGZOHYH3gBdUfcUqh-YSoHOs9H2ND6dGKVCqM9uz-5N2Efd6PRA=s1360-w1360-h1020-rw',
   '',4.5,45000,'','Samalkot Junction','Rajamahendravaram Airport'
 ),
 (
@@ -869,7 +818,7 @@ INSERT INTO temples (
   'Vaishnava','Bhadrachalam','Telangana',
   'Bhadrachalam, Bhadradri Kothagudem District, Telangana',
   17.6667,80.7833,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 12:00 PM, 3:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free (special darshan tickets available)','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'On the banks of the Godavari; associated with poet-devotee Bhakta Ramadas',
@@ -877,7 +826,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Sita Rama Kalyanam (Ram Navami)'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM44n81cU50NhXx31Q9z4wzzOgyxr-BqhLjKY5oRzOzw&s=10',
   '',4.7,27600,'','Bhadrachalam Road Railway Station','Rajiv Gandhi International Airport Hyderabad'
 ),
 (
@@ -886,7 +835,7 @@ INSERT INTO temples (
   'Vaishnava','Dwaraka Tirumala','Andhra Pradesh',
   'Dwaraka Tirumala, West Godavari, Andhra Pradesh',
   17.0297,81.2801,
-  '6:00 AM – 1:00 PM, 3:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 1:00 PM, 3:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Steps or road access to hilltop temple; prasad food offered; Brahmotsavam 9-day festival',
   'Chinna Tirupati; hilltop Venkateswara; important pilgrimage in Andhra Pradesh',
@@ -894,7 +843,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Ugadi','Vaikunta Ekadasi'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Dwaraka_Tirumala.jpg/800px-Dwaraka_Tirumala.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7xygtu1AVzzWUR9ONPK6OT3lh7B-nbBKMrtCGHxTWA&s=10',
   '',4.6,55000,'','Bhimavaram Station','Rajahmundry Airport'
 ),
 (
@@ -903,7 +852,7 @@ INSERT INTO temples (
   'Shiva','Warangal','Telangana',
   'Palampet, Mulugu District, Telangana',
   18.2667,79.9500,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 11:00 PM, 4:00 PM – 6:0 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'UNESCO World Heritage Site known for floating bricks and intricate Kakatiya sculpture',
@@ -911,7 +860,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://i0.wp.com/saichintala.com/wp-content/uploads/2019/10/img_0205.jpg?fit=1200%2C800&ssl=1',
   '',4.7,14200,'','Warangal Railway Station','Rajiv Gandhi International Airport Hyderabad'
 ),
 (
@@ -920,7 +869,7 @@ INSERT INTO temples (
   'Vaishnava','Hyderabad','Telangana',
   'Naubath Pahad, Hill Fort Rd, Hyderabad, Telangana',
   17.4062,78.4691,
-  '7:00 AM – 12:00 PM, 2:00 PM – 9:00 PM','7:00 AM','8:00 PM','Open all days; closed midday',
+  '7:00 AM – 12:00 PM, 3:00 PM – 9:00 PM','7:00 AM','8:00 PM','Open all days; closed midday',
   'Free','No specific code',
   'Panoramic city views from hilltop; Navaratri special programs; Hussain Sagar lake visible',
   'White marble temple atop Naubath Pahad hill; panoramic city views; Navaratri celebrations',
@@ -928,9 +877,10 @@ INSERT INTO temples (
   'Year round',
   ARRAY['Brahmotsavam','Navaratri','Vaikuntha Ekadasi'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Birla_Mandir_Hyderabad.jpg/800px-Birla_Mandir_Hyderabad.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/3/3c/Birla_Mandir%2C_Hyderabad.png',
   '',4.6,72000,'','Nampally Station','Rajiv Gandhi International Airport'
 ),
+
 -- ===========================
 -- KARNATAKA
 -- ===========================
@@ -940,7 +890,7 @@ INSERT INTO temples (
   'UNESCO Heritage','Hampi','Karnataka',
   'Hampi, Vijayanagara, Karnataka',
   15.3350,76.4600,
-  '6:00 AM - 1:00 PM, 3:00 PM - 8:00 PM','6:00 AM','6:30 PM','Open all days',
+  '6:00 AM – 1:00 PM, 3:00 PM – 8:00 PM','6:00 AM','6:30 PM','Open all days',
   '','Traditional attire',
   'Non-Hindus allowed in outer precincts; Hampi ruins exploration recommended',
   'UNESCO World Heritage Site; functioning temple in Hampi ruins; over 7th-century origin',
@@ -957,7 +907,7 @@ INSERT INTO temples (
   'Shaiva','Kukke Subramanya','Karnataka',
   'Kukke Subramanya, Dakshina Kannada, Karnataka',
   12.5955,75.7381,
-  '5:00 AM – 8:30 PM','5:00 AM','7:30 PM','Open all days',
+  '7:30 AM – 9:00 PM','5:00 AM','7:30 PM','Open all days',
   'Free (special darshan Rs 200–500)','Traditional attire',
   'Sarpa Samskara, Ashlesha Bali rituals for snake worship; Darshan tokens issued',
   'Most important serpent shrine in India; Sarpa Samskara ritual; forest surroundings',
@@ -965,7 +915,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Champa Shashti','Naga Panchami','Subramanya Shashti','Karthika Masam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kukke_Subramanya_Temple.jpg/800px-Kukke_Subramanya_Temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Kukke_Subramanya_Swami.jpg/500px-Kukke_Subramanya_Swami.jpg',
   '',4.7,88000,'','Subramanya Road Station','Mangaluru International Airport'
 ),
 (
@@ -982,31 +932,31 @@ INSERT INTO temples (
   'October (Dasara/Navaratri)',
   ARRAY['Dasara','Navaratri','Ugadi','Karthika Masam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Chamundeshwari_Temple_Mysore.jpg/800px-Chamundeshwari_Temple_Mysore.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/d/d1/Chamundeshwari_Temple_Mysore.jpg',
   '',4.7,112000,'','Mysuru Junction','Mysuru Airport'
 ),
 (
   'Dharmasthala Temple','Manjunatha Swamy Temple Dharmasthala',
-  'Lord Manjunatheshwara (Shiva)',ARRAY['Dharmadevatas','Goddess Ammanavaru','Lord Ganesha'],
+  'Lord Manjunatheshwara',ARRAY['Dharmadevatas','Goddess Ammanavaru','Lord Ganesha'],
   'Shaiva','Dharmasthala','Karnataka',
   'Dharmasthala, Dakshina Kannada, Karnataka 574216',
   12.9454,75.3658,
-  '6:30 AM – 2:00 PM, 5:00 PM – 9:30 PM','6:30 AM','6:30 PM','Open all days',
+  '6:30 AM – 2:30 PM, 5:00 PM – 8:30 PM','6:30 AM','6:30 PM','Open all days',
   'Free (anna-santarpane/meals free for all)','No jeans; traditional attire inside',
   'Free meals (anna-santarpane) for all visitors daily; Bahubali Gomateshwara statue nearby',
   'Free meals for all pilgrims (2 lakh/day); secular management; Jain and Hindu coexistence',
   'Dharmasthala is a unique temple town managed by the Heggade family, who are Jains by religion but devoted to Lord Shiva. The temple provides free meals to thousands of pilgrims daily.',
   'October to March',
   ARRAY['Laksha Deepotsava','Navaratri','Karthika Masam','Shivratri'],
-  '+91-8256-276345','https://www.dharmasthala.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dharmasthala_temple.jpg/800px-Dharmasthala_temple.jpg',
-  'Shaiva',4.8,135000,'574216','Subramanya Road (30 km)','Mangaluru International Airport (80 km)'
+  '','https://www.dharmasthala.in',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Dharmasthala_1.jpg/500px-Dharmasthala_1.jpg',
+  '',4.8,135000,'','Subramanya Road','Mangaluru International Airport'
 ),
 (
   'Kollur Mookambika Temple','Mookambika Devi Temple',
   'Goddess Mookambika',ARRAY['Lord Shiva','Lord Ganesha','Subrahmanya'],
   'Shakti','Kollur','Karnataka',
-  'Kollur, Udupi, Karnataka 576220',
+  'Kollur, Udupi, Karnataka',
   13.8656,74.8139,
   '5:00 AM – 9:00 PM','5:00 AM','7:30 PM','Open all days',
   'Free (special darshan Rs 50–200)','Traditional dress; no shorts/sleeveless',
@@ -1015,9 +965,9 @@ INSERT INTO temples (
   'The Mookambika Temple is a Hindu temple dedicated to Goddess Mookambika. Adi Shankaracharya is said to have brought the idol from Kodachadri Hill. The temple is situated in the dense forests of the Western Ghats.',
   'October to March',
   ARRAY['Navaratri','Sharavana Masa','Diwali','Ugadi'],
-  '+91-8254-272457','https://www.mookambika.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mookambika_temple.jpg/800px-Mookambika_temple.jpg',
-  'Shakti',4.7,95000,'576220','Kundapura Station (35 km)','Mangaluru International Airport (130 km)'
+  '','',
+  'https://static.toiimg.com/thumb/47149999/Kollur-Mookambika-Temple.jpg?width=1200&height=900',
+  '',4.7,95000,'576220','Kundapura Station','Mangaluru International Airport'
 ),
 (
   'Udupi Sri Krishna Temple','Shri Krishna Matha Udupi',
@@ -1025,16 +975,16 @@ INSERT INTO temples (
   'Vaishnava','Udupi','Karnataka',
   'Car Street, Udupi, Karnataka 576101',
   13.3391,74.7479,
-  '5:30 AM – 8:30 PM','5:30 AM','7:30 PM','Open all days',
+  '4:30 AM – 9:30 PM','5:30 AM','7:30 PM','Open all days',
   'Free','Traditional dress; men must wear dhoti inside',
   'Darshan through Kanakana Kindi (9-hole window); Aksharabhyasa (writing initiation) ceremony available',
   'Krishna visible through kanakana kindi (window of devotion); Paryaya festival every 2 years',
   'The Udupi Sri Krishna Temple was established by Sri Madhvacharya in the 13th century. The idol can be seen through a window with 9 holes (Kanakana Kindi) – made famous by devotee Kanakadasa. The Paryaya festival, where the headship of the matha changes hands every 2 years, is a grand celebration.',
   'Year round',
   ARRAY['Krishna Janmashtami','Paryaya Mahotsava','Udupi Paryaya'],
-  '+91-820-2522728','https://www.krishnamatha.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sri_Krishna_Matha_Udupi.jpg/800px-Sri_Krishna_Matha_Udupi.jpg',
-  'Vaishnava',4.8,115000,'576101','Udupi Station (3 km)','Mangaluru International Airport (60 km)'
+  '','',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9S8N9DLDvR_7wDnGyMH_d7L9LEk2J_35ovhDD_M_a4ly3wiR55ZWNCMv3xaQzVD6BRERLdUCFZNxpQqCjwQ-TtdKF19Z8WLvqT3aC4-8ZFLT69eK7eeqvo9iULDqWEPMp0Nr8bQ=s1360-w1360-h1020-rw',
+  '',4.8,115000,'576101','Udupi Station','Mangaluru International Airport'
 ),
 (
   'Murudeshwar Temple','Murudeshwara Shiva Temple',
@@ -1044,14 +994,14 @@ INSERT INTO temples (
   14.0954,74.1046,
   '6:00 AM – 8:30 PM','6:00 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
-  'Gopuram elevator (Rs 5); Shiva statue views from top; beach and water sports nearby',
+  'Gopuram elevator; Shiva statue views from top; beach and water sports nearby',
   'World''s second tallest Shiva statue (123 ft); gopuram with lift; Arabian Sea backdrop',
   'The Murudeshwar Temple is known for its 123-foot tall statue of Lord Shiva, the second tallest in the world. The 20-floor gopuram has an elevator. The temple and statue are dramatically set against the Arabian Sea.',
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month'],
-  '+91-8385-260210','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Murudeshwara_temple.jpg/800px-Murudeshwara_temple.jpg',
-  'Shaiva',4.7,112000,'581350','Murudeshwar Station (1 km)','Mangaluru International Airport (150 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Murudeshwara_raja_gopura_HDR%2C_Jul_2012.jpg/500px-Murudeshwara_raja_gopura_HDR%2C_Jul_2012.jpg',
+  '',4.7,112000,'581350','Murudeshwar Station','Mangaluru International Airport'
 ),
 (
   'Mangaladevi Temple Mangalore','Mangaladevi Mandir',
@@ -1059,7 +1009,7 @@ INSERT INTO temples (
   'Devi','Mangalore','Karnataka',
   'Bolar, Mangalore, Karnataka 575001',
   12.8635,74.8420,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 1:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Temple after which the city of Mangaluru is named',
@@ -1067,8 +1017,8 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Chaitra Vishu'],
   '+91-1075658573','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,11300,'575001','Mangalore Central (2 km)','Mangalore International Airport (15 km)'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mangaladevi_Temple_Mangalore_2.jpg/500px-Mangaladevi_Temple_Mangalore_2.jpg',
+  '',4.5,11300,'575001','Mangalore Central','Mangalore International Airport'
 ),
 (
   'Mahabaleshwar Temple Gokarna','Gokarna Shiva Temple',
@@ -1076,7 +1026,7 @@ INSERT INTO temples (
   'Shiva','Gokarna','Karnataka',
   'Gokarna, Uttara Kannada, Karnataka 581326',
   14.5497,74.3197,
-  '6:00 AM – 1:00 PM, 5:00 PM – 8:00 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 12:30 PM, 5:00 PM – 8:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Houses the sacred Atmalinga; coastal pilgrimage town',
@@ -1084,8 +1034,8 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Karthika Purnima'],
   '+91-2761266129','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,19500,'581326','Gokarna Road Railway Station (8 km)','Goa International Airport (140 km)'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Main_entry_to_the_Mahabaleshwar_Temple_at_Gokaran.jpg/500px-Main_entry_to_the_Mahabaleshwar_Temple_at_Gokaran.jpg',
+  '',4.6,19500,'581326','Gokarna Road Railway Station','Goa International Airport'
 ),
 
 -- ===========================
@@ -1097,20 +1047,20 @@ INSERT INTO temples (
   'Syncretic','Shirdi','Maharashtra',
   'Shirdi, Rahata Taluka, Ahmednagar, Maharashtra 423109',
   19.7667,74.4768,
-  '4:00 AM – 11:00 PM','4:30 AM','5:30 PM','Open all days',
+  '4:00 AM – 9:30 PM','4:30 AM','5:30 PM','Open all days',
   'Free','Modest, clean attire',
   'Kakad Aarti (4:30 AM), Madhyan Aarti (12:00 PM), Dhoop Aarti (5:30 PM), Shej Aarti (10:30 PM); online darshan booking',
   'Most visited pilgrimage site in Maharashtra; over 70,000 daily devotees',
   'Shirdi is the abode of Sai Baba, a spiritual master who lived here from around 1858 until his death in 1918. The Samadhi Mandir was built over the tomb of Sai Baba and is the central temple at Shirdi.',
   'Year round',
   ARRAY['Ramnavami','Guru Purnima','Vijayadashami','Diwali'],
-  '+91-2423-258500','https://www.shrisaibabasansthan.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Shirdi_Sai_Baba_temple.jpg/800px-Shirdi_Sai_Baba_temple.jpg',
-  'Pilgrimage',4.9,380000,'423109','Sainagar Shirdi Station (0.5 km)','Shirdi Airport (14 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIv0Q3hraL8xg9iIlgqegOBQ2h7QtML18eCQppp3aYEQ&s=10',
+  '',4.9,380000,'423109','Sainagar Shirdi Station','Shirdi Airport'
 ),
 (
   'Trimbakeshwar Temple','Trimbakeshwar Jyotirlinga Mandir',
-  'Lord Shiva (Trimbakeshwar)',ARRAY['Goddess Parvati','Lord Brahma','Lord Vishnu'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Brahma','Lord Vishnu'],
   'Jyotirlinga','Trimbak','Maharashtra',
   'Trimbak, Nashik, Maharashtra 422212',
   19.9313,73.5300,
@@ -1121,94 +1071,95 @@ INSERT INTO temples (
   'The Trimbakeshwar Temple is an ancient Hindu temple in Trimbak town, dedicated to Lord Shiva. The origin of the Godavari river is nearby. It is one of the 12 Jyotirlingas. The temple was built by the Peshwas in the 18th century.',
   'August (Shravan month)',
   ARRAY['Maha Shivratri','Shravan Month','Kumbh Mela Nashik','Kartik Purnima'],
-  '+91-2594-233221','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Trimbakeshwar_temple.jpg/800px-Trimbakeshwar_temple.jpg',
-  'Jyotirlinga',4.7,105000,'422212','Nashik Road Station (39 km)','Nashik Airport (56 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Trimbakeshwar_Temple-Nashik-Maharashtra-1.jpg/500px-Trimbakeshwar_Temple-Nashik-Maharashtra-1.jpg',
+  '',4.7,105000,'422212','Nashik Road Station','Nashik Airport'
 ),
 (
   'Siddhivinayak Temple Mumbai','Shree Siddhivinayak Ganapati Mandir',
-  'Lord Ganesha (Siddhivinayak)',ARRAY['Riddhi','Siddhi'],
+  'Lord Ganesha',ARRAY['Riddhi','Siddhi'],
   'Ganapatya','Mumbai','Maharashtra',
   'S.K. Bole Rd, Prabhadevi, Mumbai, Maharashtra 400028',
   19.0168,72.8302,
-  '5:30 AM – 9:50 PM','5:30 AM','8:30 PM','Open all days',
+  '5:30 AM – 9:50 PM','5:30 AM','7:30 PM','Open all days',
   'Free','No specific dress code',
   'Online darshan booking available; VIP darshan on Tuesday mornings',
   'Most famous Ganesha temple in India; trunk-right Ganesha; enormous wealth',
   'Built in 1801 by Laxman Vithu Patil for the welfare of childless women. The temple is famous for fulfilling wishes of devotees. The Ganesha idol here has a unique trunk turned to the right (Siddhi Vinayaka).',
   'Year round; Tuesday is most auspicious',
   ARRAY['Ganesh Chaturthi','Angarika Chaturthi','Diwali','Gudi Padwa'],
-  '+91-22-24373626','https://www.siddhivinayak.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Siddhivinayak_Temple%2C_Mumbai.jpg/800px-Siddhivinayak_Temple%2C_Mumbai.jpg',
-  'Ganapatya',4.8,195000,'400028','Dadar Station (1 km)','Chhatrapati Shivaji Maharaj International Airport (12 km)'
+  '','https://www.siddhivinayak.org',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Shree_Siddhivinayak_Temple_Mumbai.jpg/500px-Shree_Siddhivinayak_Temple_Mumbai.jpg',
+  '',4.8,195000,'400028','Dadar Station','Chhatrapati Shivaji Maharaj International Airport'
 ),
+
 (
   'Bhimashankar Temple','Bhimashankar Jyotirlinga',
-  'Lord Shiva (Bhimashankar)',ARRAY['Goddess Parvati','Nandi'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Nandi'],
   'Jyotirlinga','Bhimashankar','Maharashtra',
   'Bhimashankar, Khed Taluka, Pune, Maharashtra 410502',
   19.0700,73.5320,
-  '4:30 AM – 9:30 PM','4:30 AM','7:30 PM','Open all days',
+  '5:00 AM – 9:30 PM','4:30 AM','7:30 PM','Open all days',
   'Free','Traditional attire',
   'Shivratri celebrations attract thousands; wildlife trekking in sanctuary',
   'One of 12 Jyotirlingas; located in Sahyadri forests; wildlife sanctuary around temple',
   'Bhimashankar is one of the twelve Jyotirlinga shrines. The origin of the Bhima river lies here. The temple is nestled in the Sahyadri range, within the Bhimashankar Wildlife Sanctuary which is home to the Indian Giant Squirrel.',
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month','Kartik Purnima'],
-  '+91-2135-284224','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bhimashankar.jpg/800px-Bhimashankar.jpg',
-  'Jyotirlinga',4.7,72000,'410502','Karjat Station (65 km)','Pune Airport (120 km)'
+  '','',
+  'https://clubmahindra.gumlet.io/blog/images/Bhimashankar-Temple-resized.jpg?w=376&dpr=2.6',
+  '',4.7,72000,'410502','Karjat Station','Pune Airport'
 ),
 (
   'Ashtavinayak Morgaon Temple','Mayureshwar Temple',
-  'Lord Ganesha (Mayureshwar)',ARRAY['Riddi','Siddhi','Lord Shiva'],
+  'Lord Ganesha',ARRAY['Riddi','Siddhi','Lord Shiva'],
   'Ganapatya','Morgaon','Maharashtra',
   'Morgaon, Baramati Taluka, Pune, Maharashtra 413202',
   18.2673,74.4991,
-  '5:00 AM – 12:00 PM, 3:00 PM – 9:00 PM','5:00 AM','7:30 PM','Open all days',
+  '5:00 AM – 12:00 PM, 3:00 PM – 10:00 PM','5:30 AM','7:30 PM','Open all days',
   'Free','Traditional attire',
   'Annual Ashtavinayak Yatra starts and ends here; 16-day pilgrimage circuit',
   'Chief temple of Ashtavinayak pilgrimage; four-tusked Ganesha; Mayureshwar form',
   'Morgaon houses the Mayureshwar Temple, the first and most important temple in the Ashtavinayak pilgrimage. The idol of Ganesha here is said to be a Svayambhu (self-manifested). The peculiar feature is Ganesha seated on a peacock (Mayur) with four arms and four tusks.',
   'Year round',
   ARRAY['Ganesh Chaturthi','Angarika Chaturthi','Maghi Ganesh Jayanti'],
-  '+91-2111-231234','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mayureshvar_temple_morgaon.jpg/800px-Mayureshvar_temple_morgaon.jpg',
-  'Ganapatya',4.6,62000,'413202','Daund Station (25 km)','Pune Airport (70 km)'
+  '','',
+  'https://www.trawell.in/admin/images/upload/593911611Pundalik-temple.jpg',
+  '',4.6,62000,'413202','Daund Station','Pune Airport'
 ),
 (
   'Pandharpur Vitthal Temple','Shri Vitthal Rukmini Mandir',
-  'Lord Vitthal (Vishnu/Krishna)',ARRAY['Goddess Rukmini','Goddess Lakshmi'],
+  'Lord Vitthal',ARRAY['Goddess Rukmini','Goddess Lakshmi'],
   'Vaishnava','Pandharpur','Maharashtra',
   'Pandharpur, Solapur, Maharashtra 413304',
   17.6788,75.3338,
-  '4:00 AM – 12:00 PM, 3:30 PM – 11:00 PM','4:00 AM','7:00 PM','Closed on Fridays for cleaning ceremony',
+  '4:00 AM – 11:45 PM','4:00 AM','7:00 PM','Closed on Fridays for cleaning ceremony',
   'Free','Dhoti/saree required; no jeans',
   'Wari pilgrimage (walking from Alandi/Dehu); Ekadasi darshan; male entrance from north side',
   'Most important temple in Maharashtra; two annual Warkari pilgrimages (Wari) attract millions',
   'Pandharpur is the most sacred Hindu pilgrimage site in Maharashtra. The biannual Wari (Warkari pilgrimage) sees millions walking to Pandharpur on Ashadhi and Kartiki Ekadasi.',
   'July (Ashadhi Ekadasi) and November (Kartiki Ekadasi)',
   ARRAY['Ashadhi Ekadasi','Kartiki Ekadasi','Janmashtami','Gudi Padwa'],
-  '+91-2186-232345','https://www.pandharpur.net',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Vitthal_Rukmini_Temple_Pandharpur.jpg/800px-Vitthal_Rukmini_Temple_Pandharpur.jpg',
-  'Vaishnava',4.9,225000,'413304','Pandharpur Station (2 km)','Solapur Airport (75 km)'
+  '',4.9,225000,'413304','Pandharpur Station','Solapur Airport'
 ),
 (
   'Mahalakshmi Temple Kolhapur','Shri Mahalakshmi Ambabai Mandir',
-  'Goddess Mahalakshmi (Ambabai)',ARRAY['Lord Ganesha','Lord Shiva'],
+  'Goddess Mahalakshmi',ARRAY['Lord Ganesha','Lord Shiva'],
   'Shakti Peeth','Kolhapur','Maharashtra',
   'Old Town, Kolhapur, Maharashtra 416001',
   16.7019,74.2348,
-  '5:00 AM – 10:30 PM','5:00 AM','8:30 PM','Open all days',
+  '5:00 AM – 10:00 PM','5:00 AM','8:30 PM','Open all days',
   'Free','Traditional attire; saree/dhoti',
   'Kirnotsav (January & November) when sunrays fall on idol; Navaratri 9-day celebrations grand',
   'One of most important Shakti Peethas in Maharashtra; Kirnotsav – sunrays fall directly on idol',
   'The Mahalakshmi Temple in Kolhapur is one of the Shakti Peethas. A unique event called Kirnotsav occurs on specific days when the setting sunrays fall directly on the deity through the western door.',
   'January and November (Kirnotsav)',
   ARRAY['Navaratri','Kirnotsav','Diwali','Lalita Panchami'],
-  '+91-231-2625270','https://www.mahalaxmikolhapur.com',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mahalaxmi_Temple_Kolhapur.jpg/800px-Mahalaxmi_Temple_Kolhapur.jpg',
-  'Shakti Peeth',4.8,125000,'416001','Kolhapur Station (1 km)','Kolhapur Airport (10 km)'
+  '','',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/mahalaxmi-temple-kolhapur-maharashtra-2-attr-hero?qlt=82&ts=1726668854430',
+  '',4.8,125000,'416001','Kolhapur Station','Kolhapur Airport'
 ),
 (
   'Bhavani Mata Temple Tuljapur','Tulja Bhavani Mandir',
@@ -1216,16 +1167,16 @@ INSERT INTO temples (
   'Shakti Peeth','Tuljapur','Maharashtra',
   'Tuljapur, Osmanabad, Maharashtra 413601',
   18.0051,76.0838,
-  '4:00 AM – 11:00 PM','4:00 AM','8:30 PM','Open all days',
+  '4:00 AM – 10:00 PM','4:00 AM','8:30 PM','Open all days',
   'Free','Traditional attire',
   'Navaratri grand celebration; Shivaji Maharaj sword (Bhavani Talwar) connection',
   'One of three and a half Shakti Peethas of Maharashtra; Chhatrapati Shivaji''s family deity',
   'Tulja Bhavani Temple is one of the Sade-Teen Shakti Peethas (Three and a Half Shakti Peethas) of Maharashtra. Chhatrapati Shivaji Maharaj''s family worshipped this Goddess and he believed his victories were blessed by her.',
   'October (Navaratri)',
   ARRAY['Navaratri','Champasashti','Diwali'],
-  '+91-2471-242234','https://www.tuljapur.com',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tulja_Bhavani_Mandir.jpg/800px-Tulja_Bhavani_Mandir.jpg',
-  'Shakti Peeth',4.7,112000,'413601','Osmanabad Station (30 km)','Solapur Airport (100 km)'
+  '','',
+  'https://www.trawell.in/admin/images/upload/499589499tuljapur-temple.jpg',
+  '',4.7,112000,'413601','Osmanabad Station','Solapur Airport'
 ),
 (
   'Grishneshwar Temple Ellora','Ghushmeshwar Jyotirlinga',
@@ -1233,20 +1184,20 @@ INSERT INTO temples (
   'Jyotirlinga','Verul','Maharashtra',
   'Verul, Aurangabad, Maharashtra 431102',
   20.0270,75.1788,
-  '5:30 AM – 9:30 PM','5:30 AM','7:30 PM','Open all days',
+  '5:00 AM – 9:00 PM','5:30 AM','7:30 PM','Open all days',
   'Free','Traditional attire; men: no shirt inside sanctum',
   'Ellora Caves complex adjacent (UNESCO); combined visit recommended; Ajanta Caves 100 km away',
   'Last of 12 Jyotirlingas; adjacent to Ellora Caves (UNESCO); Maratha period red stone temple',
   'The Grishneshwar Temple (also Ghushmeshwar) is the twelfth and last Jyotirlinga. The temple was rebuilt in the 18th century by Ahilyabai Holkar. Adjacent to the UNESCO World Heritage Ellora Caves.',
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month'],
-  '+91-240-2497456','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Grishneshwar_temple.jpg/800px-Grishneshwar_temple.jpg',
-  'Jyotirlinga',4.7,85000,'431102','Aurangabad Station (30 km)','Aurangabad Airport (30 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/a/ad/Grishneshwar_temple_in_Aurangabad_district.jpg',
+  '',4.7,85000,'431102','Aurangabad Station','Aurangabad Airport'
 ),
 (
   'Mahaganapati Temple Ranjangaon','Shri Mahaganapati Mandir',
-  'Lord Ganesha (Mahaganapati)',ARRAY['Riddhi','Siddhi'],
+  'Lord Ganesha',ARRAY['Riddhi','Siddhi'],
   'Ganapatya','Ranjangaon','Maharashtra',
   'Ranjangaon, Shirur, Pune, Maharashtra 412220',
   18.7233,74.1960,
@@ -1257,9 +1208,9 @@ INSERT INTO temples (
   'The Mahaganapati Temple at Ranjangaon is the fifth in the Ashtavinayak pilgrimage. The idol here has ten trunks and twenty arms, representing the most powerful form of Ganesha. Lord Shiva is said to have worshipped Ganesha here before defeating Tripurasura.',
   'Year round',
   ARRAY['Ganesh Chaturthi','Angarika Chaturthi','Maghi Ganesh'],
-  '+91-2138-279234','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ranjangaon_Ganapati.jpg/800px-Ranjangaon_Ganapati.jpg',
-  'Ganapatya',4.6,48000,'412220','Pune Station (50 km)','Pune Airport (55 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuE8j0esAiloNSeXlubiztiZ_nVw9yUhFuo_ledpqtig&s=10',
+  '',4.6,48000,'412220','Pune Station','Pune Airport'
 ),
 (
   'Shri Datta Mandir Narsobawadi','Narsobachi Wadi Datta Kshetra',
@@ -1267,16 +1218,16 @@ INSERT INTO temples (
   'Other','Narsobawadi','Maharashtra',
   'Narsobachi Wadi, Sangli, Maharashtra 416434',
   16.7648,74.4890,
-  '5:00 AM – 9:30 PM','5:00 AM','8:00 PM','Open all days',
+  '4:30 AM – 10:00 PM','5:00 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
   'Padukas of Nrusimha Saraswati worshipped; boat ride at Krishna-Panchaganga confluence; Margashirsha Thursday special',
   'Most important Dattatreya kshetra; Datta Sampradaya origin; Krishna-Panchaganaga sangam',
   'Narsobawadi is one of the most important pilgrimages for Datta sampradaya devotees. It is located at the confluence of the Krishna and Panchaganga rivers.',
   'Year round (Margashirsha is especially holy)',
   ARRAY['Datta Jayanti','Margashirsha Thursdays','Gurupurnima'],
-  '+91-2345-267234','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Narsobawadi_temple.jpg/800px-Narsobawadi_temple.jpg',
-  'Other',4.7,65000,'416434','Miraj Station (30 km)','Kolhapur Airport (50 km)'
+  '','',
+  'https://www.trawell.in/admin/images/upload/79611443NarsobachiWadi.jpg',
+  '',4.7,65000,'416434','Miraj Station','Kolhapur Airport'
 ),
 (
   'Trimbakeshwar Jyotirlinga Nashik region','Kalaram Temple Nashik',
@@ -1284,16 +1235,16 @@ INSERT INTO temples (
   'Vaishnava','Nashik','Maharashtra',
   'Panchavati, Nashik, Maharashtra 422003',
   20.0058,73.7739,
-  '5:30 AM – 12:30 PM, 5:00 PM – 9:00 PM','5:30 AM','8:00 PM','Open all days',
+  '6:00 AM – 9:00 PM','5:30 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
   'Historic Kalaram Temple Entry Movement site (1930, Ambedkar); Panchavati Dham complex nearby',
   'Black stone (Kala) idol of Rama; site of Rama''s exile; Nashik-Panchavati connection',
   'The Kalaram Temple in Panchavati, Nashik, is believed to be located near where Rama, Sita, and Lakshmana spent part of their 14-year exile. Dr. B.R. Ambedkar led the historic Kalaram Temple Entry Movement here in 1930.',
   'October to March',
   ARRAY['Ram Navami','Diwali','Kumbh Mela Nashik'],
-  '+91-253-2575234','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Kalaram_temple_Nashik.jpg/800px-Kalaram_temple_Nashik.jpg',
-  'Vaishnava',4.6,62000,'422003','Nashik Road Station (8 km)','Nashik Airport (15 km)'
+  '','',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEa0XILM4N9yb922IWmODXzAvAzXM9e_wOSOTjxTsS8s3gWnNfh5hLgNCONtsqHyBYl5XGTOgHcdNcPUaxn1GfEHiE4qeFJ2g6hK78U4poZ_25s4oX1aF6z6bj9FlJyLd8Rr_nyYbM_5YLM=s1360-w1360-h1020-rw',
+  '',4.6,62000,'422003','Nashik Road Station','Nashik Airport'
 ),
 (
   'Ganpatipule Temple','Paschim Dwar Ganapati Temple',
@@ -1301,16 +1252,16 @@ INSERT INTO temples (
   'Other','Ratnagiri','Maharashtra',
   'Ganpatipule, Ratnagiri District, Maharashtra 415616',
   17.1444,73.2667,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:00 AM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Self-manifested Ganesha idol facing west on a scenic Konkan beach',
   'One of the eight important Ganesha shrines on the Konkan coast, the swayambhu (self-manifested) idol uniquely faces west towards the Arabian Sea.',
   'October to March',
   ARRAY['Ganesh Chaturthi','Maha Shivratri'],
-  '+91-3501290170','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,12900,'415616','Ratnagiri Railway Station (25 km)','Pune Airport (330 km)'
+  '','',
+  'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5mgvbFaJ25xmJ4yB5sg4gzXrQMXrvxdhAqXwND642YRAZd11A',
+  '',4.5,12900,'415616','Ratnagiri Railway Station','Pune Airport'
 ),
 
 -- ===========================
@@ -1322,16 +1273,16 @@ INSERT INTO temples (
   'Jyotirlinga','Somnath','Gujarat',
   'Prabhas Patan, Somnath, Gir Somnath, Gujarat 362268',
   20.8879,70.4010,
-  '6:00 AM – 10:00 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 9:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional dress recommended',
   'Evening light and sound show narrates history of demolitions and rebuilding; special Shivratri puja',
   'First and foremost Jyotirlinga; rebuilt seven times; light & sound show at sea',
   'The Somnath temple is the first of the twelve Jyotirlinga shrines of Shiva. It has been destroyed and rebuilt multiple times throughout history, most recently in 1947-1951 under Sardar Vallabhbhai Patel''s initiative. The temple faces the open sea with no land between it and Antarctica.',
   'October to March',
   ARRAY['Maha Shivratri','Kartik Purnima','Shravan Month','Diwali'],
-  '+91-2876-231222','https://www.somnath.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Somnath_temple.jpg/800px-Somnath_temple.jpg',
-  'Jyotirlinga',4.9,165000,'362268','Veraval Station (7 km)','Diu Airport (85 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrcdwGv6UCnFYmhQYcvyVWximf1LQF6Dhgy2Qx0xg30Q&s=10',
+  '',4.9,165000,'362268','Veraval Station','Diu Airport'
 ),
 (
   'Dwarkadhish Temple','Dwarkadhish Jagat Mandir',
@@ -1346,26 +1297,27 @@ INSERT INTO temples (
   'The Dwarkadhish Temple, also known as Jagat Mandir, is an ancient Hindu temple dedicated to Lord Krishna. Dwarka is believed to be the ancient kingdom of Krishna. The current temple dates to the 16th century, built on foundations dating to 2500 years.',
   'October to March',
   ARRAY['Janmashtami','Diwali','Holi','Gokul Ashtami'],
-  '+91-2892-234370','https://www.dwarkadhish.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Dwarkadhish_temple.jpg/800px-Dwarkadhish_temple.jpg',
-  'Char Dham',4.8,145000,'361335','Dwarka Station (1 km)','Jamnagar Airport (137 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLc_fk_fS9RSi9yVra9zFZkgIvwI5TMoNXb1phnU3LzQ&s=10',
+  '',4.8,145000,'361335','Dwarka Station','Jamnagar Airport'
 ),
+
 (
   'Ambaji Temple','Shree Ambaji Mata Temple',
-  'Goddess Ambaji (Amba Mata)',ARRAY['Lord Ganesha','Goddess Saraswati'],
+  'Goddess Ambaji',ARRAY['Lord Ganesha','Goddess Saraswati'],
   'Shakti Peeth','Ambaji','Gujarat',
   'Ambaji, Banaskantha, Gujarat 385110',
   24.3339,72.8538,
-  '7:00 AM – 12:00 PM, 4:00 PM – 9:00 PM','7:00 AM','7:30 PM','Open all days',
+  '7:00 AM – 9:00 PM','7:00 AM','7:30 PM','Open all days',
   'Free','Traditional dress',
   'Bhadarvi Poonam fair in September; trekking to Gabbar Hill nearby; no idol – Srichakra worshipped',
   'One of 51 Shakti Peethas; Navaratri fair with millions of devotees; Arasuri Ambaji',
   'The Ambaji Temple is one of the 51 Shakti Peethas. The temple does not have any anthropomorphic representation of the Goddess – worship is of the Srichakra. The Bhadarvi Poonam fair attracts millions.',
   'October (Navaratri)',
   ARRAY['Navaratri','Bhadarvi Poonam','Diwali'],
-  '+91-2749-262105','https://www.ambajitemple.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ambaji_temple.jpg/800px-Ambaji_temple.jpg',
-  'Shakti Peeth',4.7,155000,'385110','Abu Road Station (20 km)','Bhavnagar Airport (230 km)'
+  '','https://www.ambajitemple.in',
+  'https://temple.yatradham.org/public/Product/temple/temple_Z85Zvq7D_202506301739210.webp',
+  '',4.7,155000,'385110','Abu Road Station','Bhavnagar Airport'
 ),
 (
   'Akshardham Temple Gandhinagar','Swaminarayan Akshardham',
@@ -1373,20 +1325,20 @@ INSERT INTO temples (
   'Swaminarayan','Gandhinagar','Gujarat',
   'Sector 20, Gandhinagar, Gujarat 382020',
   23.2156,72.6524,
-  '9:30 AM – 7:30 PM','Not applicable','7:30 PM','Closed on Mondays',
+  '10:00 AM – 7:30 PM','Not applicable','7:30 PM','Closed on Mondays',
   'Free','Traditional Indian attire',
   'Exhibition on Indian culture; Sahajanand Darshan exhibition; no electronics allowed',
   'Massive spiritual complex; pink stone architecture; exhibition on Indian culture',
   'Built in 1992 by the BAPS Swaminarayan Sanstha, the Akshardham complex in Gandhinagar is built entirely from pink Rajasthani sandstone. The central monument stands 108 feet tall and is adorned with 97 carved pillars and 264 sculpted figures.',
   'October to March',
   ARRAY['Diwali','Janmashtami','Ram Navami','Swaminarayan Jayanti'],
-  '+91-79-23232727','https://www.akshardham.com/gandhinagar',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Akshardham_Gandhinagar.jpg/800px-Akshardham_Gandhinagar.jpg',
-  'Swaminarayan',4.8,122000,'382020','Gandhinagar Capital Station (4 km)','Ahmedabad Airport (25 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBgQVBQ3W0-nc946hwZxzWE65KUyPT6i-5IlQdXpMLaw&s=10',
+  '',4.8,122000,'382020','Gandhinagar Capital Station','Ahmedabad Airport'
 ),
 (
   'Palitana Jain Temples','Shatrunjaya Tirthas',
-  'Lord Adinath (Rishabhadeva)',ARRAY['22 Tirthankaras','Goddess Padmavathi'],
+  'Lord Adinath',ARRAY['22 Tirthankaras','Goddess Padmavathi'],
   'Jain','Palitana','Gujarat',
   'Shatrunjaya Hill, Palitana, Bhavnagar, Gujarat 364270',
   21.5216,71.8262,
@@ -1397,43 +1349,43 @@ INSERT INTO temples (
   'Shatrunjaya (Palitana) is the holiest pilgrimage site for Jains, containing over 900 temples on a sacred hill. The complex was built over 900 years. Pilgrims climb 3,500 steps to reach the temples.',
   'October to March',
   ARRAY['Paryushana','Mahavir Jayanti','Diwali'],
-  '+91-2848-252456','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Palitana_Jain_temples.jpg/800px-Palitana_Jain_temples.jpg',
-  'Jain Heritage',4.9,88000,'364270','Palitana Station (2 km)','Bhavnagar Airport (55 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/8/87/Palitana.jpg',
+  '',4.9,88000,'364270','Palitana Station','Bhavnagar Airport'
 ),
 (
   'Pavagadh Kalika Mata Temple','Mahakali Mata Pavagadh',
-  'Goddess Kalika (Durga)',ARRAY[]::TEXT[],
+  'Goddess Kalika',ARRAY[]::TEXT[],
   'Devi','Pavagadh','Gujarat',
   'Pavagadh Hill, Panchmahal District, Gujarat 389360',
   22.4836,73.5328,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 7:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days; ropeway to hilltop',
   'UNESCO World Heritage Champaner-Pavagadh complex; ropeway to hilltop shrine',
   'Located atop Pavagadh Hill within the UNESCO World Heritage Champaner-Pavagadh Archaeological Park, reached by an aerial ropeway, this Shakti Peeth attracts massive Navaratri crowds.',
   'October to March',
   ARRAY['Navaratri','Chaitra Poonam'],
-  '+91-3155974088','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,21800,'389360','Champaner Road Railway Station (5 km)','Vadodara Airport (50 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Kalika_Mata_Temple%2C_Pavagarh.jpg/500px-Kalika_Mata_Temple%2C_Pavagarh.jpg',
+  '',4.6,21800,'389360','Champaner Road Railway Station','Vadodara Airport'
 ),
 (
   'Modhera Sun Temple','Surya Mandir Modhera',
-  'Surya (Sun God)',ARRAY[]::TEXT[],
+  'Surya',ARRAY[]::TEXT[],
   'Surya','Modhera','Gujarat',
   'Modhera, Mehsana District, Gujarat 384212',
   23.5859,72.1316,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
-  'Free','Modest traditional attire recommended',
+  '7:00 AM – 6:00 PM ','6:00 AM','7:00 PM','Open all days',
+  '₹25 per person (Free for children under 15 years)','Modest traditional attire recommended',
   'Special darshan available on festival days; annual dance festival',
   '11th-century sun temple aligned for equinox sunrise; Modhera Dance Festival',
   'Built in 1026-27 CE by King Bhimdev I of the Solanki dynasty, this UNESCO-recognised temple is designed so that the rising sun''s rays illuminate the sanctum at equinoxes.',
   'October to March',
   ARRAY['Uttarardh Mahotsav','Modhera Dance Festival'],
-  '+91-9875862778','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,16200,'384212','Mehsana Railway Station (25 km)','Ahmedabad Airport (100 km)'
+  '','',
+  'https://assets.architecturaldigest.in/photos/659561d70b94c63c3301b5ba/16:9/w_5472,h_3078,c_limit/22%2010%2013%20ILDL%20MODHERA%20SUN%20TEMPLE%20%C2%A9%20NOUGHTS%20AND%20CROSSES%20103_1.jpg',
+  '',4.6,16200,'384212','Mehsana Railway Station','Ahmedabad Airport'
 ),
 (
   'Bahuchara Mata Temple','Bahucharaji Mandir',
@@ -1441,16 +1393,16 @@ INSERT INTO temples (
   'Devi','Becharaji','Gujarat',
   'Becharaji, Mehsana District, Gujarat 384210',
   23.5333,72.0833,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Important Shakti Peeth especially revered by the transgender community',
   'A significant Shakti Peeth in north Gujarat, the goddess here is particularly venerated as a patron deity by the transgender (Hijra) community across India.',
   'October to March',
   ARRAY['Navaratri','Bhadarvi Poonam'],
-  '+91-5356628206','',
-  '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,9600,'384210','Becharaji Railway Station (1 km)','Ahmedabad Airport (110 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/f/fa/Bahuchara_Mata_Temple_complex_in_Mehsana_district_P_20180121_142243.jpg',
+  '',4.5,9600,'384210','Becharaji Railway Station','Ahmedabad Airport'
 ),
 
 -- ===========================
@@ -1458,7 +1410,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Jagannath Temple Puri','Shree Jagannath Mandir',
-  'Lord Jagannath (Vishnu)',ARRAY['Balabhadra','Devi Subhadra','Sudarshana'],
+  'Lord Jagannath',ARRAY['Balabhadra','Devi Subhadra','Sudarshana'],
   'Char Dham','Puri','Odisha',
   'Srimandir, Grand Rd, Puri, Odisha 752001',
   19.8049,85.8181,
@@ -1469,30 +1421,30 @@ INSERT INTO temples (
   'One of the four Char Dham sacred sites. The wooden idols of Jagannath, Balabhadra, and Subhadra are replaced every 12-19 years in the Nabakalebara ceremony. The famous Rath Yatra attracts millions; non-Hindus are not permitted inside the temple.',
   'June-July (Rath Yatra), October to March',
   ARRAY['Rath Yatra','Snana Purnima','Chandan Yatra','Navaratri'],
-  '+91-6752-222302','https://www.shrijagannath.nic.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Puri_Temple_2016.jpg/800px-Puri_Temple_2016.jpg',
-  'Char Dham',4.9,255000,'752001','Puri Station (2 km)','Bhubaneswar Airport (60 km)'
+  '','https://www.shrijagannath.nic.in',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFixOUfNXbqeGibrWHyRIFf7cuFGMCMCfon9pqTD_sSHj00PHM2CpXx1pvWmBgEmuO3RREgbsNB4mVllPMniZQ3g7CLOTM0KBtY47GTIWqqUQTWF-p9c-hZIYnY13x5Xg=s1360-w1360-h1020-rw',
+  '',4.9,255000,'752001','Puri Station','Bhubaneswar Airport'
 ),
 (
   'Lingaraj Temple Bhubaneswar','Lingaraja Mandir',
-  'Lord Shiva (Harihara)',ARRAY['Goddess Parvati','Lord Vishnu','Lord Ganesha'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Vishnu','Lord Ganesha'],
   'Shaiva','Bhubaneswar','Odisha',
   'Bindu Sagar, Old Town, Bhubaneswar, Odisha 751002',
   20.2375,85.8370,
-  '6:00 AM – 1:00 PM, 4:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 12:30 PM, 3:30 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire; non-Hindus entry restricted',
   'Non-Hindus not permitted inside; viewing platform available outside',
   'Largest temple in Bhubaneswar; 11th-century Kalinga architecture; 55m Deul tower',
   'The Lingaraj Temple is the largest temple in Bhubaneswar and one of the oldest temples in the state. The 11th-century temple is dedicated to Harihara – a combination of Vishnu and Shiva. The 45-meter tall deul is a landmark of Odisha.',
   'October to March',
   ARRAY['Maha Shivratri','Ashokashtami','Rath Yatra'],
-  '+91-674-2432780','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Lingaraj_Temple_Bhubaneswar.jpg/800px-Lingaraj_Temple_Bhubaneswar.jpg',
-  'Shaiva',4.7,88000,'751002','Bhubaneswar Station (3 km)','Bhubaneswar Airport (5 km)'
+  '','',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXWsveqTZLvc0HB9AkWB5-hZErwHm_knxA_AHiEpJtjRVqzghDi3gg5DMW9lHIanCcGV79GgurSo9JB1XmK2CoWH6P9eZcg8PPIIRmF8IyIfmPmLBZJXEeIGKzLDUFFmAJIig=s1360-w1360-h1020-rw',
+  '',4.7,88000,'751002','Bhubaneswar Station','Bhubaneswar Airport'
 ),
 (
   'Konark Sun Temple','Surya Mandir Konark',
-  'Lord Surya (Sun God)',ARRAY['Lord Ganesha','Samba (son of Krishna)'],
+  'Lord Surya',ARRAY['Lord Ganesha','Samba (son of Krishna)'],
   'UNESCO Heritage','Konark','Odisha',
   'Konark, Puri, Odisha 752111',
   19.8876,86.0946,
@@ -1503,9 +1455,9 @@ INSERT INTO temples (
   'The Konark Sun Temple is a 13th-century CE (1250) UNESCO World Heritage Site Hindu temple dedicated to Surya. It was built by King Narasimhadeva I of the Eastern Ganga dynasty. The temple is designed as a massive chariot with 24 elaborately carved wheels.',
   'October to February',
   ARRAY['Konark Dance Festival','Magha Saptami','Chandrabhaga Mela'],
-  '+91-6758-236824','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Konarka_Temple.jpg/800px-Konarka_Temple.jpg',
-  'UNESCO Heritage',4.8,178000,'752111','Puri Station (35 km)','Bhubaneswar Airport (65 km)'
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKe7hM_J_8QUHUaGZZZa9g91z3K9KrAV1Rb7jC_MYXZOG-8ErqaLhIaa8&s=10',
+  '',4.8,178000,'752111','Puri Station','Bhubaneswar Airport'
 ),
 
 -- ===========================
@@ -1513,37 +1465,37 @@ INSERT INTO temples (
 -- ===========================
 (
   'Kedarnath Temple','Kedarnath Jyotirlinga',
-  'Lord Shiva (Kedarnath)',ARRAY['Goddess Parvati','Nandi','Lord Ganesha'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Nandi','Lord Ganesha'],
   'Char Dham','Kedarnath','Uttarakhand',
   'Kedarnath, Rudraprayag, Uttarakhand 246445',
   30.7352,79.0669,
-  '4:00 AM – 9:00 PM (May–Oct only)','4:00 AM','7:30 PM','Closed November to April (winter)',
+  '4:00 AM – 9:00 PM (April–Nov only)','4:00 AM','7:30 PM','Closed November to April (winter)',
   'Free','Warm clothing essential; traditional attire',
-  'VIP darshan pass starts at ₹300; helicopter service from Phata/Sitapur; 16 km trek from Gaurikund',
+  'VIP darshan prices start from approximately ₹950 to ₹1,500 per person',
   'Highest Jyotirlinga (3583m altitude); Char Dham; survived 2013 Himalayan tsunami',
   'Kedarnath is the most important shrine in the Panch Kedar pilgrimage. It is one of the 12 Jyotirlingas, situated at 3,583m altitude. The stone temple is believed to be built by the Pandavas and renovated by Adi Shankaracharya. It miraculously survived the 2013 Uttarakhand floods.',
   'May to June, September to October (temple closed in winter)',
   ARRAY['Maha Shivratri','Akshaya Tritiya (Opening)','Bhai Dooj (Closing)'],
-  '+91-1364-263315','https://www.badrinath-kedarnath.gov.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kedarnath_Temple_Uttarakhand.jpg/800px-Kedarnath_Temple_Uttarakhand.jpg',
-  'Char Dham',4.9,195000,'246445','Rishikesh Station (209 km base)','Jolly Grant Airport Dehradun (239 km)'
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/5/56/Kedarnath_Temple_in_Rainy_season.jpg',
+  '',4.9,195000,'246445','Rishikesh Station','Jolly Grant Airport Dehradun'
 ),
 (
   'Badrinath Temple','Badri Vishal Temple',
-  'Lord Vishnu (Badrinath)',ARRAY['Goddess Lakshmi','Kubera','Narada'],
+  'Lord Vishnu',ARRAY['Goddess Lakshmi','Kubera','Narada'],
   'Char Dham','Badrinath','Uttarakhand',
   'Badrinath, Chamoli, Uttarakhand 246422',
   30.7433,79.4938,
-  '4:30 AM – 9:00 PM (May–Nov only)','4:30 AM','8:30 PM','Closed November to April (winter)',
+  '4:30 AM – 9:00 PM ( April/early May–Nov only)','4:30 AM','8:30 PM','Closed November to April (winter)',
   'Free','Warm clothing; traditional attire',
   'Tapt Kund hot spring bath before darshan; helicopter service from Dehradun; Mana Village (last Indian village) 3 km away',
   'One of Char Dham; Vishnu''s meditation abode; Alaknanda River; Tapt Kund hot spring',
   'Badrinath is one of the holiest shrines for Vaishnavas. Lord Vishnu is believed to have meditated here under a Badri tree. The temple was established by Adi Shankaracharya. The Tapt Kund (hot water spring) near the temple is used for ritual bathing.',
   'May to June, September to October',
   ARRAY['Badrinath Opening Ceremony','Mata Murti Ka Mela','Dev Deepawali'],
-  '+91-1381-222308','https://www.badrinath-kedarnath.gov.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Badrinath_temple.jpg/800px-Badrinath_temple.jpg',
-  'Char Dham',4.9,185000,'246422','Rishikesh Station (298 km base)','Jolly Grant Airport Dehradun (320 km)'
+  '','https://www.badrinath-kedarnath.gov.in',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMYosKjT85-SvHqGSzzHoxAzqbgpVstBV4EBGtSnJQkUDTNyE-IeEEHwjPJPAo2vy4rVPD2SOVqiL9P6Cw8Kkt9wZSqqJKqqRyiPWWrjSAk2ejzZhbq5TpcundxxbtfflkVSdg=s1360-w1360-h1020-rw',
+  '',4.9,185000,'246422','Rishikesh Station','Jolly Grant Airport Dehradun'
 ),
 (
   'Gangotri Temple','Gangotri Devi Mandir',
@@ -1551,17 +1503,18 @@ INSERT INTO temples (
   'Char Dham','Gangotri','Uttarakhand',
   'Gangotri, Uttarkashi, Uttarakhand 249193',
   30.9944,78.9389,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Closed November to April (winter)',
+  '7:00 AM – 2:00 PM, 3:00 PM – 8:00 PM','6:00 AM','7:00 PM','Closed November to April (winter)',
   'Free','Warm clothing; traditional attire',
   'Gaumukh trek (19 km) to actual glacier source; char dham yatra; bhagirathi river bath',
   'Source temple of River Ganga; Gangotri Glacier 19 km away; Char Dham',
   'Gangotri is a Hindu pilgrimage site in the Uttarakhand Himalayas, at 3,100m altitude. The temple was built by Gurkha commander Amar Singh Thapa in the 18th century. The actual source of Ganga is the Gangotri Glacier (Gomukh), 19 km from the temple.',
   'May to June, September to October',
   ARRAY['Gangotri Opening Ceremony','Ganga Dussehra','Kartik Purnima'],
-  '+91-1375-222456','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gangotri_Temple.jpg/800px-Gangotri_Temple.jpg',
-  'Char Dham',4.8,125000,'249135','Rishikesh Railway Station (220 km)','Jolly Grant Airport Dehradun (215 km)'
+  '','',
+  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXiRxsbVeRQH102P3ZYhiFpv41FhTRfJ35GpXEQyGKkDO1z5JWlHTsdX_NOxSACRcvD5lt5IxYVfFl6KD90d_rIXlVyXNd5y_o93sMlm1-_HPRiWv1Yx8QaYqBJOGXt_urbv-CAA=s1360-w1360-h1020-rw',
+  '',4.8,125000,'249135','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
+
 (
   'Yamunotri Temple','Shri Yamunotri Devi Mandir',
   'Goddess Yamuna',ARRAY['Surya Dev','Goddess Ganga'],
@@ -1575,9 +1528,9 @@ INSERT INTO temples (
   'Yamunotri is the first dhama in the Char Dham Yatra, dedicated to Goddess Yamuna. The temple stands at 3,293m altitude. Surya Kund (a thermal spring) nearby allows pilgrims to cook rice by dipping it in the water.',
   'May to June, September to October',
   ARRAY['Yamunotri Opening Ceremony','Akshaya Tritiya'],
-  '+91-1371-223456','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Yamunotri_Temple.jpg/800px-Yamunotri_Temple.jpg',
-  'Char Dham',4.7,88000,'249141','Rishikesh Railway Station (220 km base)','Jolly Grant Airport (210 km)'
+  '',4.7,88000,'249141','Rishikesh Railway Station','Jolly Grant Airport'
 ),
 (
   'Haridwar Har Ki Pauri','Brahmakund – Har Ki Pauri Ghat',
@@ -1592,9 +1545,9 @@ INSERT INTO temples (
   'Har Ki Pauri is the most sacred ghat in Haridwar. Brahmakund here is where Vishnu left a footprint. The Ganga Aarti held every evening is a mesmerizing spectacle. Haridwar hosts the Kumbh Mela every 12 years and the Ardh Kumbh every 6 years.',
   'Year round; Kumbh/Ardh Kumbh years especially',
   ARRAY['Kumbh Mela','Ardh Kumbh','Ganga Dussehra','Makar Sankranti'],
-  '+91-1334-226491','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Har_ki_pauri.jpg/800px-Har_ki_pauri.jpg',
-  'Pilgrimage',4.9,245000,'249401','Haridwar Junction (0.5 km)','Jolly Grant Airport Dehradun (35 km)'
+  '',4.9,245000,'249401','Haridwar Junction','Jolly Grant Airport Dehradun'
 ),
 (
   'Naina Devi Temple Nainital','Naina Devi Mandir',
@@ -1609,9 +1562,9 @@ INSERT INTO temples (
   'Legend says that the eyes (Naina) of Goddess Sati fell here when Lord Shiva carried her body. The original temple was destroyed in a landslide in 1880 and was rebuilt. It is beautifully situated at the northern shore of Naini Lake.',
   'March to June, September to November',
   ARRAY['Navaratri','Diwali','Sharad Purnima'],
-  '+91-5942-235456','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Naina_Devi_temple_Nainital.jpg/800px-Naina_Devi_temple_Nainital.jpg',
-  'Shakti Peeth',4.6,55000,'263001','Kathgodam Railway Station (35 km)','Pantnagar Airport (75 km)'
+  '',4.6,55000,'263001','Kathgodam Railway Station','Pantnagar Airport'
 ),
 (
   'Neelkanth Mahadev Temple','Neelkanth Mahadev Mandir',
@@ -1626,13 +1579,13 @@ INSERT INTO temples (
   'Set amid forested hills above Rishikesh, this temple marks the legendary site where Shiva consumed the deadly poison Halahala churned from the cosmic ocean, turning his throat blue.',
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month'],
-  '+91-3874179038','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,17900,'249302','Rishikesh Railway Station (32 km)','Jolly Grant Airport Dehradun (45 km)'
+  '',4.6,17900,'249302','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 (
   'Surkanda Devi Temple','Surkanda Mata Mandir',
-  'Goddess Sati (Durga)',ARRAY[]::TEXT[],
+  'Goddess Sati',ARRAY[]::TEXT[],
   'Devi','Tehri Garhwal','Uttarakhand',
   'Surkanda Devi, Tehri Garhwal District, Uttarakhand 249175',
   30.4500,78.3667,
@@ -1643,9 +1596,9 @@ INSERT INTO temples (
   'One of the Shakti Peethas of the Himalayas, this temple sits atop a 2,757-metre peak offering panoramic views of major Himalayan ranges, reached via a 2 km trek.',
   'October to March',
   ARRAY['Navaratri'],
-  '+91-8357175279','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,9200,'249175','Rishikesh Railway Station (80 km)','Jolly Grant Airport Dehradun (85 km)'
+  '',4.5,9200,'249175','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 
 -- ===========================
@@ -1664,13 +1617,13 @@ INSERT INTO temples (
   'The Brahma Temple in Pushkar is one of the very few temples dedicated to the creator god Brahma. Most temples dedicated to Brahma are rare due to a curse. The town of Pushkar itself has 52 ghats and 500 temples around the sacred Pushkar Lake.',
   'October to March (Camel Fair in November)',
   ARRAY['Pushkar Camel Fair','Kartik Purnima','Maha Shivratri'],
-  '+91-145-2772058','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brahma_Temple%2C_Pushkar.jpg/800px-Brahma_Temple%2C_Pushkar.jpg',
-  'Other',4.6,88000,'305022','Ajmer Junction (11 km)','Jaipur Airport (150 km)'
+  '',4.6,88000,'305022','Ajmer Junction','Jaipur Airport'
 ),
 (
   'Ranakpur Jain Temple','Chaturmukha Dharana Vihara',
-  'Lord Adinath (Rishabhadeva)',ARRAY['24 Tirthankaras'],
+  'Lord Adinath',ARRAY['24 Tirthankaras'],
   'Jain','Ranakpur','Rajasthan',
   'Ranakpur, Pali, Rajasthan 306702',
   25.1165,73.4710,
@@ -1681,13 +1634,13 @@ INSERT INTO temples (
   'Ranakpur Jain Temple is considered one of the most spectacular Jain temples in India. Built in the 15th century by Seth Dharna Shah, the complex has 1,444 exquisitely carved marble pillars, none of which are alike.',
   'October to March',
   ARRAY['Paryushana','Mahavir Jayanti','Diwali'],
-  '+91-2934-285042','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ranakpur_Jain_Temple.jpg/800px-Ranakpur_Jain_Temple.jpg',
-  'Jain Heritage',4.9,95000,'306702','Falna Station (30 km)','Udaipur Airport (90 km)'
+  '',4.9,95000,'306702','Falna Station','Udaipur Airport'
 ),
 (
   'Salasar Balaji Temple','Shree Salasar Balaji Dham',
-  'Lord Hanuman (Balaji)',ARRAY['Lord Rama','Goddess Sita','Lord Ganesha'],
+  'Lord Hanuman',ARRAY['Lord Rama','Goddess Sita','Lord Ganesha'],
   'Vaishnava','Salasar','Rajasthan',
   'Salasar, Churu, Rajasthan 331506',
   27.8049,74.5012,
@@ -1698,13 +1651,13 @@ INSERT INTO temples (
   'Salasar Balaji is famous for its unique idol of Hanuman with a beard and moustache – a rare form. The temple was established by Mohandas ji in 1754 after a miraculous self-manifested idol was found in a farmer''s field.',
   'Year round (Hanumath Jayanti is grand)',
   ARRAY['Hanuman Jayanti','Holi','Ram Navami','Diwali'],
-  '+91-1564-220232','https://www.salasarbalaji.in',
+  '','https://www.salasarbalaji.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Salasar_Dham.jpg/800px-Salasar_Dham.jpg',
-  'Vaishnava',4.7,125000,'331506','Sujangarh Station (25 km)','Jaipur Airport (170 km)'
+  '',4.7,125000,'331506','Sujangarh Station','Jaipur Airport'
 ),
 (
   'Eklingji Temple','Shri Eklingji Mandir',
-  'Lord Shiva (Eklingji)',ARRAY['Lord Vishnu','Goddess Parvati','Nandi'],
+  'Lord Shiva',ARRAY['Lord Vishnu','Goddess Parvati','Nandi'],
   'Shaiva','Kailashpuri','Rajasthan',
   'Kailashpuri, Udaipur, Rajasthan 313202',
   24.5913,73.6802,
@@ -1715,13 +1668,13 @@ INSERT INTO temples (
   'The Eklingji Temple, located 22 km north of Udaipur, is a complex of 108 temples. The main deity, Eklingji, has four faces and is made of black marble. The Mewar kings worshipped Eklingji as the ultimate sovereign of their kingdom.',
   'October to March',
   ARRAY['Maha Shivratri','Kartik Purnima','Shravan Month'],
-  '+91-294-2880031','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Eklingji_Temple_Udaipur.jpg/800px-Eklingji_Temple_Udaipur.jpg',
-  'Shaiva',4.6,55000,'313202','Udaipur City Station (22 km)','Udaipur Airport (35 km)'
+  '',4.6,55000,'313202','Udaipur City Station','Udaipur Airport'
 ),
 (
   'Govind Dev Ji Temple','Jaipur Govind Devji Mandir',
-  'Lord Krishna (Govind Dev)',ARRAY['Radha'],
+  'Lord Krishna',ARRAY['Radha'],
   'Vaishnava','Jaipur','Rajasthan',
   'City Palace, Jaipur, Rajasthan 302002',
   26.9255,75.8235,
@@ -1732,13 +1685,13 @@ INSERT INTO temples (
   'Considered the deity of the Jaipur royal family, the original idol was brought from the Govind Dev temple in Vrindavan to protect it from Mughal destruction in the 17th century.',
   'October to March',
   ARRAY['Janmashtami','Holi'],
-  '+91-2986216381','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,22100,'302002','Jaipur Junction (5 km)','Jaipur International Airport (15 km)'
+  '',4.6,22100,'302002','Jaipur Junction','Jaipur International Airport'
 ),
 (
   'Birla Mandir Jaipur','Laxmi Narayan Temple Jaipur',
-  'Lord Vishnu (Laxmi Narayan)',ARRAY['Goddess Lakshmi','Lord Ganesha','Goddess Saraswati'],
+  'Lord Vishnu',ARRAY['Goddess Lakshmi','Lord Ganesha','Goddess Saraswati'],
   'Vaishnava','Jaipur','Rajasthan',
   'Jawahar Lal Nehru Marg, Jaipur, Rajasthan 302004',
   26.8958,75.8244,
@@ -1749,13 +1702,13 @@ INSERT INTO temples (
   'The Birla Temple (Laxmi Narayan Temple) in Jaipur was built by the Birla Foundation in 1988 in white marble. The temple has three domes representing three religions. The walls contain quotes from world scriptures.',
   'October to March',
   ARRAY['Janmashtami','Diwali','Ram Navami'],
-  '+91-141-2614777','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Birla_Mandir_Jaipur.jpg/800px-Birla_Mandir_Jaipur.jpg',
-  'Vaishnava',4.6,68000,'302004','Jaipur Junction (3 km)','Jaipur International Airport (12 km)'
+  '',4.6,68000,'302004','Jaipur Junction','Jaipur International Airport'
 ),
 (
   'Karni Mata Temple','Deshnoke Rat Temple',
-  'Goddess Karni Mata (Durga)',ARRAY[]::TEXT[],
+  'Goddess Karni Mata',ARRAY[]::TEXT[],
   'Devi','Bikaner','Rajasthan',
   'Deshnoke, Bikaner District, Rajasthan 334801',
   27.7833,73.3400,
@@ -1766,13 +1719,13 @@ INSERT INTO temples (
   'Famous worldwide for housing over 25,000 sacred black rats called ''kabbas'', believed to be reincarnated descendants of the goddess''s clan, who feed from the same plates as devotees.',
   'October to March',
   ARRAY['Karni Mata Fair (Navratri)'],
-  '+91-1745686206','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,19400,'334801','Deshnoke Railway Station (1 km)','Nal Airport Bikaner (35 km)'
+  '',4.5,19400,'','Deshnoke Railway Station','Nal Airport Bikaner'
 ),
 (
   'Mehandipur Balaji Temple','Mehandipur Hanuman Mandir',
-  'Lord Hanuman (Balaji)',ARRAY[]::TEXT[],
+  'Lord Hanuman',ARRAY[]::TEXT[],
   'Hanuman','Dausa','Rajasthan',
   'Mehandipur, Dausa District, Rajasthan 322746',
   26.8833,76.6333,
@@ -1783,9 +1736,9 @@ INSERT INTO temples (
   'One of the most visited temples in North India for rituals believed to cure individuals of evil spirits and negative energies, known locally as ''peshi''.',
   'October to March',
   ARRAY['Tuesday and Saturday special darshans','Hanuman Jayanti'],
-  '+91-1054596033','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.4,28900,'322746','Hindaun City Railway Station (45 km)','Jaipur International Airport (95 km)'
+  '',4.4,28900,'322746','Hindaun City Railway Station','Jaipur International Airport'
 ),
 
 -- ===========================
@@ -1793,7 +1746,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Padmanabhaswamy Temple','Shri Padmanabhaswamy Temple',
-  'Lord Vishnu (Padmanabha)',ARRAY['Goddess Lakshmi','Lord Ganesha'],
+  'Lord Vishnu',ARRAY['Goddess Lakshmi','Lord Ganesha'],
   'Vaishnava','Thiruvananthapuram','Kerala',
   'Padmanabhaswamy Temple Rd, East Fort, Thiruvananthapuram, Kerala 695023',
   8.4830,76.9442,
@@ -1804,13 +1757,13 @@ INSERT INTO temples (
   'The Padmanabhaswamy Temple is one of the 108 Divya Desams. The temple vaults reportedly hold assets worth over $22 billion, making it the wealthiest temple in the world. The main deity is an 18-foot Vishnu reclining on Anantha (the serpent). Non-Hindus are not permitted.',
   'October to March',
   ARRAY['Alpashy Uthram','Painkuni','Laksha Deepam','Onam'],
-  '+91-471-2450234','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sree_Padmanabhaswamy_temple_2018.jpg/800px-Sree_Padmanabhaswamy_temple_2018.jpg',
-  'Vaishnava',4.9,155000,'695023','Thiruvananthapuram Central (1 km)','Thiruvananthapuram International Airport (6 km)'
+  '',4.9,155000,'695023','Thiruvananthapuram Central','Thiruvananthapuram International Airport'
 ),
 (
   'Sabarimala Temple','Sabarimala Sree Dharma Sastha Temple',
-  'Lord Ayyappa (Dharma Sastha)',ARRAY['Malikappuram','Lord Ganesha','Vavar'],
+  'Lord Ayyappa',ARRAY['Malikappuram','Lord Ganesha','Vavar'],
   'Pilgrimage','Sabarimala','Kerala',
   'Sabarimala, Pathanamthitta, Kerala 689672',
   9.4453,77.0777,
@@ -1821,13 +1774,13 @@ INSERT INTO temples (
   'Sabarimala is the most visited pilgrimage center in the world in terms of annual footfall. The 18 steps (Pathinettampadi) leading to the temple are sacred and can only be climbed by devotees observing the 41-day austerity.',
   'November to January (Mandalam–Makaravilakku season)',
   ARRAY['Makaravilakku','Mandalam Season','Vishu','Niraputhari'],
-  '+91-4735-222120','https://www.sabarimala.kerala.gov.in',
+  '','https://www.sabarimala.kerala.gov.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sabarimala-temple.jpg/800px-Sabarimala-temple.jpg',
-  'Pilgrimage',4.9,500000,'689672','Chengannur Station (70 km)','Cochin International Airport (170 km)'
+  '',4.9,500000,'689672','Chengannur Station','Cochin International Airport'
 ),
 (
   'Guruvayur Temple','Guruvayurappan Temple',
-  'Lord Krishna (Guruvayurappan)',ARRAY['Goddess Lakshmi','Lord Ganesha'],
+  'Lord Krishna',ARRAY['Goddess Lakshmi','Lord Ganesha'],
   'Vaishnava','Guruvayur','Kerala',
   'East Nada, Guruvayur, Thrissur, Kerala 680101',
   10.5942,76.0382,
@@ -1838,13 +1791,13 @@ INSERT INTO temples (
   'Guruvayur temple is one of the most important places of worship for Hindus. The idol of Guruvayurappan (a form of Lord Vishnu/Krishna) is said to be more than 5000 years old. Non-Hindus are not permitted entry.',
   'October to March',
   ARRAY['Guruvayur Ekadasi','Janmashtami','Vishu','Onam'],
-  '+91-487-2556236','https://www.guruvayurtemple.in',
+  '','https://www.guruvayurtemple.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Guruvayur_temple.jpg/800px-Guruvayur_temple.jpg',
-  'Vaishnava',4.9,198000,'680101','Guruvayur Station (1 km)','Cochin International Airport (90 km)'
+  '',4.9,198000,'680101','Guruvayur Station','Cochin International Airport'
 ),
 (
   'Vadakkunnathan Temple','Thrissivaperur – Vadakkunnathan Temple',
-  'Lord Shiva (Vadakkunnathan)',ARRAY['Goddess Parvati','Lord Ganesha','Lord Rama'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha','Lord Rama'],
   'Shaiva','Thrissur','Kerala',
   'Round South, Thrissur, Kerala 680001',
   10.5220,76.2142,
@@ -1855,13 +1808,13 @@ INSERT INTO temples (
   'The Vadakkunnathan Temple is a prime example of Kerala style of architecture and is dedicated to Lord Shiva. The Thrissur Pooram, considered the mother of all poorams, is held in the grounds of this temple.',
   'April-May (Pooram), October to March',
   ARRAY['Thrissur Pooram','Maha Shivratri','Shivaratri','Onam'],
-  '+91-487-2332009','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Vadakkunnathan_Temple.jpg/800px-Vadakkunnathan_Temple.jpg',
-  'Shaiva',4.8,98000,'680001','Thrissur Station (0.5 km)','Cochin International Airport (75 km)'
+  '',4.8,98000,'680001','Thrissur Station','Cochin International Airport'
 ),
 (
   'Attukal Bhagavathy Temple','Attukal Devi Temple',
-  'Goddess Bhagavathy (Kannaki)',ARRAY[]::TEXT[],
+  'Goddess Bhagavathy',ARRAY[]::TEXT[],
   'Devi','Thiruvananthapuram','Kerala',
   'Attukal, Thiruvananthapuram, Kerala 695011',
   8.4667,76.9500,
@@ -1872,13 +1825,13 @@ INSERT INTO temples (
   'Holds a Guinness World Record for the Attukal Pongala festival, when millions of women gather to cook a ritual offering in the temple precincts and surrounding streets.',
   'October to March',
   ARRAY['Attukal Pongala','Navaratri'],
-  '+91-9381412644','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'FEATURED',4.6,24500,'695011','Thiruvananthapuram Central (3 km)','Trivandrum International Airport (8 km)'
+  '',4.6,24500,'695011','Thiruvananthapuram Central','Trivandrum International Airport'
 ),
 (
   'Chottanikkara Temple','Chottanikkara Bhagavathy Temple',
-  'Goddess Bhagavathy (Durga)',ARRAY[]::TEXT[],
+  'Goddess Bhagavathy',ARRAY[]::TEXT[],
   'Devi','Chottanikkara','Kerala',
   'Chottanikkara, Ernakulam District, Kerala 682312',
   9.9667,76.3667,
@@ -1889,9 +1842,9 @@ INSERT INTO temples (
   'The presiding goddess is worshipped in three different forms across the day — Saraswati in the morning, Bhagavathy at noon, and Bhadrakali in the evening.',
   'October to March',
   ARRAY['Makam Thozhal','Navaratri'],
-  '+91-7763553824','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,19800,'682312','Tripunithura Railway Station (10 km)','Cochin International Airport (35 km)'
+  '',4.6,19800,'682312','Tripunithura Railway Station','Cochin International Airport'
 ),
 (
   'Ettumanoor Mahadeva Temple','Ettumanoor Shiva Temple',
@@ -1908,7 +1861,7 @@ INSERT INTO temples (
   ARRAY['Ettumanoor Vilakku','Arattu Festival'],
   '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,9700,'','Ettumanoor Railway Station','Cochin International Airport'
+  '',4.5,9700,'','Ettumanoor Railway Station','Cochin International Airport'
 ),
 
 -- ===========================
@@ -1916,7 +1869,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Dakshineswar Kali Temple','Dakshineswar Kali Mandir',
-  'Goddess Kali (Bhavatarini)',ARRAY['Radha Krishna','Lord Shiva'],
+  'Goddess Kali',ARRAY['Radha Krishna','Lord Shiva'],
   'Shakti','Kolkata','West Bengal',
   'Dakshineswar, Kolkata, West Bengal 700076',
   22.6550,88.3577,
@@ -1929,7 +1882,7 @@ INSERT INTO temples (
   ARRAY['Kali Puja','Durga Puja','Navaratri','Diwali'],
   '','https://www.dakshineswarkalitemple.org',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Dakshineswar_Kali_temple_pillar.jpg/800px-Dakshineswar_Kali_temple_pillar.jpg',
-  'Shakti',4.8,155000,'700076','Dakshineswar Metro (0.2 km)','Netaji Subhash Chandra Bose Airport (20 km)'
+  '',4.8,155000,'700076','Dakshineswar Metro','Netaji Subhash Chandra Bose Airport'
 ),
 (
   'Kalighat Temple Kolkata','Kalighat Kali Mandir',
@@ -1944,13 +1897,13 @@ INSERT INTO temples (
   'The Kalighat Kali Temple is one of the most revered Shakti Peethas. The idol of Kali here has a distinctive golden tongue and arms. The temple gave its name to Calcutta/Kolkata.',
   'Year round (Kali Puja is grandest)',
   ARRAY['Kali Puja','Durga Puja','Navaratri'],
-  '+91-33-24610003','https://www.kalighattemple.com',
+  '','https://www.kalighattemple.com',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kalighat_Temple_Kolkata.jpg/800px-Kalighat_Temple_Kolkata.jpg',
-  'Shakti Peeth',4.7,145000,'700026','Kalighat Metro (0.3 km)','Netaji Subhash Chandra Bose Airport (18 km)'
+  '',4.7,145000,'700026','Kalighat Metro','Netaji Subhash Chandra Bose Airport'
 ),
 (
   'Tarapith Temple','Ma Tara Temple',
-  'Goddess Tara (Kali)',ARRAY['Lord Shiva','Sage Vasishtha'],
+  'Goddess Tara',ARRAY['Lord Shiva','Sage Vasishtha'],
   'Shakti Peeth','Tarapith','West Bengal',
   'Tarapith, Rampurhat, Birbhum, West Bengal 731233',
   24.0690,87.8340,
@@ -1961,9 +1914,9 @@ INSERT INTO temples (
   'Tarapith is famous for the worship of Goddess Tara, one of the ten Mahavidyas. The saint Bamakhepa lived and performed Tantric sadhana at the nearby cremation ground (Mahasmashan).',
   'Year round',
   ARRAY['Kali Puja','Navaratri','Maha Ashtami'],
-  '+91-3461-253345','',
+  '5','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tarapith_Temple.jpg/800px-Tarapith_Temple.jpg',
-  'Shakti',4.6,88000,'731233','Rampurhat Station (8 km)','Netaji Subhash Chandra Bose Airport (200 km)'
+  '',4.6,88000,'731233','Rampurhat Station','Netaji Subhash Chandra Bose Airport'
 ),
 (
   'Belur Math','Ramakrishna Math Belur',
@@ -1978,9 +1931,9 @@ INSERT INTO temples (
   'Founded by Swami Vivekananda, the main temple''s architecture deliberately blends Hindu, Christian, and Islamic motifs to symbolise the unity of all religions.',
   'October to March',
   ARRAY['Durga Puja','Ramakrishna Janmotsav','Vivekananda Jayanti'],
-  '+91-2109493704','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.7,31700,'711202','Belur Math Railway Station (1 km)','Netaji Subhash Chandra Bose Airport (25 km)'
+  '',4.7,31700,'711202','Belur Math Railway Station','Netaji Subhash Chandra Bose Airport'
 ),
 
 -- ===========================
@@ -1988,7 +1941,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Mahakaleshwar Temple Ujjain','Mahakaleshwar Jyotirlinga',
-  'Lord Shiva (Mahakaleshwar)',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
   'Jyotirlinga','Ujjain','Madhya Pradesh',
   'Jaisinghpura, Ujjain, Madhya Pradesh 456006',
   23.1828,75.7688,
@@ -1999,9 +1952,9 @@ INSERT INTO temples (
   'The Mahakaleshwar Temple is one of the twelve Jyotirlingas. The unique feature is that the Shivalinga is Dakshina-mukhi (south-facing), which is uncommon. The Bhasma Aarti performed at dawn using sacred ash is a unique and ancient ritual not found in any other temple.',
   'August (Shravan), Kumbh Mela years',
   ARRAY['Maha Shivratri','Shravan Month','Kumbh Mela Ujjain','Navaratri'],
-  '+91-734-2551243','https://www.mahakaleshwar.nic.in',
+  '','https://www.mahakaleshwar.nic.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Mahakal_temple.jpg/800px-Mahakal_temple.jpg',
-  'Jyotirlinga',4.9,175000,'456006','Ujjain Junction (2 km)','Indore Airport (55 km)'
+  '',4.9,175000,'456006','Ujjain Junction','Indore Airport'
 ),
 (
   'Khajuraho Temples','Kandariya Mahadeva Temple',
@@ -2016,13 +1969,13 @@ INSERT INTO temples (
   'The Khajuraho Group of Monuments is a collection of Hindu and Jain temples from the Chandela dynasty (950-1050 CE). Of 85 original temples, 25 remain. They are UNESCO World Heritage Sites.',
   'October to March',
   ARRAY['Khajuraho Dance Festival','Maha Shivratri'],
-  '+91-7686-274242','https://www.khajuraho.in',
+  '','https://www.khajuraho.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kandariya_mahadeva_temple_khajuraho.jpg/800px-Kandariya_mahadeva_temple_khajuraho.jpg',
-  'UNESCO Heritage',4.8,165000,'471606','Khajuraho Station (6 km)','Khajuraho Airport (3 km)'
+  '',4.8,165000,'471606','Khajuraho Station','Khajuraho Airport'
 ),
 (
   'Omkareshwar Temple','Omkareshwar Jyotirlinga',
-  'Lord Shiva (Omkareshwar)',ARRAY['Amareshwar Shiva','Goddess Parvati'],
+  'Lord Shiva',ARRAY['Amareshwar Shiva','Goddess Parvati'],
   'Jyotirlinga','Omkareshwar','Madhya Pradesh',
   'Omkareshwar, Khandwa, Madhya Pradesh 450551',
   22.2461,76.1507,
@@ -2033,13 +1986,13 @@ INSERT INTO temples (
   'Omkareshwar is a Hindu temple on the island of Mandhata in the Narmada River. The island itself is said to form the shape of the Om symbol. The temple houses the Omkareshwar Jyotirlinga. Nearby is the Amareshwar temple, another Jyotirlinga.',
   'October to March',
   ARRAY['Maha Shivratri','Kartik Purnima','Shravan Month'],
-  '+91-7280-271333','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Omkareshwar_temple.jpg/800px-Omkareshwar_temple.jpg',
-  'Jyotirlinga',4.8,112000,'450551','Omkareshwar Road Station (12 km)','Indore Airport (80 km)'
+  '',4.8,112000,'450551','Omkareshwar Road Station','Indore Airport'
 ),
 (
   'Maa Sharda Devi Temple Maihar','Maihar Devi Temple',
-  'Goddess Sharda (Saraswati)',ARRAY[]::TEXT[],
+  'Goddess Sharda',ARRAY[]::TEXT[],
   'Devi','Maihar','Madhya Pradesh',
   'Maihar, Satna District, Madhya Pradesh 485771',
   24.2667,80.7667,
@@ -2050,9 +2003,9 @@ INSERT INTO temples (
   'One of the 51 Shakti Peethas, this temple sits atop the Trikuta hill and is reached by a flight of over 1,000 steps or a modern ropeway.',
   'October to March',
   ARRAY['Navaratri'],
-  '+91-1147041253','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,13400,'485771','Maihar Railway Station (4 km)','Khajuraho Airport (95 km)'
+  '',4.6,13400,'485771','Maihar Railway Station','Khajuraho Airport'
 ),
 (
   'Pitambara Peeth','Maa Pitambara Peeth Datia',
@@ -2067,9 +2020,9 @@ INSERT INTO temples (
   'A renowned centre of Tantric worship dedicated to the goddesses Bagalamukhi and Dhumavati, frequently visited by political and public figures seeking blessings.',
   'October to March',
   ARRAY['Navaratri'],
-  '+91-5813262035','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,11600,'475661','Datia Railway Station (3 km)','Gwalior Airport (75 km)'
+  '',4.5,11600,'475661','Datia Railway Station','Gwalior Airport'
 ),
 (
   'Birla Mandir Bhopal','Lakshmi Narayan Temple Bhopal',
@@ -2084,9 +2037,9 @@ INSERT INTO temples (
   'A relatively modern temple built by the Birla family atop Arera Hills, offering sweeping views over Bhopal city and its lakes.',
   'October to March',
   ARRAY['Janmashtami','Diwali'],
-  '+91-4384569797','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.4,9800,'462011','Bhopal Junction (6 km)','Raja Bhoj Airport Bhopal (12 km)'
+  '',4.4,9800,'462011','Bhopal Junction','Raja Bhoj Airport Bhopal'
 ),
 
 -- ===========================
@@ -2094,7 +2047,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Mahabodhi Temple Bodh Gaya','Mahabodhi Mahavihar',
-  'Lord Buddha (Gautama)',ARRAY['N/A'],
+  'Lord Buddha',ARRAY['N/A'],
   'Buddhist','Bodh Gaya','Bihar',
   'Bodh Gaya, Gaya, Bihar 824231',
   24.6969,84.9912,
@@ -2105,9 +2058,9 @@ INSERT INTO temples (
   'The Mahabodhi Temple Complex is one of the four holy sites related to the life of the Lord Buddha, and particularly to the attainment of Enlightenment. The first temple was built by Emperor Ashoka in the 3rd century BC. A UNESCO World Heritage Site.',
   'October to March',
   ARRAY['Buddha Purnima','Losar','Japanese Bon Festival'],
-  '+91-631-2200742','https://www.mahabodhisociety.com',
+  '','https://www.mahabodhisociety.com',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mahabodhi_Temple.jpg/800px-Mahabodhi_Temple.jpg',
-  'UNESCO Heritage',4.9,188000,'824231','Gaya Junction (13 km)','Gaya Airport (10 km)'
+  '',4.9,188000,'824231','Gaya Junction','Gaya Airport'
 ),
 (
   'Vishnupad Temple Gaya','Vishnupad Mandir',
@@ -2122,9 +2075,9 @@ INSERT INTO temples (
   'The Vishnupad Temple is an ancient Hindu temple built over a footprint of Lord Vishnu, imprinted on a rock. Gaya is one of the most sacred places for performing Shradha (Pind Daan) rites for ancestors. The temple was rebuilt by Maratha queen Ahilyabai Holkar in 1787.',
   'Pitru Paksha (September/October)',
   ARRAY['Pitru Paksha','Maha Shivratri','Gaya Mahotsav'],
-  '+91-631-2221234','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Vishnupad_mandir_gaya.jpg/800px-Vishnupad_mandir_gaya.jpg',
-  'Vaishnava',4.6,65000,'823001','Gaya Junction (2 km)','Gaya Airport (8 km)'
+  '',4.6,65000,'823001','Gaya Junction','Gaya Airport'
 ),
 (
   'Mundeshwari Devi Temple','Mundeshwari Mata Mandir',
@@ -2139,9 +2092,9 @@ INSERT INTO temples (
   'The Mundeshwari Devi Temple is considered one of the oldest functioning temples in India, with an ASI inscription dated 625 CE. The octagonal temple structure is unique. The goddess is propitiated with live animals which are waved before her and then released unharmed.',
   'October to March',
   ARRAY['Navaratri','Shivratri','Kartik Purnima'],
-  '+91-6189-221345','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mundeshwari_Temple.jpg/800px-Mundeshwari_Temple.jpg',
-  'Shakti',4.6,28000,'821109','Bhabua Road (Mohania) Station (25 km)','Varanasi Airport (105 km)'
+  '',4.6,28000,'821109','Bhabua Road (Mohania) Station','Varanasi Airport'
 ),
 (
   'Takht Sri Patna Sahib','Patna Sahib Gurudwara',
@@ -2156,9 +2109,9 @@ INSERT INTO temples (
   'One of the five Takhts (seats of authority) of Sikhism, this gurudwara marks the birthplace of the tenth Sikh Guru, Guru Gobind Singh.',
   'October to March',
   ARRAY['Prakash Utsav (Guru Gobind Singh Jayanti)'],
-  '+91-6911710847','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.7,19600,'800008','Patna Junction (4 km)','Jay Prakash Narayan Airport Patna (8 km)'
+  '',4.7,19600,'800008','Patna Junction','Jay Prakash Narayan Airport Patna'
 ),
 
 -- ===========================
@@ -2166,7 +2119,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Vaishno Devi Temple','Shri Mata Vaishno Devi Mandir',
-  'Goddess Vaishno Devi (Shakti)',ARRAY['Goddess Saraswati','Goddess Lakshmi','Goddess Kali'],
+  'Goddess Vaishno Devi',ARRAY['Goddess Saraswati','Goddess Lakshmi','Goddess Kali'],
   'Shakti Peeth','Katra','Jammu and Kashmir',
   'Trikuta Hills, Katra, Reasi, J&K 182301',
   33.0298,74.9379,
@@ -2177,13 +2130,13 @@ INSERT INTO temples (
   'Vaishno Devi is one of the most revered Hindu pilgrimage sites in India. The cave shrine is located in the Trikuta Hills at 5,200 feet. About 8-10 million pilgrims visit annually. The Yatra Parchi (registration) is mandatory.',
   'March to July, September to November',
   ARRAY['Navaratri','Diwali','Maha Shivratri'],
-  '+91-1991-232527','https://www.maavaishnodevi.org',
+  '','https://www.maavaishnodevi.org',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg',
-  'Shakti Peeth',4.9,420000,'182301','Katra Station (20 km)','Jammu Airport (50 km)'
+  '',4.9,420000,'182301','Katra Station','Jammu Airport'
 ),
 (
   'Shankaracharya Temple Srinagar','Jyeshteshwara Temple',
-  'Lord Shiva (Jyeshteshwara)',ARRAY['Goddess Parvati','Lord Ganesha'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha'],
   'Shaiva','Srinagar','Jammu and Kashmir',
   'Shankaracharya Hill, Srinagar, J&K 190001',
   34.0927,74.8722,
@@ -2194,9 +2147,9 @@ INSERT INTO temples (
   'The Shankaracharya Temple, dating to 200 BCE, is one of the oldest temples in India dedicated to Lord Shiva. It is located atop the Shankaracharya Hill (Gopadari Hill) at 1,100 feet. Adi Shankaracharya visited and meditated here.',
   'April to October',
   ARRAY['Maha Shivratri','Navaratri'],
-  '+91-194-2311234','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Shankaracharya_Temple_Srinagar.jpg/800px-Shankaracharya_Temple_Srinagar.jpg',
-  'Shaiva',4.7,48000,'190001','Srinagar Bus Stand (5 km)','Sheikh ul Alam International Airport (15 km)'
+  '',4.7,48000,'190001','Srinagar Bus Stand','Sheikh ul Alam International Airport'
 ),
 (
   'Kheer Bhawani Temple','Ragnya Devi Temple',
@@ -2211,13 +2164,13 @@ INSERT INTO temples (
   'Built around a sacred spring whose water is said to change colour as an omen, this temple is one of the most revered shrines for the Kashmiri Pandit community.',
   'October to March',
   ARRAY['Kheer Bhawani Mela (Jyeshtha Ashtami)'],
-  '+91-5377594542','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,11800,'191002','Srinagar Railway Station (25 km)','Srinagar Airport (28 km)'
+  '',4.6,11800,'191002','Srinagar Railway Station','Srinagar Airport'
 ),
 (
   'Raghunath Temple Jammu','Raghunath Mandir',
-  'Lord Rama (Raghunath)',ARRAY['Sita','Lakshman'],
+  'Lord Rama',ARRAY['Sita','Lakshman'],
   'Vaishnava','Jammu','Jammu and Kashmir',
   'Raghunath Bazaar, Jammu, Jammu and Kashmir 180001',
   32.7280,74.8642,
@@ -2228,9 +2181,9 @@ INSERT INTO temples (
   'Built in the mid-19th century by Maharaja Gulab Singh and completed by Maharaja Ranbir Singh, this complex of seven shrines is one of the largest temple complexes in North India.',
   'October to March',
   ARRAY['Ram Navami','Janmashtami'],
-  '+91-3616778670','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,14600,'180001','Jammu Tawi Railway Station (3 km)','Jammu Airport (8 km)'
+  '',4.5,14600,'180001','Jammu Tawi Railway Station','Jammu Airport'
 ),
 
 -- ===========================
@@ -2238,7 +2191,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Kamakhya Temple','Kamakhya Devi Mandir',
-  'Goddess Kamakhya (Shakti)',ARRAY['Lord Shiva','Lord Ganesha','Brahmaputra Dev'],
+  'Goddess Kamakhya',ARRAY['Lord Shiva','Lord Ganesha','Brahmaputra Dev'],
   'Shakti Peeth','Guwahati','Assam',
   'Nilachal Hills, Guwahati, Assam 781010',
   26.1665,91.7040,
@@ -2249,13 +2202,13 @@ INSERT INTO temples (
   'The Kamakhya Temple is the most important of the 51 Shakti Peethas. It is believed that the womb and genitals of Goddess Sati fell here. There is no conventional idol; the yoni is worshipped. During Ambubachi Mela (June), the temple closes for 3 days.',
   'October to March (Ambubachi Mela in June)',
   ARRAY['Ambubachi Mela','Navaratri','Durga Puja','Manasha Puja'],
-  '+91-361-2663298','https://www.kamakhyadevi.in',
+  '','https://www.kamakhyadevi.in',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kamakhya_Temple_Guwahati.jpg/800px-Kamakhya_Temple_Guwahati.jpg',
-  'Shakti Peeth',4.8,145000,'781010','Guwahati Station (7 km)','Lokpriya Gopinath Bordoloi Airport (22 km)'
+  '',4.8,145000,'781010','Guwahati Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 (
   'Umananda Temple Guwahati','Umananda Devi Mandir',
-  'Lord Shiva (Umananda)',ARRAY['Goddess Uma (Parvati)','Lord Ganesha'],
+  'Lord Shiva',ARRAY['Goddess Uma (Parvati)','Lord Ganesha'],
   'Shaiva','Guwahati','Assam',
   'Peacock Island, Brahmaputra, Guwahati, Assam 781001',
   26.1837,91.7466,
@@ -2266,9 +2219,9 @@ INSERT INTO temples (
   'The Umananda Temple is situated on Peacock Island in the middle of the Brahmaputra river. The island is believed to be the smallest inhabited river island in the world. The ferry to Umananda offers excellent views of the Brahmaputra.',
   'October to March',
   ARRAY['Maha Shivratri','Navaratri'],
-  '+91-361-2540123','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Umananda_temple.jpg/800px-Umananda_temple.jpg',
-  'Shaiva',4.6,42000,'781001','Guwahati Station (3 km)','Lokpriya Gopinath Bordoloi Airport (25 km)'
+  '',4.6,42000,'781001','Guwahati Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 (
   'Navagraha Temple Guwahati','Navagraha Mandir',
@@ -2283,9 +2236,9 @@ INSERT INTO temples (
   'Set atop Chitrachal Hill, this temple houses nine shrines under a single dark dome dedicated to the nine planetary deities of Hindu astrology.',
   'October to March',
   ARRAY['Navagraha Puja days'],
-  '+91-9153609133','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.3,5400,'781001','Guwahati Railway Station (4 km)','Lokpriya Gopinath Bordoloi Airport (25 km)'
+  '',4.3,5400,'781001','Guwahati Railway Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 
 -- ===========================
@@ -2293,7 +2246,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Golden Temple Amritsar','Harmandir Sahib',
-  'Waheguru (Sikh)',ARRAY['N/A'],
+  'Waheguru',ARRAY['N/A'],
   'Sikh','Amritsar','Punjab',
   'Golden Temple Rd, Amritsar, Punjab 143006',
   31.6200,74.8765,
@@ -2304,9 +2257,9 @@ INSERT INTO temples (
   'The Golden Temple (Harmandir Sahib) is the holiest shrine in Sikhism, located in Amritsar. The temple is built on a 67-foot square of marble and is surrounded by the Amrit Sarovar (Pool of Nectar). The perpetual langar (community kitchen) serves free meals to 100,000 visitors daily.',
   'Year round',
   ARRAY['Guru Nanak Jayanti','Baisakhi','Diwali','Hola Mohalla'],
-  '+91-183-2553957','https://www.sgpc.net',
+  '','https://www.sgpc.net',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Golden_Temple_amritsar_2.jpg/800px-Golden_Temple_amritsar_2.jpg',
-  'Sikh',5.0,520000,'143006','Amritsar Junction (2 km)','Sri Guru Ram Dass Jee International Airport (11 km)'
+  '',5.0,520000,'143006','Amritsar Junction','Sri Guru Ram Dass Jee International Airport'
 ),
 (
   'Durgiana Temple Amritsar','Lakshmi Narayan Temple',
@@ -2321,9 +2274,9 @@ INSERT INTO temples (
   'The Durgiana Temple, also known as the Silver Temple, is a Hindu temple dedicated to Goddess Durga. It was built in the 16th century and is similar in structure to the Golden Temple. It is located in the heart of Amritsar.',
   'October to March',
   ARRAY['Navaratri','Diwali','Janmashtami','Ram Navami'],
-  '+91-183-2554234','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Durgiana_Temple.jpg/800px-Durgiana_Temple.jpg',
-  'Shakti',4.6,65000,'143001','Amritsar Junction (2 km)','Sri Guru Ram Dass Jee International Airport (11 km)'
+  '',4.6,65000,'143001','Amritsar Junction','Sri Guru Ram Dass Jee International Airport'
 ),
 (
   'Takht Sri Keshgarh Sahib','Anandpur Sahib Gurudwara',
@@ -2338,9 +2291,9 @@ INSERT INTO temples (
   'One of the five Takhts of Sikhism, marking the site where Guru Gobind Singh founded the Khalsa Panth in 1699.',
   'October to March',
   ARRAY['Hola Mohalla','Baisakhi'],
-  '+91-9374981280','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'FEATURED',4.7,26400,'140118','Anandpur Sahib Railway Station (1 km)','Sri Guru Ram Dass Jee International Airport (90 km)'
+  '',4.7,26400,'140118','Anandpur Sahib Railway Station','Sri Guru Ram Dass Jee International Airport'
 ),
 
 -- ===========================
@@ -2348,7 +2301,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Jwala Ji Temple','Jwala Devi Mandir',
-  'Goddess Jwala Devi (Shakti)',ARRAY['Lord Ganesha','Goddess Durga'],
+  'Goddess Jwala Devi',ARRAY['Lord Ganesha','Goddess Durga'],
   'Shakti Peeth','Jawala Mukhi','Himachal Pradesh',
   'Jawalamukhi, Kangra, Himachal Pradesh 176031',
   31.8757,76.3133,
@@ -2359,13 +2312,13 @@ INSERT INTO temples (
   'The Jwala Ji temple is one of the 51 Shakti Peethas. It is unique in that there is no idol – the Goddess is worshipped as natural flames (Jawalas) that burn from crevices in the earth. These flames have burned continuously for thousands of years.',
   'March to June, September to November',
   ARRAY['Navaratri','Diwali','Maha Ashtami'],
-  '+91-1970-222340','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Jwala_Ji_Temple.jpg/800px-Jwala_Ji_Temple.jpg',
-  'Shakti Peeth',4.7,78000,'176031','Jawali Bus Stand (4 km)','Gaggal Airport Kangra (35 km)'
+  '',4.7,78000,'176031','Jawali Bus Stand','Gaggal Airport Kangra'
 ),
 (
   'Hidimba Devi Temple Manali','Dhungri Temple',
-  'Goddess Hidimba (Bhima''s wife)',ARRAY['Lord Ganesha','Ghatothkacha (son of Bhima)'],
+  'Goddess Hidimba',ARRAY['Lord Ganesha','Ghatothkacha (son of Bhima)'],
   'Other','Manali','Himachal Pradesh',
   'Hadimba Devi Road, Old Manali, Himachal Pradesh 175131',
   32.2432,77.1892,
@@ -2376,9 +2329,9 @@ INSERT INTO temples (
   'Built in 1553 by Raja Bahadur Singh, the Hadimba Temple (Dhungri Temple) is a cave temple dedicated to Hadimba Devi, wife of Bhima. The four-tiered pagoda structure is made of wood and is surrounded by cedar forests.',
   'March to June, September to October',
   ARRAY['Hadimba Devi Fair','Dussehra','Shivratri'],
-  '+91-1902-252243','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hidimba_Devi_Temple.jpg/800px-Hidimba_Devi_Temple.jpg',
-  'Other',4.7,95000,'175131','Bhuntar Station (50 km)','Bhuntar Airport (50 km)'
+  '',4.7,95000,'175131','Bhuntar Station','Bhuntar Airport'
 ),
 (
   'Naina Devi Temple Himachal','Shri Naina Devi Ji Temple Himachal',
@@ -2393,13 +2346,13 @@ INSERT INTO temples (
   'The Naina Devi Temple in Bilaspur, Himachal Pradesh, is one of the 51 Shakti Peethas. The eyes of Goddess Sati are believed to have fallen here. A ropeway provides easy access.',
   'March to June, September to November',
   ARRAY['Navaratri','Shravan Ashtami','Diwali'],
-  '+91-1978-285456','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Naina_Devi_Temple_Himachal.jpg/800px-Naina_Devi_Temple_Himachal.jpg',
-  'Shakti Peeth',4.7,75000,'174031','Anandpur Sahib Station (25 km)','Chandigarh Airport (90 km)'
+  '',4.7,75000,'174031','Anandpur Sahib Station','Chandigarh Airport'
 ),
 (
   'Baijnath Temple','Vaidyanath Mahadeva Temple',
-  'Lord Shiva (Vaidyanath)',ARRAY['Goddess Parvati','Lord Ganesha'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha'],
   'Shaiva','Baijnath','Himachal Pradesh',
   'Baijnath, Kangra, Himachal Pradesh 176125',
   32.0467,76.6506,
@@ -2410,13 +2363,13 @@ INSERT INTO temples (
   'The Baijnath Temple is dedicated to Lord Shiva as Vaidyanath (Lord of physicians). The main structure dates back to 1204 CE and is one of the best examples of Nagara style of architecture in Himachal Pradesh.',
   'March to June, September to November',
   ARRAY['Maha Shivratri','Shravan Month'],
-  '+91-1894-223456','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Baijnath_Temple.jpg/800px-Baijnath_Temple.jpg',
-  'Shaiva',4.5,32000,'176125','Baijnath-Paprola Station (1 km)','Gaggal Airport Kangra (65 km)'
+  '',4.5,32000,'176125','Baijnath-Paprola Station','Gaggal Airport Kangra'
 ),
 (
   'Chintpurni Temple','Maa Chintpurni Mandir',
-  'Goddess Chintpurni (Durga)',ARRAY[]::TEXT[],
+  'Goddess Chintpurni',ARRAY[]::TEXT[],
   'Devi','Una','Himachal Pradesh',
   'Chintpurni, Una District, Himachal Pradesh 177110',
   31.7833,76.1167,
@@ -2429,11 +2382,11 @@ INSERT INTO temples (
   ARRAY['Navaratri'],
   '+91-8681105726','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.5,13600,'177110','Una Himachal Railway Station (25 km)','Gaggal Airport Kangra (60 km)'
+  '',4.5,13600,'177110','Una Himachal Railway Station','Gaggal Airport Kangra'
 ),
 (
   'Bhimakali Temple','Bhimakali Mandir Sarahan',
-  'Goddess Bhimakali (Kali)',ARRAY[]::TEXT[],
+  'Goddess Bhimakali',ARRAY[]::TEXT[],
   'Devi','Sarahan','Himachal Pradesh',
   'Sarahan, Shimla District, Himachal Pradesh 172033',
   31.5167,77.8167,
@@ -2444,9 +2397,9 @@ INSERT INTO temples (
   'Combining Hindu and Buddhist architectural styles typical of the Himalayan hill states, this temple was the seat of the royal family of the former Bushahr kingdom.',
   'October to March',
   ARRAY['Navaratri'],
-  '+91-8371822927','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,8400,'172033','Shimla Railway Station (180 km)','Shimla Airport (185 km)'
+  '',4.6,8400,'172033','Shimla Railway Station','Shimla Airport'
 ),
 
 -- ===========================
@@ -2454,7 +2407,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Shanta Durga Temple','Shantadurga Temple Kavalem',
-  'Goddess Shantadurga (Durga)',ARRAY[]::TEXT[],
+  'Goddess Shantadurga',ARRAY[]::TEXT[],
   'Devi','Ponda','Goa',
   'Kavalem, Ponda Taluk, Goa 403115',
   15.4167,74.0833,
@@ -2465,13 +2418,13 @@ INSERT INTO temples (
   'The largest and most revered Hindu temple in Goa, showcasing a distinctive fusion of traditional Hindu and Portuguese-colonial architectural styles.',
   'October to March',
   ARRAY['Zatra (temple festival)','Navaratri'],
-  '+91-1063754540','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'FEATURED',4.7,18600,'403115','Madgaon Railway Station (25 km)','Goa International Airport (28 km)'
+  '',4.7,18600,'403115','Madgaon Railway Station','Goa International Airport'
 ),
 (
   'Shri Manguesh Temple','Mangueshi Temple',
-  'Lord Shiva (Manguesh)',ARRAY[]::TEXT[],
+  'Lord Shiva',ARRAY[]::TEXT[],
   'Shiva','Ponda','Goa',
   'Mangeshi, Ponda Taluk, Goa 403104',
   15.4500,73.9667,
@@ -2482,9 +2435,9 @@ INSERT INTO temples (
   'One of the most frequented temples in Goa, recognisable by its seven-storeyed lamp tower (deepastambha) and blend of Hindu and European architectural elements.',
   'October to March',
   ARRAY['Jatra Utsav','Maha Shivratri'],
-  '+91-4046765577','',
+  '','',
   '/src/assets/images/hero-temple.jpg',
-  'POPULAR',4.6,16400,'403104','Madgaon Railway Station (22 km)','Goa International Airport (25 km)'
+  '',4.6,16400,'403104','Madgaon Railway Station','Goa International Airport'
 ),
 
 -- ===========================
@@ -2503,9 +2456,9 @@ INSERT INTO temples (
   'The Kali Bari Temple on Mandir Marg in Delhi is a famous temple dedicated to Goddess Kali. The temple is well-known for its Navaratri celebrations. It is easily accessible from central Delhi.',
   'Year round',
   ARRAY['Navaratri','Kali Puja','Diwali'],
-  '+91-11-23364444','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Kali_Bari_Temple_Delhi.jpg/800px-Kali_Bari_Temple_Delhi.jpg',
-  'Shakti',4.5,55000,'110001','Patel Chowk Metro (0.5 km)','Indira Gandhi International Airport (18 km)'
+  '',4.5,55000,'110001','Patel Chowk Metro','Indira Gandhi International Airport'
 ),
 (
   'Akshardham Temple Delhi','Swaminarayan Akshardham Delhi',
@@ -2520,9 +2473,9 @@ INSERT INTO temples (
   'Inaugurated in 2005; built in just 5 years by 11,000 artisans and thousands of BAPS volunteers. The main monument features intricate carvings from pink Rajasthani sandstone and Italian marble.',
   'October to March',
   ARRAY['Diwali','Ram Navami','Janmashtami'],
-  '+91-11-43444344','https://akshardham.com/delhi',
+  '','https://akshardham.com/delhi',
   '/src/assets/images/hero-temple.jpg',
-  'FEATURED',4.9,67400,'110092','Akshardham Metro (0.5 km)','Indira Gandhi International Airport (16 km)'
+  '',4.9,67400,'110092','Akshardham Metro','Indira Gandhi International Airport'
 ),
 
 -- ===========================
@@ -2530,7 +2483,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Muktinath Temple','Muktinath – Chumig Gyatsa',
-  'Lord Vishnu (Muktinath)',ARRAY['Goddess Lakshmi','Lord Ganesha'],
+  'Lord Vishnu',ARRAY['Goddess Lakshmi','Lord Ganesha'],
   'Vaishnava','Mustang district','Nepal',
   'Muktinath, Mustang (Nepal border area near Uttarakhand Char Dham)',
   28.8167,83.8713,
@@ -2541,9 +2494,9 @@ INSERT INTO temples (
   'Muktinath is a sacred place for Hindus and Buddhists situated at 3,710m. Hindus see Vishnu here; Tibetan Buddhists call it Chumig Gyatsa (108 sacred water spouts). The temple is high in the Mustang district with a flame and water miracle.',
   'May to October',
   ARRAY['Yatra Season Opening','Purnima'],
-  'N/A','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Muktinath_Nepal.jpg/800px-Muktinath_Nepal.jpg',
-  'Vaishnava',4.6,35000,'N/A','Pokhara (via road/trek)','Jomsom Airport (18 km)'
+  '',4.6,35000,'','Pokhara','Jomsom Airport'
 ),
 
 -- ===========================
@@ -2551,7 +2504,7 @@ INSERT INTO temples (
 -- ===========================
 (
   'Baidyanath Temple Deoghar','Vaidyanath Jyotirlinga',
-  'Lord Shiva (Baidyanath)',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
+  'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
   'Jyotirlinga','Deoghar','Jharkhand',
   'Temple St, Deoghar, Jharkhand 814112',
   24.4837,86.6992,
@@ -2562,9 +2515,9 @@ INSERT INTO temples (
   'Baidyanath Temple is one of the twelve Jyotirlingas and is the most sacred temple in Jharkhand. During the Shravan (Sawan) month, millions of kanwariyas (pilgrims carrying Ganga water) walk from Sultanganj to offer water here.',
   'July-August (Shravan month Kanwar Yatra)',
   ARRAY['Maha Shivratri','Shravan Month','Kartik Purnima'],
-  '+91-6432-222234','',
+  '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Baidyanath_temple_deoghar.jpg/800px-Baidyanath_temple_deoghar.jpg',
-  'Jyotirlinga',4.8,115000,'814112','Deoghar Station (5 km)','Deoghar Airport (7 km)'
+  '',4.8,115000,'814112','Deoghar Station','Deoghar Airport    '
 )
 
 -- ============================================================
