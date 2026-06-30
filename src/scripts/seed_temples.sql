@@ -395,7 +395,7 @@ INSERT INTO temples (
   ARRAY['Maha Shivratri','Brahmotsavam','Thai Amavasai'],
   '','',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ramanathaswamy_temple7.JPG/500px-Ramanathaswamy_temple7.JPG',
-  'Jyotirlinga',4.8,165000,'','Rameswaram Station','Madurai Airport'
+  '',4.8,165000,'','Rameswaram Station','Madurai Airport'
 ),
 (
   'Murugan Temple Palani','Arulmigu Dhandayuthapani Swamy Temple',
@@ -1141,7 +1141,7 @@ INSERT INTO temples (
   'July (Ashadhi Ekadasi) and November (Kartiki Ekadasi)',
   ARRAY['Ashadhi Ekadasi','Kartiki Ekadasi','Janmashtami','Gudi Padwa'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Vitthal_Rukmini_Temple_Pandharpur.jpg/800px-Vitthal_Rukmini_Temple_Pandharpur.jpg',
+  'https://dorituals.com/wp-content/uploads/2025/04/Vithoba-Temple.jpeg',
   '',4.9,225000,'413304','Pandharpur Station','Solapur Airport'
 ),
 (
@@ -1494,7 +1494,7 @@ INSERT INTO temples (
   'May to June, September to October',
   ARRAY['Badrinath Opening Ceremony','Mata Murti Ka Mela','Dev Deepawali'],
   '','https://www.badrinath-kedarnath.gov.in',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMYosKjT85-SvHqGSzzHoxAzqbgpVstBV4EBGtSnJQkUDTNyE-IeEEHwjPJPAo2vy4rVPD2SOVqiL9P6Cw8Kkt9wZSqqJKqqRyiPWWrjSAk2ejzZhbq5TpcundxxbtfflkVSdg=s1360-w1360-h1020-rw',
+  'https://badrinath-kedarnath.gov.in/Assets/image/badrinath.jpg',
   '',4.9,185000,'246422','Rishikesh Station','Jolly Grant Airport Dehradun'
 ),
 (
@@ -1511,7 +1511,7 @@ INSERT INTO temples (
   'May to June, September to October',
   ARRAY['Gangotri Opening Ceremony','Ganga Dussehra','Kartik Purnima'],
   '','',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXiRxsbVeRQH102P3ZYhiFpv41FhTRfJ35GpXEQyGKkDO1z5JWlHTsdX_NOxSACRcvD5lt5IxYVfFl6KD90d_rIXlVyXNd5y_o93sMlm1-_HPRiWv1Yx8QaYqBJOGXt_urbv-CAA=s1360-w1360-h1020-rw',
+  'https://www.tourmyindia.com/chardham/images/gangotri-dham1.jpg',
   '',4.8,125000,'249135','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 
@@ -1529,7 +1529,7 @@ INSERT INTO temples (
   'May to June, September to October',
   ARRAY['Yamunotri Opening Ceremony','Akshaya Tritiya'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Yamunotri_Temple.jpg/800px-Yamunotri_Temple.jpg',
+  'https://www.chardhamtour.in/assets/images/tourism/yamunotri/yamunotri-geography.webp',
   '',4.7,88000,'249141','Rishikesh Railway Station','Jolly Grant Airport'
 ),
 (
@@ -1546,7 +1546,7 @@ INSERT INTO temples (
   'Year round; Kumbh/Ardh Kumbh years especially',
   ARRAY['Kumbh Mela','Ardh Kumbh','Ganga Dussehra','Makar Sankranti'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Har_ki_pauri.jpg/800px-Har_ki_pauri.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/0/0f/Evening_view_of_Har-ki-Pauri%2C_Haridwar.jpg',
   '',4.9,245000,'249401','Haridwar Junction','Jolly Grant Airport Dehradun'
 ),
 (
@@ -1563,7 +1563,7 @@ INSERT INTO temples (
   'March to June, September to November',
   ARRAY['Navaratri','Diwali','Sharad Purnima'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Naina_Devi_temple_Nainital.jpg/800px-Naina_Devi_temple_Nainital.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/d/de/Maa_Naina_Devi_Temple%2C_Mallital%2C_Nainital%2C_Uttarakhand%2C_India.jpg',
   '',4.6,55000,'263001','Kathgodam Railway Station','Pantnagar Airport'
 ),
 (
@@ -1572,7 +1572,7 @@ INSERT INTO temples (
   'Shiva','Rishikesh','Uttarakhand',
   'Neelkanth, Rishikesh, Uttarakhand 249302',
   30.1167,78.4167,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:00 AM – 7:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Believed to be where Shiva consumed the poison (Halahala) during Samudra Manthan',
@@ -1580,7 +1580,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://blog.lemontreehotels.com/wp-content/uploads/2025/02/Neelkanth-Mahadev-Temple-Rishikesh.jpg',
   '',4.6,17900,'249302','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 (
@@ -1589,7 +1589,7 @@ INSERT INTO temples (
   'Devi','Tehri Garhwal','Uttarakhand',
   'Surkanda Devi, Tehri Garhwal District, Uttarakhand 249175',
   30.4500,78.3667,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:00 AM - 10:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Shakti Peeth atop a hill offering panoramic Himalayan views; 2-km trek from Kaddukhal',
@@ -1597,7 +1597,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://i0.wp.com/www.humansofuttarakhand.com/wp-content/uploads/2021/01/Ancient-Siddhpeetha-Maa-Surkanda-Devi-Temple.jpg?fit=819%2C1023&ssl=1',
   '',4.5,9200,'249175','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 
@@ -1610,7 +1610,7 @@ INSERT INTO temples (
   'Other','Pushkar','Rajasthan',
   'Pushkar, Ajmer, Rajasthan 305022',
   26.4881,74.5547,
-  '6:30 AM – 1:30 PM, 3:00 PM – 8:30 PM','6:30 AM','7:00 PM','Open all days',
+  '6:00 AM – 8:30 PM','6:30 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Pushkar Lake bath is considered holy; Camel Fair in November; Gayatri and Savitri temples nearby',
   'One of very few Brahma temples in India; sacred Pushkar Lake; annual camel fair',
@@ -1618,7 +1618,7 @@ INSERT INTO temples (
   'October to March (Camel Fair in November)',
   ARRAY['Pushkar Camel Fair','Kartik Purnima','Maha Shivratri'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brahma_Temple%2C_Pushkar.jpg/800px-Brahma_Temple%2C_Pushkar.jpg',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d6/b9/96/temple.jpg?w=1200&h=-1&s=1',
   '',4.6,88000,'305022','Ajmer Junction','Jaipur Airport'
 ),
 (
@@ -1627,7 +1627,7 @@ INSERT INTO temples (
   'Jain','Ranakpur','Rajasthan',
   'Ranakpur, Pali, Rajasthan 306702',
   25.1165,73.4710,
-  '12:00 PM – 5:00 PM (non-Jains)','7:00 AM','N/A','Open all days',
+  '6:30 AM – 12:00 PM (Jain Devotees), 12:00 PM – 5:00 PM (non-Jains)','N/A','N/A','Open all days',
   'Free (camera Rs 100)','Modest attire; no leather items inside',
   'Non-Jains entry 12 PM – 5 PM; menstruating women and leather items not allowed',
   '1444 uniquely carved marble pillars; 15th-century Jain masterpiece; no two pillars alike',
@@ -1635,7 +1635,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Paryushana','Mahavir Jayanti','Diwali'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ranakpur_Jain_Temple.jpg/800px-Ranakpur_Jain_Temple.jpg',
+  'https://www.oyorooms.com/travel-guide/wp-content/uploads/2020/01/ranakpur-temple-jain-rajasthan-india-1.jpg',
   '',4.9,95000,'306702','Falna Station','Udaipur Airport'
 ),
 (
@@ -1644,7 +1644,7 @@ INSERT INTO temples (
   'Vaishnava','Salasar','Rajasthan',
   'Salasar, Churu, Rajasthan 331506',
   27.8049,74.5012,
-  '5:00 AM – 12:00 PM, 4:00 PM – 10:00 PM','5:00 AM','8:00 PM','Open all days',
+  '5:00 AM – 10:00 PM','5:00 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
   'Hanumath Jayanti and Chaitra Purnima darshans very crowded; no cameras inside',
   'Unique bearded and moustached Hanuman idol; millions of devotees annually',
@@ -1652,7 +1652,7 @@ INSERT INTO temples (
   'Year round (Hanumath Jayanti is grand)',
   ARRAY['Hanuman Jayanti','Holi','Ram Navami','Diwali'],
   '','https://www.salasarbalaji.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Salasar_Dham.jpg/800px-Salasar_Dham.jpg',
+  'https://temple.yatradham.org/public/Product/temple/temple_8XwM6C2A_202403031615400.jpg',
   '',4.7,125000,'331506','Sujangarh Station','Jaipur Airport'
 ),
 (
@@ -1661,7 +1661,7 @@ INSERT INTO temples (
   'Shaiva','Kailashpuri','Rajasthan',
   'Kailashpuri, Udaipur, Rajasthan 313202',
   24.5913,73.6802,
-  '4:30 AM – 7:30 AM, 10:30 AM – 1:30 PM, 5:30 PM – 7:30 PM','4:30 AM','6:30 PM','Open at specific times only',
+  '4:00 AM – 7:00 AM, 10:30 AM – 1:30 PM, 5:00 PM – 7:30 PM','4:30 AM','6:30 PM','Open at specific times only',
   'Free','Traditional attire',
   'Photography strictly prohibited; Mewar royal family still visits',
   'Royal deity of Mewar rulers; silver plated Shiva idol with four faces; 108 shrines',
@@ -1669,7 +1669,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Kartik Purnima','Shravan Month'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Eklingji_Temple_Udaipur.jpg/800px-Eklingji_Temple_Udaipur.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROXADinv2i2GmTPufEgUAWrUwxT8nQkoaeziZjp21nqLBV1M_2oyGY5ZCl&s=10',
   '',4.6,55000,'313202','Udaipur City Station','Udaipur Airport'
 ),
 (
@@ -1678,7 +1678,7 @@ INSERT INTO temples (
   'Vaishnava','Jaipur','Rajasthan',
   'City Palace, Jaipur, Rajasthan 302002',
   26.9255,75.8235,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:30 AM – 9:15 PM','6:00 AM','7:00 PM','Open all days',
   'Free (special darshan tickets available)','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Royal family deity of Jaipur; idol originally from Vrindavan''s Govind Dev temple',
@@ -1686,7 +1686,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Janmashtami','Holi'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://temple.yatradham.org/public/Product/temple/temple_t691F1YG_202507111358010.jpg',
   '',4.6,22100,'302002','Jaipur Junction','Jaipur International Airport'
 ),
 (
@@ -1695,15 +1695,15 @@ INSERT INTO temples (
   'Vaishnava','Jaipur','Rajasthan',
   'Jawahar Lal Nehru Marg, Jaipur, Rajasthan 302004',
   26.8958,75.8244,
-  '6:00 AM – 12:00 PM, 3:00 PM – 9:00 PM','6:00 AM','7:30 PM','Open all days; closed midday',
-  'Free','No specific code; modest attire',
+  '8:00 AM – 12:00 PM, 4:00 PM – 9:00 PM','6:00 AM','7:30 PM','Open all days; closed midday',
+  'Free for all visitors','No specific code; modest attire',
   'Night illumination is spectacular; Moti Doongari Fort backdrop; Ganesh temple nearby',
   'Pure white marble Birla temple; quotes from world religions on walls; modern architecture',
   'The Birla Temple (Laxmi Narayan Temple) in Jaipur was built by the Birla Foundation in 1988 in white marble. The temple has three domes representing three religions. The walls contain quotes from world scriptures.',
   'October to March',
   ARRAY['Janmashtami','Diwali','Ram Navami'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Birla_Mandir_Jaipur.jpg/800px-Birla_Mandir_Jaipur.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnxgYro2N7Fjea7QDz5TvTXCYaXXb8jwN_HH8YSewdO9TfIUTUuXPsKOU&s=10',
   '',4.6,68000,'302004','Jaipur Junction','Jaipur International Airport'
 ),
 (
@@ -1712,7 +1712,7 @@ INSERT INTO temples (
   'Devi','Bikaner','Rajasthan',
   'Deshnoke, Bikaner District, Rajasthan 334801',
   27.7833,73.3400,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:00 AM - 10:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Famous for thousands of sacred black rats (kabbas) roaming the temple',
@@ -1720,16 +1720,27 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Karni Mata Fair (Navratri)'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/7/72/Le_temple_de_Karni_Mata_%28Deshnoke%29_%288423353617%29.jpg',
   '',4.5,19400,'','Deshnoke Railway Station','Nal Airport Bikaner'
 ),
+
+
+
+
+
+
+
+
+
+
+
 (
   'Mehandipur Balaji Temple','Mehandipur Hanuman Mandir',
   'Lord Hanuman',ARRAY[]::TEXT[],
   'Hanuman','Dausa','Rajasthan',
   'Mehandipur, Dausa District, Rajasthan 322746',
   26.8833,76.6333,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 9:00 PM','6:15 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Renowned for exorcism and ''peshi'' rituals to remove negative spirits',
@@ -1737,7 +1748,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Tuesday and Saturday special darshans','Hanuman Jayanti'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/8f/d7/8e/balaji-temple-near-dosa.jpg?w=1200&h=-1&s=1',
   '',4.4,28900,'322746','Hindaun City Railway Station','Jaipur International Airport'
 ),
 
@@ -1750,7 +1761,7 @@ INSERT INTO temples (
   'Vaishnava','Thiruvananthapuram','Kerala',
   'Padmanabhaswamy Temple Rd, East Fort, Thiruvananthapuram, Kerala 695023',
   8.4830,76.9442,
-  '3:30 AM – 12:00 PM, 5:00 PM – 7:15 PM','3:30 AM','6:30 PM','Closed on specific days per ritual calendar',
+  '3:30 AM – 4:45 AM | 6:30 AM – 7:00 AM | 9:00 AM – 10:00 AM | 10:30 AM – 11:15 AM | 11:45 AM – 12:00 PM | 4:30 PM – 6:15 PM | 6:45 PM – 7:20 PM','3:30 AM','6:30 PM','Closed on specific days per ritual calendar',
   'Free','Men: dhoti only (no shirt inside); Women: saree/half-saree',
   'Only Hindus allowed; strict dress code enforced at entrance; photographing deity forbidden',
   'Wealthiest temple in world ($22 billion); 18-foot reclining Vishnu; Travancore royals',
@@ -1758,25 +1769,40 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Alpashy Uthram','Painkuni','Laksha Deepam','Onam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sree_Padmanabhaswamy_temple_2018.jpg/800px-Sree_Padmanabhaswamy_temple_2018.jpg',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/fe/2b/f3/sree-padmanabhaswamy.jpg?w=1200&h=1200&s=1',
   '',4.9,155000,'695023','Thiruvananthapuram Central','Thiruvananthapuram International Airport'
 ),
 (
-  'Sabarimala Temple','Sabarimala Sree Dharma Sastha Temple',
-  'Lord Ayyappa',ARRAY['Malikappuram','Lord Ganesha','Vavar'],
-  'Pilgrimage','Sabarimala','Kerala',
-  'Sabarimala, Pathanamthitta, Kerala 689672',
-  9.4453,77.0777,
-  'Open November–January; special opening on Vishu/Onam','N/A','N/A','Open only during pilgrimage seasons; closed most of the year',
-  'Free','Black/dark attire; 41-day vrata required for first-timers',
-  'Irumudi (sacred bundle) mandatory for darshan; 41-day vrathm required; Makaravilakku star phenomenon',
-  'Largest annual pilgrimage in world (50 million+); 18 sacred steps; Makaravilakku',
-  'Sabarimala is the most visited pilgrimage center in the world in terms of annual footfall. The 18 steps (Pathinettampadi) leading to the temple are sacred and can only be climbed by devotees observing the 41-day austerity.',
-  'November to January (Mandalam–Makaravilakku season)',
-  ARRAY['Makaravilakku','Mandalam Season','Vishu','Niraputhari'],
-  '','https://www.sabarimala.kerala.gov.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sabarimala-temple.jpg/800px-Sabarimala-temple.jpg',
-  '',4.9,500000,'689672','Chengannur Station','Cochin International Airport'
+  'Sabarimala Temple',
+  'Sabarimala Sree Dharma Sastha Temple',
+  'Lord Ayyappa',
+  ARRAY['Malikappuram', 'Lord Ganesha', 'Vavar'],
+  'Pilgrimage',
+  'Sabarimala',
+  'Kerala',
+  'Sabarimala, Pathanamthitta, Kerala 689662',
+  9.4402,
+  77.0819,
+  'Open November–January; special opening on Vishu/Onam',
+  'N/A',
+  'N/A',
+  'Open only during pilgrimage seasons; closed most of the year',
+  'Free',
+  'Black/dark blue/saffron attire; strict traditional guidelines apply',
+  'Irumudi (sacred bundle) mandatory to climb the 18 steps; 41-day vratham required; Makaravilakku star phenomenon',
+  'Largest annual pilgrimage in the world; 18 sacred steps (Pathinettampadi); Vavaru Nada shrine',
+  'Sabarimala is one of the most visited pilgrimage centers in the world. The 18 steps leading to the main shrine are highly sacred and can only be climbed by devotees carrying the Irumudikettu after completing the 41-day austerity vow.',
+  'November to January (Mandala–Makaravilakku season)',
+  ARRAY['Makaravilakku', 'Mandalam Season', 'Vishu', 'Onam', 'Niraputhari'],
+  'Pathanamthitta',
+  'https://sabarimala.kerala.gov.in',
+  'https://static2.tripoto.com/media/filter/tst/img/15546/TripDocument/1457280826_sabarimala_temple_750x750.jpg',
+  '',
+  4.7,
+  50000000,
+  '689662',
+  'Chengannur (CNGR)',
+  'Cochin International Airport (COK)'
 ),
 (
   'Guruvayur Temple','Guruvayurappan Temple',
@@ -1784,15 +1810,15 @@ INSERT INTO temples (
   'Vaishnava','Guruvayur','Kerala',
   'East Nada, Guruvayur, Thrissur, Kerala 680101',
   10.5942,76.0382,
-  '3:00 AM – 1:00 PM, 4:30 PM – 9:00 PM','3:00 AM','7:00 PM','Open all days',
+  '3:00 AM – 12:30 PM, 4:30 PM – 9:15 PM','3:00 AM','7:00 PM','Open all days',
   'Free','Men: dhoti/lungi only; Women: saree/half-saree/churidar',
   'Ekadasi darshan special; Udayasthamana Pooja (from sunrise to sunset) available',
   'Most important Vaishnava temple in Kerala; Krishna idol said to be 5000 years old',
   'Guruvayur temple is one of the most important places of worship for Hindus. The idol of Guruvayurappan (a form of Lord Vishnu/Krishna) is said to be more than 5000 years old. Non-Hindus are not permitted entry.',
   'October to March',
   ARRAY['Guruvayur Ekadasi','Janmashtami','Vishu','Onam'],
-  '','https://www.guruvayurtemple.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Guruvayur_temple.jpg/800px-Guruvayur_temple.jpg',
+  '','https://guruvayurdevaswom.in/#/login',
+  'https://www.stayvista.com/blog/wp-content/uploads/2024/12/1024px-009392022_Guruvayur_temple_Kerala_024.jpg',
   '',4.9,198000,'680101','Guruvayur Station','Cochin International Airport'
 ),
 (
@@ -1809,7 +1835,7 @@ INSERT INTO temples (
   'April-May (Pooram), October to March',
   ARRAY['Thrissur Pooram','Maha Shivratri','Shivaratri','Onam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Vadakkunnathan_Temple.jpg/800px-Vadakkunnathan_Temple.jpg',
+  'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8irr82tAkA6AfMHD0Q9GiWPoasD8VWyDw1CCUNWycoiD-Vxsy',
   '',4.8,98000,'680001','Thrissur Station','Cochin International Airport'
 ),
 (
@@ -1818,7 +1844,7 @@ INSERT INTO temples (
   'Devi','Thiruvananthapuram','Kerala',
   'Attukal, Thiruvananthapuram, Kerala 695011',
   8.4667,76.9500,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:30 AM – 12:30 PM, 5:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Holds the Guinness record for the largest gathering of women (Pongala festival)',
@@ -1826,7 +1852,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Attukal Pongala','Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://pikme.in/cdn/spiritual-tour/kerala-spiritual/attukal-bhagavathy-temple.webp',
   '',4.6,24500,'695011','Thiruvananthapuram Central','Trivandrum International Airport'
 ),
 (
@@ -1835,7 +1861,7 @@ INSERT INTO temples (
   'Devi','Chottanikkara','Kerala',
   'Chottanikkara, Ernakulam District, Kerala 682312',
   9.9667,76.3667,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Believed to heal mental ailments; goddess worshipped in three forms through the day',
@@ -1843,7 +1869,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Makam Thozhal','Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://www.keralatourism.org/images/temple/video/thumb/Chottanikkara_Bhagavathy_Temple,_Ernakulam-02012020163526.jpg',
   '',4.6,19800,'682312','Tripunithura Railway Station','Cochin International Airport'
 ),
 (
@@ -1852,7 +1878,7 @@ INSERT INTO temples (
   'Shiva','Ettumanoor','Kerala',
   'Ettumanoor, Kottayam District, Kerala 686631',
   9.6667,76.5500,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:00 AM – 12:00 PM, 5:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Famous mural paintings of Nataraja; massive ''vilakku'' lamp festival',
@@ -1860,7 +1886,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Ettumanoor Vilakku','Arattu Festival'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/ettumanoor-mahadeva-temple-kottayam-kerala-1-attr-hero?qlt=82&ts=1751459339756',
   '',4.5,9700,'','Ettumanoor Railway Station','Cochin International Airport'
 ),
 
@@ -1873,7 +1899,7 @@ INSERT INTO temples (
   'Shakti','Kolkata','West Bengal',
   'Dakshineswar, Kolkata, West Bengal 700076',
   22.6550,88.3577,
-  '6:00 AM – 12:30 PM, 3:00 PM – 8:30 PM','6:00 AM','7:30 PM','Open all days',
+  '6:00 AM – 12:30 PM, 3:30 PM – 9:00 PM','6:00 AM','7:30 PM','Open all days',
   'Free','Modest traditional attire',
   'Kali Puja night puja is spectacular; Belur Math (Ramakrishna Mission) nearby 5 km',
   'Ramakrishna Paramahamsa''s temple; 12 Shiva temples in row; Ganga ghats',
@@ -1881,7 +1907,7 @@ INSERT INTO temples (
   'Year round',
   ARRAY['Kali Puja','Durga Puja','Navaratri','Diwali'],
   '','https://www.dakshineswarkalitemple.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Dakshineswar_Kali_temple_pillar.jpg/800px-Dakshineswar_Kali_temple_pillar.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe7sBgYsFvAERp6ecfT8ideYRW0QAPpmsSDysXIhYXEA&s=10',
   '',4.8,155000,'700076','Dakshineswar Metro','Netaji Subhash Chandra Bose Airport'
 ),
 (
@@ -1891,14 +1917,14 @@ INSERT INTO temples (
   'Kalighat, Kolkata, West Bengal 700026',
   22.5206,88.3442,
   '5:00 AM – 10:30 PM','5:00 AM','9:00 PM','Open all days',
-  'Free (special darshan Rs 100)','Traditional attire',
+  'Free (special darshan Rs 500)','Traditional attire',
   'VIP darshan available; Kali Puja all-night celebrations',
   'One of the 51 Shakti Peethas; toe of Goddess Sati fell here; ancient temple',
   'The Kalighat Kali Temple is one of the most revered Shakti Peethas. The idol of Kali here has a distinctive golden tongue and arms. The temple gave its name to Calcutta/Kolkata.',
   'Year round (Kali Puja is grandest)',
   ARRAY['Kali Puja','Durga Puja','Navaratri'],
-  '','https://www.kalighattemple.com',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kalighat_Temple_Kolkata.jpg/800px-Kalighat_Temple_Kolkata.jpg',
+  '','',
+  'https://upload.wikimedia.org/wikipedia/commons/9/97/Kalighat_Kali_Temple_after_renovation.jpg',
   '',4.7,145000,'700026','Kalighat Metro','Netaji Subhash Chandra Bose Airport'
 ),
 (
@@ -1907,15 +1933,15 @@ INSERT INTO temples (
   'Shakti Peeth','Tarapith','West Bengal',
   'Tarapith, Rampurhat, Birbhum, West Bengal 731233',
   24.0690,87.8340,
-  '4:00 AM – 11:00 PM','4:00 AM','9:00 PM','Open all days',
+  '5:30 AM – 12:00 PM | 1:30 PM - 6:00 PM | 7:30 PM - 10:00 PM','4:00 AM','9:00 PM','Open all days',
   'Free','Traditional attire',
   'Tantric rituals visible at cremation ground; Bamakhepa ashram nearby; night pujas famous',
   'Famous for Tantric rituals; Bamakhepa (saint) ashram; cremation ground rituals',
   'Tarapith is famous for the worship of Goddess Tara, one of the ten Mahavidyas. The saint Bamakhepa lived and performed Tantric sadhana at the nearby cremation ground (Mahasmashan).',
   'Year round',
   ARRAY['Kali Puja','Navaratri','Maha Ashtami'],
-  '5','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tarapith_Temple.jpg/800px-Tarapith_Temple.jpg',
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqI0JlA6wudMfTvXUzaClbZlrjYPTFqT08HHTp6tEQI2xgaNCEx69mRQ&s=10',
   '',4.6,88000,'731233','Rampurhat Station','Netaji Subhash Chandra Bose Airport'
 ),
 (
@@ -1924,7 +1950,7 @@ INSERT INTO temples (
   'Ramakrishna Mission','Howrah','West Bengal',
   'Belur Math, Howrah, West Bengal 711202',
   22.6298,88.3554,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:30 AM – 11:30 PM, 4:00 PM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Headquarters of the Ramakrishna Mission founded by Swami Vivekananda; unifies temple architectural styles',
@@ -1932,9 +1958,20 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Durga Puja','Ramakrishna Janmotsav','Vivekananda Jayanti'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/8/81/Belur_Math%2C_Howrah.jpg',
   '',4.7,31700,'711202','Belur Math Railway Station','Netaji Subhash Chandra Bose Airport'
 ),
+
+
+
+
+
+
+
+
+
+
+
 
 -- ===========================
 -- MADHYA PRADESH
@@ -1945,15 +1982,15 @@ INSERT INTO temples (
   'Jyotirlinga','Ujjain','Madhya Pradesh',
   'Jaisinghpura, Ujjain, Madhya Pradesh 456006',
   23.1828,75.7688,
-  '4:00 AM – 11:00 PM','4:00 AM','7:30 PM','Open all days',
-  'Free','Traditional dress; no shorts/sleeveless',
+  '3:00 AM – 11:00 PM','4:00 AM','7:30 PM','Open all days',
+  'Free','Traditional dress; no shorts',
   'Bhasma Aarti (4 AM) registration mandatory (online/offline); VIP darshan pass available; passes often sold out months in advance',
   'Only Dakshina-mukhi (south-facing) Jyotirlinga; famous Bhasma Aarti at 4 AM',
   'The Mahakaleshwar Temple is one of the twelve Jyotirlingas. The unique feature is that the Shivalinga is Dakshina-mukhi (south-facing), which is uncommon. The Bhasma Aarti performed at dawn using sacred ash is a unique and ancient ritual not found in any other temple.',
   'August (Shravan), Kumbh Mela years',
   ARRAY['Maha Shivratri','Shravan Month','Kumbh Mela Ujjain','Navaratri'],
-  '','https://www.mahakaleshwar.nic.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Mahakal_temple.jpg/800px-Mahakal_temple.jpg',
+  '','',
+  'https://cdn.mahakal.brainabove.net/public-static/bg_4.jpg',
   '',4.9,175000,'456006','Ujjain Junction','Indore Airport'
 ),
 (
@@ -1967,10 +2004,10 @@ INSERT INTO temples (
   'Annual Khajuraho Dance Festival in February; light & sound show in evenings; western & eastern temple groups',
   'UNESCO World Heritage; 10th-century erotic sculptures; Chandela dynasty masterpieces',
   'The Khajuraho Group of Monuments is a collection of Hindu and Jain temples from the Chandela dynasty (950-1050 CE). Of 85 original temples, 25 remain. They are UNESCO World Heritage Sites.',
-  'October to March',
+  'October to February',
   ARRAY['Khajuraho Dance Festival','Maha Shivratri'],
-  '','https://www.khajuraho.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kandariya_mahadeva_temple_khajuraho.jpg/800px-Kandariya_mahadeva_temple_khajuraho.jpg',
+  '','',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh3VjU_sENokxWpoPcgcbCEa4jhcy2FGhwLmIrQeyzpih_bHZiA6RS66uv&s=10',
   '',4.8,165000,'471606','Khajuraho Station','Khajuraho Airport'
 ),
 (
@@ -1979,7 +2016,7 @@ INSERT INTO temples (
   'Jyotirlinga','Omkareshwar','Madhya Pradesh',
   'Omkareshwar, Khandwa, Madhya Pradesh 450551',
   22.2461,76.1507,
-  '5:00 AM – 10:00 PM','5:00 AM','8:30 PM','Open all days',
+  '4:30 AM – 10:00 PM','5:00 AM','8:30 PM','Open all days',
   'Free','Traditional attire',
   'Boat ride to island; Narmada Parikrama available; Amareshwar temple also nearby',
   'Island temple on Narmada River; unique Om-shaped island; two Jyotirlingas in one area',
@@ -1987,7 +2024,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Kartik Purnima','Shravan Month'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Omkareshwar_temple.jpg/800px-Omkareshwar_temple.jpg',
+  'https://touringwithpk.com/wp-content/uploads/2025/01/IMG_2545-2a.jpg',
   '',4.8,112000,'450551','Omkareshwar Road Station','Indore Airport'
 ),
 (
@@ -1996,7 +2033,7 @@ INSERT INTO temples (
   'Devi','Maihar','Madhya Pradesh',
   'Maihar, Satna District, Madhya Pradesh 485771',
   24.2667,80.7667,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:00 AM - 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days; ropeway available',
   'Hilltop Shakti Peeth reached by over 1000 steps or ropeway',
@@ -2004,7 +2041,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCMvUTTFVftI36853hmk8EA8fUliNUbFZH75yePKbIufz1W8noio-8i88&s=10',
   '',4.6,13400,'485771','Maihar Railway Station','Khajuraho Airport'
 ),
 (
@@ -2013,7 +2050,7 @@ INSERT INTO temples (
   'Devi','Datia','Madhya Pradesh',
   'Datia, Madhya Pradesh 475661',
   25.6700,78.4600,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:00 AM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days; important Tantric centre',
   'Important Tantric Shakti centre; visited by many political leaders for blessings',
@@ -2021,7 +2058,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Shri_Peetambra_Peetha%2C_Datia_entrance_gate.jpg/500px-Shri_Peetambra_Peetha%2C_Datia_entrance_gate.jpg',
   '',4.5,11600,'475661','Datia Railway Station','Gwalior Airport'
 ),
 (
@@ -2030,7 +2067,7 @@ INSERT INTO temples (
   'Vaishnava','Bhopal','Madhya Pradesh',
   'Arera Hills, Bhopal, Madhya Pradesh 462011',
   23.2380,77.4030,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 12:00 PM, 3:30 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Modern hilltop temple with panoramic views of Bhopal city and Upper Lake',
@@ -2038,7 +2075,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Janmashtami','Diwali'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://www.hoteldekho.com/storage/img/tourattraction/1650617903Birla%20Mandir%20in%20bhopal.jpg',
   '',4.4,9800,'462011','Bhopal Junction','Raja Bhoj Airport Bhopal'
 ),
 
@@ -2059,7 +2096,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Buddha Purnima','Losar','Japanese Bon Festival'],
   '','https://www.mahabodhisociety.com',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mahabodhi_Temple.jpg/800px-Mahabodhi_Temple.jpg',
+  'https://cdn.britannica.com/82/74682-050-83C1B781/Mahabodhi-temple-Bodh-Gaya-Bihar-India.jpg',
   '',4.9,188000,'824231','Gaya Junction','Gaya Airport'
 ),
 (
@@ -2068,7 +2105,7 @@ INSERT INTO temples (
   'Vaishnava','Gaya','Bihar',
   'Vishnupad Temple Road, Gaya, Bihar 823001',
   24.7955,85.0005,
-  '5:30 AM – 10:00 PM','5:30 AM','7:30 PM','Open all days',
+  '5:00 AM – 9:00 PM','5:30 AM','7:30 PM','Open all days',
   'Free','Traditional attire',
   'Pitru Paksha period: massive crowds for Pind Daan; non-Hindus not permitted inside main sanctum',
   'Ancient temple where Vishnu''s footprint is enshrined; Pind Daan (ancestor rites) center',
@@ -2076,7 +2113,7 @@ INSERT INTO temples (
   'Pitru Paksha (September/October)',
   ARRAY['Pitru Paksha','Maha Shivratri','Gaya Mahotsav'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Vishnupad_mandir_gaya.jpg/800px-Vishnupad_mandir_gaya.jpg',
+  'https://thetempleguru.com/wp-content/uploads/2023/08/vishnupad-temple-gaya.jpg',
   '',4.6,65000,'823001','Gaya Junction','Gaya Airport'
 ),
 (
@@ -2085,7 +2122,7 @@ INSERT INTO temples (
   'Shakti','Kaimur','Bihar',
   'Mundeshwari Hill, Ramgarh, Kaimur, Bihar 821109',
   25.0344,83.5834,
-  '6:00 AM – 7:00 PM','6:00 AM','7:30 PM','Open all days',
+  '6:00 AM – 7:00 PM','6:00 AM','6:30 PM','Open all days',
   'Free','Traditional attire',
   'Unique live animal offering ritual (animals released unharmed); ASI protected monument; remote hilltop location',
   'Oldest functioning temple in India (625 CE inscription); octagonal structure; unique prana-pratishtha',
@@ -2093,7 +2130,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Shivratri','Kartik Purnima'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mundeshwari_Temple.jpg/800px-Mundeshwari_Temple.jpg',
+  'https://thetempleguru.com/wp-content/uploads/2024/08/Maa-Mundeshwari-Temple-kaimur-5.jpg',
   '',4.6,28000,'821109','Bhabua Road (Mohania) Station','Varanasi Airport'
 ),
 (
@@ -2102,7 +2139,7 @@ INSERT INTO temples (
   'Sikh','Patna','Bihar',
   'Patna Sahib, Patna, Bihar 800008',
   25.6177,85.1486,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '3:30 AM - 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'One of the five Takhts of Sikhism; birthplace of Guru Gobind Singh',
@@ -2110,7 +2147,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Prakash Utsav (Guru Gobind Singh Jayanti)'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/takht-sri-patna-sahib-patna1-bihar-attr-hero?qlt=82&ts=1742157323645',
   '',4.7,19600,'800008','Patna Junction','Jay Prakash Narayan Airport Patna'
 ),
 
@@ -2131,7 +2168,7 @@ INSERT INTO temples (
   'March to July, September to November',
   ARRAY['Navaratri','Diwali','Maha Shivratri'],
   '','https://www.maavaishnodevi.org',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Vaishno_Devi_Temple.jpg/800px-Vaishno_Devi_Temple.jpg',
+  'https://www.tourmyindia.com/states/jammu-kashmir/image/mata-vaishno-devi1.jpg',
   '',4.9,420000,'182301','Katra Station','Jammu Airport'
 ),
 (
@@ -2148,16 +2185,26 @@ INSERT INTO temples (
   'April to October',
   ARRAY['Maha Shivratri','Navaratri'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Shankaracharya_Temple_Srinagar.jpg/800px-Shankaracharya_Temple_Srinagar.jpg',
+  'https://www.trawell.in/admin/images/upload/309708465Shankaracharya_Hill_Main.jpg',
   '',4.7,48000,'190001','Srinagar Bus Stand','Sheikh ul Alam International Airport'
 ),
+
+
+
+
+
+
+
+
+
+
 (
   'Kheer Bhawani Temple','Ragnya Devi Temple',
   'Goddess Ragnya Devi (Durga)',ARRAY[]::TEXT[],
   'Devi','Ganderbal','Jammu and Kashmir',
   'Tulmulla, Ganderbal District, Jammu and Kashmir 191002',
   34.2667,74.6167,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 6:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Sacred spring temple revered by Kashmiri Pandits; spring changes colour mysteriously',
@@ -2165,7 +2212,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Kheer Bhawani Mela (Jyeshtha Ashtami)'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSU6G074eTWffvN_IfdtRJXKQ4bsb2FbrNdIMrKC87D9fnS9cFo',
   '',4.6,11800,'191002','Srinagar Railway Station','Srinagar Airport'
 ),
 (
@@ -2174,7 +2221,7 @@ INSERT INTO temples (
   'Vaishnava','Jammu','Jammu and Kashmir',
   'Raghunath Bazaar, Jammu, Jammu and Kashmir 180001',
   32.7280,74.8642,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 8:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free (special darshan tickets available)','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Largest temple complex in northern India built by Dogra rulers; seven shrines',
@@ -2182,7 +2229,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Ram Navami','Janmashtami'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQopgk6z0FU2Aoqr1lcIrJ4HvncIJtvkTlEWZBOrVu2dl8Tq1LMXpbvZto&s=10',
   '',4.5,14600,'180001','Jammu Tawi Railway Station','Jammu Airport'
 ),
 
@@ -2195,15 +2242,15 @@ INSERT INTO temples (
   'Shakti Peeth','Guwahati','Assam',
   'Nilachal Hills, Guwahati, Assam 781010',
   26.1665,91.7040,
-  '5:30 AM – 1:00 PM, 2:30 PM – 5:30 PM, 8:00 PM – 10:00 PM','5:30 AM','8:00 PM','Closed during Ambubachi (3 days in June)',
+  '5:30 AM – 1:00 PM, 2:30 PM – 5:30 PM','5:30 AM','8:00 PM','Closed during Ambubachi (3 days in June)',
   'Free (special darshan available)','Traditional attire',
   'Ambubachi Mela: temple closed 3 days; prasad of soaked cloth sold; tantric rituals visible; early morning less crowded',
   'Most powerful of 51 Shakti Peethas; Ambubachi Mela; tantric rituals; no idol',
   'The Kamakhya Temple is the most important of the 51 Shakti Peethas. It is believed that the womb and genitals of Goddess Sati fell here. There is no conventional idol; the yoni is worshipped. During Ambubachi Mela (June), the temple closes for 3 days.',
   'October to March (Ambubachi Mela in June)',
   ARRAY['Ambubachi Mela','Navaratri','Durga Puja','Manasha Puja'],
-  '','https://www.kamakhyadevi.in',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Kamakhya_Temple_Guwahati.jpg/800px-Kamakhya_Temple_Guwahati.jpg',
+  '','',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/kamakhya-temple-dispur-assam-2-attr-hero?qlt=82&ts=1742179171313',
   '',4.8,145000,'781010','Guwahati Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 (
@@ -2212,7 +2259,7 @@ INSERT INTO temples (
   'Shaiva','Guwahati','Assam',
   'Peacock Island, Brahmaputra, Guwahati, Assam 781001',
   26.1837,91.7466,
-  '7:00 AM – 5:30 PM','7:00 AM','5:00 PM','Closed on rainy season days when river is in spate',
+  '5:30 AM – 6:00 PM','7:00 AM','5:00 PM','Closed on rainy season days when river is in spate',
   'Free (boat Rs 20)','Traditional attire',
   'Boat ride from Umananda Ghat; golden langurs (rare primates) can be seen on island',
   'Smallest inhabited river island in world; boat journey on Brahmaputra; peacocks roam freely',
@@ -2220,7 +2267,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Navaratri'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Umananda_temple.jpg/800px-Umananda_temple.jpg',
+  'https://hblimg.mmtcdn.com/content/hubble/img/Guwahati/mmt/activities/m_Umananda%20Temple-1_l_390_620.jpg?im=Resize=(412,347.56)',
   '',4.6,42000,'781001','Guwahati Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 (
@@ -2237,7 +2284,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navagraha Puja days'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/navagraha-temple-guwahati-dispur-assam-attr-about?qlt=82&ts=1742158422051',
   '',4.3,5400,'781001','Guwahati Railway Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 
