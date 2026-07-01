@@ -37,7 +37,6 @@ CREATE TABLE IF NOT EXISTS temples (
 
 CREATE UNIQUE INDEX IF NOT EXISTS uq_temples_name_city ON temples (name, location_city);
 
--- ============================================================
 -- INSERT ALL TEMPLES
 -- ============================================================
 INSERT INTO temples (
@@ -49,6 +48,7 @@ INSERT INTO temples (
     festivals, contact_phone, website, image_url, tag, rating, reviews,
     pincode, nearest_railway, nearest_airport
 ) VALUES
+
 
 -- ===========================
 -- UTTAR PRADESH
@@ -66,8 +66,7 @@ INSERT INTO temples (
   'One of the oldest and most sacred temples in Hinduism, dedicated to Lord Shiva as the lord of the universe. The original temple was demolished multiple times and rebuilt. The current structure was rebuilt by Maratha queen Ahilyabai Holkar in 1780.',
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month','Dev Deepawali','Kartik Purnima'],
-  '','https://shrikashivishwanath.org',
-  'https://upload.wikimedia.org/wikipedia/commons/f/ff/Kashi_Vishwanath.jpg',
+  '','','https://i.pinimg.com/736x/c9/91/ff/c991ff4769ce07cde38292521ec83d9d.jpg',
   '',4.8,152000,'','Varanasi Junction','Lal Bahadur Shastri International Airport'
 ),
 (
@@ -101,7 +100,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Janmashtami','Holi','Annakut','Govardhan Puja'],
   '','',
-  ' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/61/0e/2e/inside-temple-premises.jpg?w=2000&h=-1&s=1',
+  'https://temple.yatradham.org/public/Product/temple/temple_315mPKIv_202506301824190.webp',
   '',4.6,72000,'','Mathura Junction ','Agra Airport'
 ),
 (
@@ -117,8 +116,8 @@ INSERT INTO temples (
   'The most sacred site in Hinduism for Vaishnavas, believed to be the birthplace of Lord Rama. The new grand temple was consecrated on January 22, 2024. The Nagara-style architecture spans 2.7 acres with a 161-foot shikhara.',
   'October to March',
   ARRAY['Ram Navami','Diwali','Vivah Panchami','Kartik Purnima'],
-  '','https://srjbtkshetra.org',
-  'https://upload.wikimedia.org/wikipedia/commons/d/de/Shri_Ram_Janambhoomi_Mandir%2C_Ayodhya_Dham.jpg',
+  '','',
+  'https://i.pinimg.com/736x/40/69/63/4069637d3e3aa6e432faa7978c739d6c.jpg',
   '',4.9,250000,'','Ayodhya Dham Junction ','Maharishi Valmiki International Airport Ayodhya '
 ),
 (
@@ -135,7 +134,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Hanuman Jayanti','Ram Navami','Diwali'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS111N5oMj6vgVtswtOKnl0lDos70DYXlvPqW_QV5Ls30H_AnvKMllesLc&s=10',
+  'https://upload.wikimedia.org/wikipedia/commons/f/f8/Hanuman_Garhi_Temple%2C_a_major_religious_site_in_Ayodhya_utter_pradesh.jpg',
   '',4.6,65000,'','Ayodhya Dham Junction','Maharishi Valmiki International Airport'
 ),
 (
@@ -152,7 +151,7 @@ INSERT INTO temples (
   'October (Navaratri) and March-April (Chaitra Navaratri)',
   ARRAY['Navaratri','Diwali','Durga Puja','Ashtami'],
   '','',
-  'https://namandarshan-bucket.s3.ap-south-1.amazonaws.com/images/migrated-1775471847316-875.png',
+  'https://i.pinimg.com/736x/d9/47/e0/d947e01ff3a5a54ac349591be6d0280a.jpg',
   '',4.7,88000,'','Vindhyachal Station','Lal Bahadur Shastri Airport Varanasi'
 ),
 (
@@ -169,7 +168,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Janmashtami','Radhashtami','Holi','Diwali'],
   '','https://www.premmandir.org',
-  'https://premmandir.org.in/wp-content/uploads/2023/05/img1.jpg',
+  'https://i.pinimg.com/736x/00/c8/e1/00c8e128138e7cddb63dc7fe0d4d24cd.jpg',
   '',4.8,115000,'','Mathura Junction','Agra Airport'
 ),
 (
@@ -203,7 +202,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Hanuman Jayanti','Tulsidas Jayanti'],
   '','',
-  'https://cdn.triptotemples.com/ImageManager/66a0a36de15aead00e2de86d-whatsapp-image-2024-07-20-at-14.31.18.jpeg',
+  'https://kashi.gov.in/cmsadmin/getApiFile/CMS/68c41b84cb3521757682564~jpg',
   '',4.6,38900,'','Varanasi Junction','Lal Bahadur Shastri International Airport'
 ),
 (
@@ -220,7 +219,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navratri','Durga Puja'],
   '','',
-  'https://s7ap1.scene7.com/is/image/incredibleindia/durga-temple-varanasi-6-attr-hero?qlt=82&ts=1727353607687',
+  'https://i.pinimg.com/1200x/26/96/cd/2696cde6778b480936fbc7ccba93b4bb.jpg',
   '',4.5,18700,'','Varanasi Junction','Lal Bahadur Shastri International Airport '
 ),
 (
@@ -254,9 +253,13 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Janmashtami','Gaura Purnima','Radhashtami'],
   '','',
-  'https://www.trawell.in/admin/images/upload/941139367Vrindavan_ISKCON_Temple_Main.jpg',
+  'https://thetempleguru.com/wp-content/uploads/2023/11/iskcon-temple-vrindavan.jpg',
   '',4.7,45200,'','Mathura Junction','Agra Airport'
 ),
+
+
+
+
 (
   'Mankameshwar Temple','Mankameshwar Mandir',
   'Lord Shiva',ARRAY['Parvati'],
@@ -305,7 +308,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Diwali','Ram Navami','Deepotsav'],
   '','',
-  'https://temple.yatradham.org/public/Product/temple/temple_w50HVvPx_202506301418270.jpg',
+  'https://thetempleguru.com/wp-content/uploads/2023/09/Kamadgiri-temple-Chitrakoot-11.jpg',
   '',4.6,12400,'','Chitrakoot Dham Karwi','Allahabad Airport'
 ),
 (
@@ -339,7 +342,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Kumbh Mela','Magh Mela'],
   '','',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHWoh4iW_FuNa3Bt6cJJbwRvEcy3RDNX4T2kPlhyuq1fJaJN_EzuTTgm6yKE5ecjKgOjF1NZ4ZWEigxYMhgVG6lId4Vf4mVtOtLCYaeRiUiH69FI5QhWhiy0tYCZbeEoU40P4exT-a9d8=s1360-w1360-h1020-rw',
+  'https://chalbanjare.com/crmnew/img_master/package/SriAkshayavatTemplePatalpuri_17715663280.webp',
   '',4.5,16700,'','Prayagraj Junction','Prayagraj Airport'
 ),
 
@@ -428,7 +431,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Margazhi Thiruvadhirai','Ani Thirumanjanam','Brahmotsavam','Thai Poosam'],
   '','',
-  'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQqrehZ-i91_b01hoLhSB8DYmdv9V9KHjuajjBkjieRVtA8zs1w',
+  'https://i.pinimg.com/1200x/7d/d8/cf/7dd8cfd213bdc8808342ff1d39e539d5.jpg',
   '',4.8,125000,'','Chidambaram Station','Pondicherry Airport'
 ),
 (
@@ -445,7 +448,7 @@ INSERT INTO temples (
   'November to January (Karthigai)',
   ARRAY['Karthigai Deepam','Maha Shivratri','Pongal','Aadi Puram'],
   '','',
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/cd/5b/9b/temple-gopuram.jpg?w=1200&h=1200&s=1',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/cd/5b/51/temple-view.jpg?w=1200&h=1200&s=1',
   '',4.8,142000,'','Thiruvannamalai Station','Chennai International Airport'
 ),
 (
@@ -466,6 +469,17 @@ INSERT INTO temples (
   '',4.7,98000,'','Chennai Central','Chennai International Airport'
 ),
 
+
+
+
+
+
+
+
+
+
+
+
 (
   'Ranganathaswamy Temple Srirangam','Shri Ranganathaswamy Temple',
   'Lord Vishnu',ARRAY['Goddess Ranganayaki','Lord Ganesha'],
@@ -480,7 +494,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Vaikunta Ekadasi','Brahmotsavam','Aadi Pooram','Panguni Uthiram'],
   '','',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJENvtA3A15YlzpgqkInVjsbc7pnJ4uTp-6sv4_qHGtSGJ441lE-EKJM39yv8-5pWRj4lTP0e9fMEW83V1zFxcZHPR_wc8KZ28SpT97dNblz1ykQXGF8QApY2dJl4xUxNH4v0=s1360-w1360-h1020-rw',
+  'https://i.pinimg.com/736x/7a/7f/d9/7a7fd9d8682ee89d2e38b4b18dc63801.jpg',
   '',4.9,195000,'','Srirangam Station','Tiruchirappalli International Airport'
 ),
 (
@@ -531,7 +545,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Aadi Pooram'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kanchipuram.in_Kamakshi-Amman_Temple_-_panoramio_-_SINHA_%28cropped%29.jpg/500px-Kanchipuram.in_Kamakshi-Amman_Temple_-_panoramio_-_SINHA_%28cropped%29.jpg',
+  'https://i.pinimg.com/736x/40/50/8f/40508fbbed7f2967d907d9e408d76fe5.jpg',
   '',4.7,34500,'','Kanchipuram Railway Station','Chennai International Airport'
 ),
 (
@@ -582,7 +596,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Float Festival (Teppam)','Aadi Perukku'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nellaiappar_temple_tower.jpg/500px-Nellaiappar_temple_tower.jpg',
+  'https://i.pinimg.com/736x/ab/23/01/ab23019af3fe95b1209fe14a8c403de6.jpg',
   '',4.6,21900,'','Tirunelveli Junction','Tuticorin Airport'
 ),
 (
@@ -599,7 +613,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Thai Poosam','Panguni Uthiram','Aadi Pooram'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Tiruvanaikaval5.jpg/500px-Tiruvanaikaval5.jpg',
+  'https://i.pinimg.com/1200x/21/b5/17/21b51761647f4b64b782bb7d0fd66099.jpg',
   '',4.7,68000,'','Tiruchirappalli Junction','Tiruchirappalli International Airport'
 ),
 (
@@ -616,7 +630,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Thai Poosam','Float Festival'],
   '','',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3UPacb7-M1em0bHc329aAK0OUfm7YcqNw_DevQIc__G05T3s3OErVvVZypT4toy4scrSVz4niabw2a_6R_OhtDCknh0sqbxgxOdsBIgblyqp5dtMMPced-h3RtucoIb8-zaNk=s1360-w1360-h1020-rw',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SUCHINDAM_%283%29.jpg/500px-SUCHINDAM_%283%29.jpg',
   '',4.6,55000,'','Nagercoil Station','Trivandrum Airport'
 ),
 (
@@ -633,7 +647,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Thai Poosam','Skanda Sashti','Panguni Uthiram','Vaikasi Visakam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Thiruparamkundram_%281%29.jpg/500px-Thiruparamkundram_%281%29.jpg',
+  'https://arunraj.org/wp-content/uploads/2025/05/thiruparankundram-murugan-temple-madurai-tourism-entry-fee-timings-holidays-reviews-header.jpg',
   '',4.7,72000,'','Madurai Junction','Madurai Airport'
 ),
 
@@ -654,7 +668,7 @@ INSERT INTO temples (
   'October (Navaratri)',
   ARRAY['Navaratri','Maha Shivratri','Diwali','Ugadi'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Kanakadurga_Temple_gopuram.jpg/500px-Kanakadurga_Temple_gopuram.jpg',
+  'https://i.pinimg.com/736x/69/a0/34/69a034dc900773d07d39840e457040d6.jpg',
   '',4.8,165000,'','Vijayawada Junction','Vijayawada Airport'
 ),
 (
@@ -671,7 +685,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Chandana Yatra','Kalyanotsavam','Brahmotsavam','Vaikuntha Ekadasi'],
   '','',
-  'https://holidaysdna.com/wp-content/uploads/simhachalam-temple-visakhapatnam-india-tourism-1.jpg',
+  'https://static.toiimg.com/thumb/msid-46918850,width=1200,height=900/46918850.jpg',
   '',4.7,78000,'','Visakhapatnam Junction','Visakhapatnam Airport'
 ),
 
@@ -690,7 +704,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Ugadi','Kartika Purnima','Navaratri'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp8sq4P38wa7F_ry2RAvjRFQgzWC6a1jnwnw&s',
+  'https://www.trawell.in/admin/images/upload/65827497Srisailam_Bhramaramba_Temple_Main.jpg',
   '',4.8,112000,'','Markapur Road','Hyderabad Rajiv Gandhi Airport'
 ),
 (
@@ -792,7 +806,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Narasimha Jayanti'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTskpl2X3k6VOtn0KfqczahL3VlGxMUeIB5mq4k2u9Sgg&s=10',
+  'https://www.revv.co.in/blogs/wp-content/uploads/2021/07/Ahobilam-Templ.jpg',
   '',4.6,15200,'','Nandyal Railway Station','Tirupati Airport'
 ),
 (
@@ -809,7 +823,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Karthika Masam','Brahmotsavam'],
   '','',
-  'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcyGZ-gIvWj2fSXpHl8y2151x05r9GQJ_sX4VbUTF5hBVOxfXW4wRO9zSViUeD4PwASFIO1Tzg14uOgYd8Es4KGZOHYH3gBdUfcUqh-YSoHOs9H2ND6dGKVCqM9uz-5N2Efd6PRA=s1360-w1360-h1020-rw',
+  'https://i.pinimg.com/1200x/27/65/df/2765dfe13352aefce8ec6a1fab4ab52c.jpg',
   '',4.5,45000,'','Samalkot Junction','Rajamahendravaram Airport'
 ),
 (
@@ -826,7 +840,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Sita Rama Kalyanam (Ram Navami)'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM44n81cU50NhXx31Q9z4wzzOgyxr-BqhLjKY5oRzOzw&s=10',
+  'https://i.pinimg.com/1200x/6d/3c/d6/6d3cd6593588bed09cf0d925a8d9c8fc.jpg',
   '',4.7,27600,'','Bhadrachalam Road Railway Station','Rajiv Gandhi International Airport Hyderabad'
 ),
 (
@@ -843,7 +857,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Brahmotsavam','Ugadi','Vaikunta Ekadasi'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7xygtu1AVzzWUR9ONPK6OT3lh7B-nbBKMrtCGHxTWA&s=10',
+  'https://i.pinimg.com/736x/2e/4f/96/2e4f963ba0baa1d1f47a506d3bc29ae1.jpg',
   '',4.6,55000,'','Bhimavaram Station','Rajahmundry Airport'
 ),
 (
@@ -860,7 +874,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri'],
   '','',
-  'https://i0.wp.com/saichintala.com/wp-content/uploads/2019/10/img_0205.jpg?fit=1200%2C800&ssl=1',
+  'https://i.pinimg.com/1200x/f5/a7/a2/f5a7a26d3dadc7dd689365f83593dfbf.jpg',
   '',4.7,14200,'','Warangal Railway Station','Rajiv Gandhi International Airport Hyderabad'
 ),
 (
@@ -932,7 +946,7 @@ INSERT INTO temples (
   'October (Dasara/Navaratri)',
   ARRAY['Dasara','Navaratri','Ugadi','Karthika Masam'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/d/d1/Chamundeshwari_Temple_Mysore.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQceD1FVgUmxYFJ4oix95L6OSFTIj3tk8Bb9wAv_cE3Yg&s=10',
   '',4.7,112000,'','Mysuru Junction','Mysuru Airport'
 ),
 (
@@ -966,7 +980,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Sharavana Masa','Diwali','Ugadi'],
   '','',
-  'https://static.toiimg.com/thumb/47149999/Kollur-Mookambika-Temple.jpg?width=1200&height=900',
+  'https://i.pinimg.com/1200x/a3/46/e6/a346e690ba3e6ea119d643f9399eb2f7.jpg',
   '',4.7,95000,'576220','Kundapura Station','Mangaluru International Airport'
 ),
 (
@@ -1000,7 +1014,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Shravan Month'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Murudeshwara_raja_gopura_HDR%2C_Jul_2012.jpg/500px-Murudeshwara_raja_gopura_HDR%2C_Jul_2012.jpg',
+  'https://i.pinimg.com/736x/1f/26/52/1f2652f5ba6c670ee16df4b3c9713ce3.jpg',
   '',4.7,112000,'581350','Murudeshwar Station','Mangaluru International Airport'
 ),
 (
@@ -1017,7 +1031,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Chaitra Vishu'],
   '+91-1075658573','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mangaladevi_Temple_Mangalore_2.jpg/500px-Mangaladevi_Temple_Mangalore_2.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuz8eHDBfPQ_S7-0FxvMEp-Hrf8dWZlk3m-NgPFJFV6rNFbKb6L1ZTpJw&s=10',
   '',4.5,11300,'575001','Mangalore Central','Mangalore International Airport'
 ),
 (
@@ -1034,7 +1048,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Maha Shivratri','Karthika Purnima'],
   '+91-2761266129','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Main_entry_to_the_Mahabaleshwar_Temple_at_Gokaran.jpg/500px-Main_entry_to_the_Mahabaleshwar_Temple_at_Gokaran.jpg',
+  'https://i.pinimg.com/1200x/f7/2c/a2/f72ca271755e7d929dcf94265cfe812b.jpg',
   '',4.6,19500,'581326','Gokarna Road Railway Station','Goa International Airport'
 ),
 
@@ -1226,7 +1240,7 @@ INSERT INTO temples (
   'Year round (Margashirsha is especially holy)',
   ARRAY['Datta Jayanti','Margashirsha Thursdays','Gurupurnima'],
   '','',
-  'https://www.trawell.in/admin/images/upload/79611443NarsobachiWadi.jpg',
+  'https://c8.alamy.com/comp/KH4GP4/narsobawadi-ghat-on-krishna-river-kolhapur-maharashtra-india-asia-KH4GP4.jpg',
   '',4.7,65000,'416434','Miraj Station','Kolhapur Airport'
 ),
 (
@@ -1835,7 +1849,7 @@ INSERT INTO temples (
   'April-May (Pooram), October to March',
   ARRAY['Thrissur Pooram','Maha Shivratri','Shivaratri','Onam'],
   '','',
-  'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8irr82tAkA6AfMHD0Q9GiWPoasD8VWyDw1CCUNWycoiD-Vxsy',
+  'https://i.pinimg.com/736x/a3/8b/e9/a38be9ea7df6928c14d1d6285d77b14e.jpg',
   '',4.8,98000,'680001','Thrissur Station','Cochin International Airport'
 ),
 (
@@ -1869,7 +1883,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Makam Thozhal','Navaratri'],
   '','',
-  'https://www.keralatourism.org/images/temple/video/thumb/Chottanikkara_Bhagavathy_Temple,_Ernakulam-02012020163526.jpg',
+  'https://i.pinimg.com/736x/c0/62/9c/c0629c668339d6d89bf4e71661a02fc3.jpg',
   '',4.6,19800,'682312','Tripunithura Railway Station','Cochin International Airport'
 ),
 (
@@ -2212,7 +2226,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Kheer Bhawani Mela (Jyeshtha Ashtami)'],
   '','',
-  'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSU6G074eTWffvN_IfdtRJXKQ4bsb2FbrNdIMrKC87D9fnS9cFo',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUSfhbqQiMI27x5_4WEK_Z7DeVcmmV_yiA70nIzVmhJzCIDuTAbruCuw&s=10',
   '',4.6,11800,'191002','Srinagar Railway Station','Srinagar Airport'
 ),
 (
@@ -2229,7 +2243,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Ram Navami','Janmashtami'],
   '','',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQopgk6z0FU2Aoqr1lcIrJ4HvncIJtvkTlEWZBOrVu2dl8Tq1LMXpbvZto&s=10',
+  'https://temple.yatradham.org/public/Product/temple/temple_EbMj5NVP_202408111236090.jpg',
   '',4.5,14600,'180001','Jammu Tawi Railway Station','Jammu Airport'
 ),
 
@@ -2305,7 +2319,7 @@ INSERT INTO temples (
   'Year round',
   ARRAY['Guru Nanak Jayanti','Baisakhi','Diwali','Hola Mohalla'],
   '','https://www.sgpc.net',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Golden_Temple_amritsar_2.jpg/800px-Golden_Temple_amritsar_2.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/9/94/The_Golden_Temple_of_Amrithsar_7.jpg',
   '',5.0,520000,'143006','Amritsar Junction','Sri Guru Ram Dass Jee International Airport'
 ),
 (
@@ -2314,7 +2328,7 @@ INSERT INTO temples (
   'Shakti','Amritsar','Punjab',
   'Brahm Buta Market, Amritsar, Punjab 143001',
   31.6280,74.8760,
-  '6:00 AM – 9:00 PM','6:00 AM','8:00 PM','Open all days',
+  '6:00 AM – 10:00 PM','6:00 AM','8:00 PM','Open all days',
   'Free','Modest attire',
   'Silver doors at entrance; sacred sarovar in complex; Hanuman Mandir within premises',
   'Known as Silver Temple; modeled on Golden Temple; sacred sarovar; Hindu pilgrimage',
@@ -2322,7 +2336,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri','Diwali','Janmashtami','Ram Navami'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Durgiana_Temple.jpg/800px-Durgiana_Temple.jpg',
+  'https://s7ap1.scene7.com/is/image/incredibleindia/durgiana-temple-amritsar-punjab-3-musthead-hero?qlt=82&ts=1726662289251',
   '',4.6,65000,'143001','Amritsar Junction','Sri Guru Ram Dass Jee International Airport'
 ),
 (
@@ -2331,7 +2345,7 @@ INSERT INTO temples (
   'Sikh','Anandpur Sahib','Punjab',
   'Anandpur Sahib, Rupnagar District, Punjab 140118',
   31.2333,76.5000,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  'Open 24 Hours every day','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Birthplace of the Khalsa, founded by Guru Gobind Singh in 1699',
@@ -2339,7 +2353,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Hola Mohalla','Baisakhi'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://www.meer.com/attachments/e14a1605e47486392ec6d153d318aa8d68a46915/store/fill/1090/613/e5a4fe985aa910bc3472cdda2fcf4f9eb003e22cbffa35d12d3f0816ffa3/Takhat-Sri-Kesgarh-Sahib-Anandpur.jpg',
   '',4.7,26400,'140118','Anandpur Sahib Railway Station','Sri Guru Ram Dass Jee International Airport'
 ),
 
@@ -2347,7 +2361,7 @@ INSERT INTO temples (
 -- HIMACHAL PRADESH
 -- ===========================
 (
-  'Jwala Ji Temple','Jwala Devi Mandir',
+  'Shri Jwalamukhi Mata Shaktipeeth','Jwala Devi Mandir',
   'Goddess Jwala Devi',ARRAY['Lord Ganesha','Goddess Durga'],
   'Shakti Peeth','Jawala Mukhi','Himachal Pradesh',
   'Jawalamukhi, Kangra, Himachal Pradesh 176031',
@@ -2360,7 +2374,7 @@ INSERT INTO temples (
   'March to June, September to November',
   ARRAY['Navaratri','Diwali','Maha Ashtami'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Jwala_Ji_Temple.jpg/800px-Jwala_Ji_Temple.jpg',
+  'https://myoksha.com/wp-content/uploads/2016/04/Jwalamukhi-Temple.jpg',
   '',4.7,78000,'176031','Jawali Bus Stand','Gaggal Airport Kangra'
 ),
 (
@@ -2377,7 +2391,7 @@ INSERT INTO temples (
   'March to June, September to October',
   ARRAY['Hadimba Devi Fair','Dussehra','Shivratri'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hidimba_Devi_Temple.jpg/800px-Hidimba_Devi_Temple.jpg',
+  'https://img.avianexperiences.com/trek/1d3e0af6-21a7-4ff7-99f7-0c8d38fc1f30',
   '',4.7,95000,'175131','Bhuntar Station','Bhuntar Airport'
 ),
 (
@@ -2386,7 +2400,7 @@ INSERT INTO temples (
   'Shakti Peeth','Naina Devi','Himachal Pradesh',
   'Naina Devi, Bilaspur, Himachal Pradesh 174031',
   31.3961,76.6744,
-  '5:00 AM – 9:00 PM','5:00 AM','8:00 PM','Open all days',
+  '4:00 AM – 10:00 PM','5:00 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
   'Cable car (ropeway) to hilltop; Gobind Sagar Lake panorama; Anandpur Sahib Gurudwara nearby',
   'One of 51 Shakti Peethas; hilltop cable car; panoramic Gobind Sagar Lake views',
@@ -2394,7 +2408,7 @@ INSERT INTO temples (
   'March to June, September to November',
   ARRAY['Navaratri','Shravan Ashtami','Diwali'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Naina_Devi_Temple_Himachal.jpg/800px-Naina_Devi_Temple_Himachal.jpg',
+  'https://utsav.gov.in/public/uploads/darshan_picture/darshan_88/16596128991722914195.jpg',
   '',4.7,75000,'174031','Anandpur Sahib Station','Chandigarh Airport'
 ),
 (
@@ -2403,7 +2417,7 @@ INSERT INTO temples (
   'Shaiva','Baijnath','Himachal Pradesh',
   'Baijnath, Kangra, Himachal Pradesh 176125',
   32.0467,76.6506,
-  '6:00 AM – 7:00 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 9:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Traditional attire',
   'Archaeological Survey of India protected monument; no active photography of idols; Shravan Month puja special',
   '13th-century Nagara-style temple; Shiva as lord of physicians; well-preserved carvings',
@@ -2411,24 +2425,37 @@ INSERT INTO temples (
   'March to June, September to November',
   ARRAY['Maha Shivratri','Shravan Month'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Baijnath_Temple.jpg/800px-Baijnath_Temple.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/7/79/Shiva_temple_baijnath_HP.jpg',
   '',4.5,32000,'176125','Baijnath-Paprola Station','Gaggal Airport Kangra'
 ),
+
+
+
+
+
+
+
+
+
+
+
+
+
 (
   'Chintpurni Temple','Maa Chintpurni Mandir',
   'Goddess Chintpurni',ARRAY[]::TEXT[],
   'Devi','Una','Himachal Pradesh',
   'Chintpurni, Una District, Himachal Pradesh 177110',
   31.7833,76.1167,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '4:00 AM – 10:00 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'One of the 51 Shakti Peethas, set amid the Shivalik hills',
   'One of the Shakti Peethas of the Himalayas, this temple draws huge crowds especially during Navratri, set amid the scenic Shivalik foothills.',
   'October to March',
   ARRAY['Navaratri'],
-  '+91-8681105726','',
-  '/src/assets/images/hero-temple.jpg',
+  '','',
+  'https://i.pinimg.com/736x/94/77/11/947711a0ffeccfcf0aa13dd9834451e7.jpg',
   '',4.5,13600,'177110','Una Himachal Railway Station','Gaggal Airport Kangra'
 ),
 (
@@ -2437,7 +2464,7 @@ INSERT INTO temples (
   'Devi','Sarahan','Himachal Pradesh',
   'Sarahan, Shimla District, Himachal Pradesh 172033',
   31.5167,77.8167,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '7:00 AM – 9:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Unique blend of Hindu and Buddhist hill architecture; former royal temple of Bushahr kingdom',
@@ -2445,7 +2472,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://i.pinimg.com/1200x/1b/3b/d2/1b3bd2abca0554cb86efb49e1a1b69b7.jpg',
   '',4.6,8400,'172033','Shimla Railway Station','Shimla Airport'
 ),
 
@@ -2458,7 +2485,7 @@ INSERT INTO temples (
   'Devi','Ponda','Goa',
   'Kavalem, Ponda Taluk, Goa 403115',
   15.4167,74.0833,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '6:00 AM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'Largest and most important Hindu temple in Goa; distinct Goan-Portuguese architectural fusion',
@@ -2466,7 +2493,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Zatra (temple festival)','Navaratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://i.pinimg.com/736x/4b/6f/5c/4b6f5cc74a1c9419b2b092c493db596f.jpg',
   '',4.7,18600,'403115','Madgaon Railway Station','Goa International Airport'
 ),
 (
@@ -2475,7 +2502,7 @@ INSERT INTO temples (
   'Shiva','Ponda','Goa',
   'Mangeshi, Ponda Taluk, Goa 403104',
   15.4500,73.9667,
-  '6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM','6:00 AM','7:00 PM','Open all days',
+  '5:30 AM – 9:30 PM','6:00 AM','7:00 PM','Open all days',
   'Free','Modest traditional attire recommended',
   'Special darshan available on festival days',
   'One of the most visited and largest temples in Goa with a distinctive seven-storeyed deepastambha',
@@ -2483,7 +2510,7 @@ INSERT INTO temples (
   'October to March',
   ARRAY['Jatra Utsav','Maha Shivratri'],
   '','',
-  '/src/assets/images/hero-temple.jpg',
+  'https://i.pinimg.com/736x/a1/c1/6e/a1c16e42990dedb2430dd460769e84ac.jpg',
   '',4.6,16400,'403104','Madgaon Railway Station','Goa International Airport'
 ),
 
@@ -2496,7 +2523,7 @@ INSERT INTO temples (
   'Shakti','New Delhi','Delhi',
   'Mandir Marg, New Delhi, Delhi 110001',
   28.6361,77.2044,
-  '6:00 AM – 10:00 PM','6:00 AM','8:30 PM','Open all days',
+  '7:30 AM - 12:30 PM | 5:00 PM - 8:45 PM','6:00 AM','8:30 PM','Open all days',
   'Free','Modest attire',
   'Navaratri special aarti every evening; easily accessible from Central Delhi',
   'Famous Kali temple in Delhi; Navaratri celebrations; central Delhi location',
@@ -2504,7 +2531,7 @@ INSERT INTO temples (
   'Year round',
   ARRAY['Navaratri','Kali Puja','Diwali'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Kali_Bari_Temple_Delhi.jpg/800px-Kali_Bari_Temple_Delhi.jpg',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/40/6b/3e/mandir.jpg?w=1200&h=-1&s=1',
   '',4.5,55000,'110001','Patel Chowk Metro','Indira Gandhi International Airport'
 ),
 (
@@ -2513,15 +2540,14 @@ INSERT INTO temples (
   'Swaminarayan','New Delhi','Delhi',
   'NH 24, Noida Link Rd, New Delhi 110092',
   28.6127,77.2773,
-  '9:30 AM – 6:30 PM','9:30 AM','5:30 PM','Closed on Mondays',
+  '10:00 AM – 6:30 PM','9:30 AM','5:30 PM','Closed on Mondays',
   'Complex free; exhibitions ₹170–250','Traditional attire strongly preferred; no shorts or sleeveless',
   'Water show Sahaj Anand ₹80; Audio Animatronics show ₹170; no electronics allowed inside',
   'Guinness World Record for largest Hindu temple complex; crafted from 234 ornately carved pillars and 20,000 statues',
   'Inaugurated in 2005; built in just 5 years by 11,000 artisans and thousands of BAPS volunteers. The main monument features intricate carvings from pink Rajasthani sandstone and Italian marble.',
   'October to March',
   ARRAY['Diwali','Ram Navami','Janmashtami'],
-  '','https://akshardham.com/delhi',
-  '/src/assets/images/hero-temple.jpg',
+  '','','https://i.pinimg.com/1200x/7d/cc/6b/7dcc6b9315a6745dc552e326bd1c073d.jpg',
   '',4.9,67400,'110092','Akshardham Metro','Indira Gandhi International Airport'
 ),
 
@@ -2534,7 +2560,7 @@ INSERT INTO temples (
   'Vaishnava','Mustang district','Nepal',
   'Muktinath, Mustang (Nepal border area near Uttarakhand Char Dham)',
   28.8167,83.8713,
-  '6:00 AM – 12:00 PM, 3:00 PM – 6:00 PM','6:00 AM','N/A','Open all days (seasonal)',
+  '5:00 AM – 12:00 PM, 2:00 PM – 9:00 PM','6:00 AM','N/A','Open all days (seasonal)',
   'Free','Warm clothing essential',
   '108 bull-head water spouts; natural gas flame; high altitude requires acclimatization',
   'Sacred to Vaishnavas and Buddhists; eternal flame at Muktidhara waterfall; high altitude',
@@ -2542,7 +2568,7 @@ INSERT INTO temples (
   'May to October',
   ARRAY['Yatra Season Opening','Purnima'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Muktinath_Nepal.jpg/800px-Muktinath_Nepal.jpg',
+  'https://i.pinimg.com/736x/f0/70/ec/f070ecfc3ccf087a76c32072b63c30ed.jpg',
   '',4.6,35000,'','Pokhara','Jomsom Airport'
 ),
 
@@ -2555,7 +2581,7 @@ INSERT INTO temples (
   'Jyotirlinga','Deoghar','Jharkhand',
   'Temple St, Deoghar, Jharkhand 814112',
   24.4837,86.6992,
-  '4:00 AM – 11:30 PM','4:00 AM','8:00 PM','Open all days',
+  '4:00 AM – 9:00 PM','4:00 AM','8:00 PM','Open all days',
   'Free','Traditional attire',
   'Shravan month Kanwar Yatra: 100+ km walk by millions; security and crowd management in place; special abhishekam',
   'One of 12 Jyotirlingas; Shravan month kanwar yatris walk 100+ km to offer Ganga water',
@@ -2563,7 +2589,7 @@ INSERT INTO temples (
   'July-August (Shravan month Kanwar Yatra)',
   ARRAY['Maha Shivratri','Shravan Month','Kartik Purnima'],
   '','',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Baidyanath_temple_deoghar.jpg/800px-Baidyanath_temple_deoghar.jpg',
+  'https://i.pinimg.com/736x/ab/8d/56/ab8d56e75c7027246ca2f63471f07e48.jpg',
   '',4.8,115000,'814112','Deoghar Station','Deoghar Airport    '
 )
 
