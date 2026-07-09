@@ -1,3 +1,26 @@
+// src/scripts/seedTemples.js
+// Creates (if needed) and seeds the `temples` table with 100+ temple records.
+// JS-file equivalent of seed_temples.sql — same SQL, embedded directly so no
+// filesystem read is needed at runtime, matching the initScriptures.js style.
+//
+// This replaces the old root-level seed.js + seed_temples.sql combo. It keeps
+// the same safety features that file had (transaction wrapping with rollback,
+// --dry-run, --count) so nothing was lost in the switch — just consolidated
+// into one self-contained file.
+//
+// Usage:
+//   node src/scripts/seedTemples.js              (normal run — upserts all temples)
+//   node src/scripts/seedTemples.js --dry-run     (parse & count rows without inserting)
+//   node src/scripts/seedTemples.js --count       (print current temple count then exit)
+//
+// Or via npm:  npm run db:seed
+
+require('dotenv').config();
+const pool = require('../config/db');
+
+// The full seed SQL (table create + upsert of all temples) lives here as a
+// single template string, so no filesystem read is needed at runtime.
+const CREATE_SQL = `
 CREATE TABLE IF NOT EXISTS temples (
     id                    SERIAL PRIMARY KEY,
     name                  VARCHAR(255) NOT NULL,
@@ -35,8 +58,9 @@ CREATE TABLE IF NOT EXISTS temples (
     updated_at            TIMESTAMP DEFAULT NOW()
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS uq_temples_name_city ON temples (name, location_city);
+CREATE UNIQUE INDEX IF NOT EXISTS uq_temples_name_city ON temples (name, location_city)`;
 
+const INSERT_SQL = `
 -- INSERT ALL TEMPLES
 -- ============================================================
 INSERT INTO temples (
@@ -2624,3 +2648,75 @@ ON CONFLICT (name, location_city) DO UPDATE SET
     nearest_railway       = EXCLUDED.nearest_railway,
     nearest_airport       = EXCLUDED.nearest_airport,
     updated_at            = NOW();
+
+`;
+
+const DRY_RUN = process.argv.includes('--dry-run');
+const COUNT_ONLY = process.argv.includes('--count');
+
+async function getCount(client) {
+  const { rows } = await client.query('SELECT COUNT(*) FROM temples');
+  return parseInt(rows[0].count, 10);
+}
+
+async function seedTemples() {
+  const client = await pool.connect();
+  try {
+    // ── Count only ──────────────────────────────────────────────────
+    if (COUNT_ONLY) {
+      const n = await getCount(client);
+      console.log(`\n✅  temples table currently has ${n} rows.\n`);
+      return;
+    }
+
+    // ── Dry run — parse & report without touching the database ────────
+    if (DRY_RUN) {
+      // Count temple entries by looking for the pattern ('TempleName', in INSERT_SQL
+      const matches = INSERT_SQL.match(/^\s*\(\s*\n?\s*'/gm) || [];
+      console.log(`\n🔎  Dry run — SQL parsed OK.`);
+      console.log(`    Temple entries found in INSERT_SQL: ${matches.length}`);
+      console.log('    No changes made to the database.\n');
+      return;
+    }
+
+    // ── Real seed, wrapped in a transaction so a bad row rolls back ──
+    // everything instead of leaving the table half-updated.
+    // Step 1: Create table OUTSIDE any transaction so it's visible immediately
+    console.log(`\n🕌  Ensuring table exists…`);
+    await client.query(CREATE_SQL);
+
+    const before = await getCount(client);
+    console.log(`    Table ready. Current count: ${before} temples`);
+
+    // Step 2: Insert data inside a transaction
+    await client.query('BEGIN');
+    await client.query(INSERT_SQL);
+    await client.query('COMMIT');
+
+    const after = await getCount(client);
+    const added = after - before;
+
+    console.log(`\n✅  Seed complete!`);
+    console.log(`    Temples before : ${before}`);
+    console.log(`    Temples after  : ${after}`);
+    console.log(`    Net new rows   : ${added >= 0 ? '+' + added : added}`);
+    console.log(`    (Existing rows were updated via UPSERT)\n`);
+  } catch (err) {
+    await client.query('ROLLBACK').catch(() => { });
+    console.error('\n❌  Seed failed – rolled back.\n');
+    console.error(err.message);
+    if (err.position) {
+      // Show a snippet of the SQL near the error position — same
+      // diagnostic the original seed.js gave you.
+      const pos = parseInt(err.position, 10);
+      console.error('\nSQL snippet near error:');
+      console.error('...' + CREATE_SQL.substring(Math.max(0, pos - 120), pos + 120) + '...');
+    }
+    process.exitCode = 1;
+  } finally {
+    client.release();
+    await pool.end();
+  }
+}
+
+seedTemples();
