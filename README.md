@@ -44,6 +44,151 @@ Server starts at **http://localhost:5000**
 
 ---
 
+## Prayers Module
+
+Prayer content (Sanskrit text, transliteration, meaning, benefits) is static —
+it never changes — so it is **not** stored in Postgres. Instead, every prayer
+lives in its own Markdown file inside `/prayers` at the project root:
+
+```
+prayers/
+├── gayatri-mantra.md
+├── hanuman-chalisa.md
+├── om-namah-shivaya.md
+└── ... (one .md file per prayer)
+```
+
+Each file has YAML frontmatter plus four sections:
+
+```markdown
+---
+id: 1
+title: Gayatri Mantra
+deity: Savitri
+frequency: Daily
+slug: gayatri-mantra
+---
+## Sanskrit
+
+ॐ भूर्भुवः स्वः...
+
+## Transliteration
+
+Om Bhur Bhuvah Swah...
+
+## Meaning
+
+...
+
+## Benefits
+
+...
+```
+
+`src/controllers/prayerController.js` reads and parses these files on demand
+(cached in memory after the first read) and serves them through the same API
+shape the frontend already expects:
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/prayers` | All prayers, optional `?category=<deity>` filter |
+| GET | `/api/prayers/categories` | Distinct list of deities |
+| GET | `/api/prayers/:slug` | Single prayer by slug or numeric id |
+
+**To add a new prayer:** drop a new `.md` file into `/prayers` following the
+format above and give it the next `id`. No database migration needed.
+
+**To edit a prayer:** just edit its `.md` file directly — no SQL needed.
+
+The old `src/scripts/seedPrayers.js` script and the `prayers` Postgres table
+are deprecated and no longer used by the API.
+
+---
+
+## Scriptures Module
+
+Scripture content (Sanskrit text, transliteration, English/Hindi translation)
+is static — it never changes — so like Prayers, it is **not** stored in
+Postgres. Instead, every scripture lives in its own Markdown file inside
+`/scriptures` at the project root:
+
+```
+scriptures/
+├── bhagavad-gita.md
+├── ramayana.md
+├── mahabharata.md
+├── upanishads.md
+├── rigveda.md
+└── ... (one .md file per scripture, however large — e.g. all ~23,000
+        Ramayana verses live in the single ramayana.md file)
+```
+
+Each file has YAML frontmatter (id, slug, title, description, category,
+emoji, color, language, meta_labels, source, display_order) followed by
+`## Chapter N: Title` sections, each containing `### Verse N` blocks with
+`**Sanskrit:**` / `**Transliteration:**` / `**English:**` / `**Hindi:**` /
+`**Summary:**` fields:
+
+```markdown
+---
+id: 1
+slug: "bhagavad-gita"
+title: "Bhagavad Gita"
+description: "..."
+category: "Smriti"
+emoji: "📖"
+color: "#e8f0fe"
+language: "Sanskrit"
+meta_labels: ["18 Chapters", "Sanskrit"]
+source: "..."
+display_order: 1
+---
+## Chapter 1: Arjuna Vishada Yoga
+
+### Verse 1
+**Sanskrit:** ...
+**Transliteration:** ...
+**English:** ...
+**Hindi:** ...
+```
+
+A scripture with no chapters yet (verses "pending", e.g. most Puranas) is
+just the frontmatter block — it still shows up in the Scriptures list with
+an empty chapter list.
+
+`src/utils/scriptureLoader.js` reads and parses these files on demand
+(cached in memory after the first read), and `src/controllers/scriptureController.js`
+serves them through the same API shape the frontend already expects.
+
+**To add or edit a scripture:** create/edit its `.md` file in `/scriptures`
+directly — no SQL, no migration needed.
+
+**Refreshing Bhagavad Gita / Ramayana content:**
+- `node fetch-gita-to-md.js` — pulls the full 18-chapter, ~700-verse Gita
+  (Sanskrit, transliteration, English, Hindi) from RapidAPI and writes
+  `scriptures/bhagavad-gita.md`. Requires `RAPIDAPI_KEY` in `.env` and
+  network access to `*.rapidapi.com`.
+- `node ramayana-json-to-md.js /path/to/Valmiki_Ramayan_Shlokas.json` —
+  converts the Valmiki_Ramayan_Dataset JSON (AshuVj, GitHub, MIT license)
+  into `scriptures/ramayana.md`.
+
+**Bookmarks / Favorites / Reading Progress:** these are the only scripture
+features that still touch Postgres, since they're user-specific, not
+content. They're keyed by `(scriptureSlug, chapterNumber, verseNumber)` /
+`scriptureSlug` instead of a foreign key into a `verses` table (which no
+longer exists). Run the one-time migration to set up these tables:
+```bash
+node src/scripts/migrateScripturesToMd.js
+```
+This also drops the old `scriptures` / `chapters` / `verses` tables and the
+old id-keyed `bookmarks` / `favorites` / `reading_progress` tables.
+
+The old `import-gita.js`, `import-gita-hindi.js`, `import-ramayana.js`, and
+`src/scripts/seedScriptures.js` are deprecated and no longer used by the API
+— kept only for reference.
+
+---
+
 ## Using Kaggle Data (optional)
 
 1. Download a temple dataset from Kaggle  

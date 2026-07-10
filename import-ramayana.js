@@ -1,37 +1,3 @@
-/**
- * import-ramayana.js
- *
- * One-time import: pulls the COMPLETE Valmiki Ramayana (all 7 Kaandas,
- * 648 Sargas, 23,291 shlokas — Sanskrit, transliteration, English) from
- * the open-source "Valmiki_Ramayan_Dataset" (AshuVj, GitHub, MIT license)
- * and writes it into YOUR database, using the exact same
- * scriptures / chapters / verses tables as the Bhagavad Gita import.
- *
- * Structure decision: the Ramayana is stored as ONE scripture
- * (slug: 'valmiki-ramayana'), with chapter_number running CONTINUOUSLY
- * from 1 to 648 across all 7 Kaandas, in their traditional order:
- *   Bala -> Ayodhya -> Aranya -> Kishkindha -> Sundara -> Yuddha -> Uttara
- * Each chapter's title carries both the Kaanda name and the Kaanda-local
- * Sarga number, e.g. "Bala Kanda · Sarga 1", so readers always know which
- * book they're in even though chapter numbers are global (same UX pattern
- * as the Gita's Ch. 1-18 pills).
- *
- * There is NO Hindi text in this dataset — the `hindi` column is left
- * NULL for every verse. `english` is the flowing prose translation
- * (dataset's `explanation` field); the word-by-word gloss (`translation`)
- * and traditional commentary (`comments`) are combined into `summary`.
- *
- * Safe to re-run — every insert is an upsert (ON CONFLICT ... DO UPDATE),
- * so running this again just refreshes the data, it won't duplicate rows.
- *
- * Source data (no auth needed, ~30MB, fetched directly, nothing to
- * configure):
- *   https://raw.githubusercontent.com/AshuVj/Valmiki_Ramayan_Dataset/main/data/Valmiki_Ramayan_Shlokas.json
- *
- * Usage:
- *   node import-ramayana.js
- */
-
 require('dotenv').config();
 const axios = require('axios');
 const pool = require('./src/config/db');

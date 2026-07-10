@@ -1,26 +1,3 @@
-/**
- * import-gita.js
- *
- * One-time import: pulls the COMPLETE Bhagavad Gita (all 18 chapters,
- * ~700 verses — Sanskrit, transliteration, English, Hindi) from the
- * bhagavad-gita3 API on RapidAPI and writes it into YOUR database.
- *
- * After this runs once, your app never calls the external API again —
- * every request is served from your own `chapters` / `verses` tables,
- * same as everything else in the Scriptures module.
- *
- * Safe to re-run — every insert is an upsert (ON CONFLICT ... DO UPDATE),
- * so running this again just refreshes the data, it won't duplicate rows.
- *
- * Setup:
- *   1. Sign up free at https://rapidapi.com/bhagavad-gita-bhagavad-gita-default/api/bhagavad-gita3
- *   2. Subscribe to the free tier, copy your key
- *   3. Add to your backend .env:  RAPIDAPI_KEY=your_key_here
- *
- * Usage:
- *   node import-gita.js
- */
-
 require('dotenv').config();
 const axios = require('axios');
 const pool = require('./src/config/db');

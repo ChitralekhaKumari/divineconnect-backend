@@ -1,34 +1,69 @@
-const pool = require('../config/db');
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
 
-// ─── GET /api/prayers ──────────────────────────────────────────────────────
-// Query params:
-//   category (Savitri | Shiva | Hanuman | Vishnu | Lakshmi | Ganesha)
-// ─────────────────────────────────────────────────────────────────────────
+const CWD_PRAYERS_DIR = path.join(process.cwd(), 'prayers');
+const DIRNAME_PRAYERS_DIR = path.join(__dirname, '..', '..', 'prayers');
+const PRAYERS_DIR = fs.existsSync(CWD_PRAYERS_DIR) ? CWD_PRAYERS_DIR : DIRNAME_PRAYERS_DIR;
+
+// Pull the text under a "## Heading" until the next "## " or end of string.
+function extractSection(body, heading) {
+  const re = new RegExp(`##\\s*${heading}\\s*\\n+([\\s\\S]*?)(?=\\n##\\s|$)`, 'i');
+  const match = body.match(re);
+  return match ? match[1].trim() : '';
+}
+
+function parsePrayerFile(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const { data, content } = matter(raw);
+
+  return {
+    id: data.id,
+    title: data.title,
+    deity: data.deity,
+    frequency: data.frequency,
+    slug: data.slug || path.basename(filePath, '.md'),
+    sanskrit: extractSection(content, 'Sanskrit'),
+    transliteration: extractSection(content, 'Transliteration'),
+    meaning: extractSection(content, 'Meaning'),
+    benefits: extractSection(content, 'Benefits'),
+  };
+}
+
+// Loaded once per process and cached — see note above on why this is safe.
+let cache = null;
+
+function loadPrayers() {
+  if (cache) return cache;
+
+  if (!fs.existsSync(PRAYERS_DIR)) {
+    console.error(`Prayers directory not found at ${PRAYERS_DIR}`);
+    cache = [];
+    return cache;
+  }
+
+  const files = fs.readdirSync(PRAYERS_DIR).filter((f) => f.endsWith('.md'));
+
+  cache = files
+    .map((f) => parsePrayerFile(path.join(PRAYERS_DIR, f)))
+    .sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
+
+  return cache;
+}
+
+
 async function getPrayers(req, res) {
   try {
     const category = (req.query.category || '').trim();
-
-    const conditions = ['is_active = TRUE'];
-    const params = [];
+    let prayers = loadPrayers();
 
     if (category && category.toLowerCase() !== 'all') {
-      params.push(category);
-      conditions.push(`deity = $${params.length}`);
+      prayers = prayers.filter(
+        (p) => p.deity.toLowerCase() === category.toLowerCase()
+      );
     }
 
-    const where = conditions.join(' AND ');
-
-    const result = await pool.query(
-      `SELECT
-         id, title, deity, frequency,
-         sanskrit, transliteration, meaning, benefits
-       FROM prayers
-       WHERE ${where}
-       ORDER BY id ASC`,
-      params
-    );
-
-    res.json({ success: true, data: result.rows });
+    res.json({ success: true, data: prayers });
   } catch (err) {
     console.error('getPrayers error:', err);
     res.status(500).json({ success: false, message: 'Internal server error' });
@@ -38,14 +73,35 @@ async function getPrayers(req, res) {
 // ─── GET /api/prayers/categories ───────────────────────────────────────────
 async function getPrayerCategories(req, res) {
   try {
-    const result = await pool.query(
-      `SELECT DISTINCT deity FROM prayers WHERE is_active = TRUE ORDER BY deity`
-    );
-    res.json({ success: true, data: result.rows.map(r => r.deity) });
+    const prayers = loadPrayers();
+    const categories = [...new Set(prayers.map((p) => p.deity))].sort();
+    res.json({ success: true, data: categories });
   } catch (err) {
     console.error('getPrayerCategories error:', err);
     res.status(500).json({ success: false, message: 'Internal server error' });
   }
 }
 
-module.exports = { getPrayers, getPrayerCategories };
+// ─── GET /api/prayers/:slug ─────────────────────────────────────────────────
+// Single prayer by slug or numeric id — handy for direct-linking a prayer.
+// ─────────────────────────────────────────────────────────────────────────
+async function getPrayerBySlug(req, res) {
+  try {
+    const { slug } = req.params;
+    const prayers = loadPrayers();
+    const prayer = prayers.find(
+      (p) => p.slug === slug || String(p.id) === slug
+    );
+
+    if (!prayer) {
+      return res.status(404).json({ success: false, message: 'Prayer not found' });
+    }
+
+    res.json({ success: true, data: prayer });
+  } catch (err) {
+    console.error('getPrayerBySlug error:', err);
+    res.status(500).json({ success: false, message: 'Internal server error' });
+  }
+}
+
+module.exports = { getPrayers, getPrayerCategories, getPrayerBySlug };

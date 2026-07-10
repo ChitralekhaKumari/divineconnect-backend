@@ -1,13 +1,3 @@
-// PASTE THIS FILE HERE (NEW FILE):
-// divineconnect_backend/src/utils/panchangEngine.js
-//
-// This file calculates real Panchang data (sunrise, sunset, moonrise, moonset,
-// tithi, nakshatra, Rahu Kalam, Gulika Kalam, Yamaganda, Abhijit Muhurat,
-// Brahma Muhurat) for ANY date and ANY location.
-//
-// It needs NO internet, NO API key, NO cost. It runs fully on your server.
-// It uses the free npm package "suncalc" for sun and moon positions.
-//
 // INSTALL FIRST (run this in divineconnect_backend folder):
 //   npm install suncalc
 

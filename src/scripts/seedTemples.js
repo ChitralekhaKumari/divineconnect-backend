@@ -1,25 +1,7 @@
-// src/scripts/seedTemples.js
-// Creates (if needed) and seeds the `temples` table with 100+ temple records.
-// JS-file equivalent of seed_temples.sql — same SQL, embedded directly so no
-// filesystem read is needed at runtime, matching the initScriptures.js style.
-//
-// This replaces the old root-level seed.js + seed_temples.sql combo. It keeps
-// the same safety features that file had (transaction wrapping with rollback,
-// --dry-run, --count) so nothing was lost in the switch — just consolidated
-// into one self-contained file.
-//
-// Usage:
-//   node src/scripts/seedTemples.js              (normal run — upserts all temples)
-//   node src/scripts/seedTemples.js --dry-run     (parse & count rows without inserting)
-//   node src/scripts/seedTemples.js --count       (print current temple count then exit)
-//
-// Or via npm:  npm run db:seed
-
 require('dotenv').config();
 const pool = require('../config/db');
 
-// The full seed SQL (table create + upsert of all temples) lives here as a
-// single template string, so no filesystem read is needed at runtime.
+
 const CREATE_SQL = `
 CREATE TABLE IF NOT EXISTS temples (
     id                    SERIAL PRIMARY KEY,

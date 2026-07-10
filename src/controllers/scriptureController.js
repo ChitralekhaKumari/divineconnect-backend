@@ -1,49 +1,31 @@
 const pool = require('../config/db');
+const { loadScriptures, loadAllVersesFlat } = require('../utils/scriptureLoader');
 
-// ─── GET /api/scriptures ────────────────────────────────────────────────────
-// Query params: category
-async function getScriptures(req, res) {
+
+function getScriptures(req, res) {
     try {
         const category = (req.query.category || '').trim();
-        const conditions = ['is_active = TRUE'];
-        const params = [];
+        let scriptures = loadScriptures();
 
         if (category && category.toLowerCase() !== 'all') {
-            params.push(category);
-            conditions.push(`category = $${params.length}`);
+            scriptures = scriptures.filter((s) => s.category.toLowerCase() === category.toLowerCase());
         }
 
-        const where = conditions.join(' AND ');
+        const data = scriptures.map((s) => ({
+            id: s.id,
+            slug: s.slug,
+            title: s.title,
+            description: s.description,
+            category: s.category,
+            emoji: s.emoji,
+            color: s.color,
+            language: s.language,
+            meta_labels: s.meta_labels,
+            chapter_count: s.chapters.length,
+            verse_count: s.chapters.reduce((sum, c) => sum + c.verses.length, 0),
+        }));
 
-        // NOTE: chapter/verse counts are pre-aggregated in subqueries, then
-        // LEFT JOINed onto scriptures — NOT joined as raw rows. Joining
-        // `chapters` and `verses` directly (both on scripture_id) creates a
-        // full cross-product per scripture (chapters × verses) before the
-        // GROUP BY can collapse it. That's cheap for small texts (Gita:
-        // 18 × ~700 = 12.6k temp rows) but explodes for large ones
-        // (Ramayana: 648 × 23,291 ≈ 15 MILLION temp rows) — which is what
-        // was hanging the /scriptures list page.
-        const result = await pool.query(
-            `SELECT
-         s.id, s.slug, s.title, s.description, s.category, s.emoji, s.color,
-         s.language, s.meta_labels,
-         COALESCE(ch.chapter_count, 0) AS chapter_count,
-         COALESCE(vs.verse_count, 0) AS verse_count
-       FROM scriptures s
-       LEFT JOIN (
-         SELECT scripture_id, COUNT(*)::int AS chapter_count
-         FROM chapters GROUP BY scripture_id
-       ) ch ON ch.scripture_id = s.id
-       LEFT JOIN (
-         SELECT scripture_id, COUNT(*)::int AS verse_count
-         FROM verses GROUP BY scripture_id
-       ) vs ON vs.scripture_id = s.id
-       WHERE ${where}
-       ORDER BY s.display_order ASC`,
-            params
-        );
-
-        res.json({ success: true, data: result.rows });
+        res.json({ success: true, data });
     } catch (err) {
         console.error('getScriptures error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -51,12 +33,11 @@ async function getScriptures(req, res) {
 }
 
 // ─── GET /api/scriptures/categories ────────────────────────────────────────
-async function getCategories(req, res) {
+function getCategories(req, res) {
     try {
-        const result = await pool.query(
-            `SELECT DISTINCT category FROM scriptures WHERE is_active = TRUE ORDER BY category`
-        );
-        res.json({ success: true, data: result.rows.map((r) => r.category) });
+        const scriptures = loadScriptures();
+        const categories = [...new Set(scriptures.map((s) => s.category))].sort();
+        res.json({ success: true, data: categories });
     } catch (err) {
         console.error('getCategories error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -64,25 +45,14 @@ async function getCategories(req, res) {
 }
 
 // ─── GET /api/scriptures/random-verse ──────────────────────────────────────
-async function getRandomVerse(req, res) {
+function getRandomVerse(req, res) {
     try {
-        const result = await pool.query(
-            `SELECT
-         v.id, v.verse_number, v.sanskrit, v.transliteration, v.english, v.hindi,
-         c.chapter_number, c.title AS chapter_title,
-         s.slug AS scripture_slug, s.title AS scripture_title
-       FROM verses v
-       JOIN chapters c ON c.id = v.chapter_id
-       JOIN scriptures s ON s.id = v.scripture_id
-       WHERE v.english IS NOT NULL
-       ORDER BY RANDOM()
-       LIMIT 1`
-        );
-
-        if (!result.rows.length) {
+        const verses = loadAllVersesFlat().filter((v) => v.english);
+        if (!verses.length) {
             return res.status(404).json({ success: false, message: 'No verses available yet.' });
         }
-        res.json({ success: true, data: result.rows[0] });
+        const verse = verses[Math.floor(Math.random() * verses.length)];
+        res.json({ success: true, data: verse });
     } catch (err) {
         console.error('getRandomVerse error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -90,35 +60,29 @@ async function getRandomVerse(req, res) {
 }
 
 // ─── GET /api/scriptures/search?q= ─────────────────────────────────────────
-// Searches english (full-text), sanskrit + hindi (trigram similarity)
-async function search(req, res) {
+// Simple in-memory, case-insensitive substring search across english,
+// sanskrit, hindi, and summary — content set is small enough (no verses
+// table, no DB round-trip) that this doesn't need Postgres full-text search.
+function search(req, res) {
     try {
-        const q = (req.query.q || '').trim();
+        const qRaw = (req.query.q || '').trim();
+        const q = qRaw.toLowerCase();
         if (!q) return res.json({ success: true, data: [] });
 
         const page = Math.max(parseInt(req.query.page) || 1, 1);
         const limit = Math.min(parseInt(req.query.limit) || 20, 50);
         const offset = (page - 1) * limit;
 
-        const result = await pool.query(
-            `SELECT
-         v.id, v.verse_number, v.sanskrit, v.transliteration, v.english, v.hindi,
-         c.chapter_number, c.title AS chapter_title,
-         s.slug AS scripture_slug, s.title AS scripture_title
-       FROM verses v
-       JOIN chapters c ON c.id = v.chapter_id
-       JOIN scriptures s ON s.id = v.scripture_id
-       WHERE
-         to_tsvector('english', coalesce(v.english,'') || ' ' || coalesce(v.summary,'')) @@ plainto_tsquery('english', $1)
-         OR v.sanskrit % $1
-         OR v.hindi % $1
-       ORDER BY
-         ts_rank(to_tsvector('english', coalesce(v.english,'')), plainto_tsquery('english', $1)) DESC
-       LIMIT $2 OFFSET $3`,
-            [q, limit, offset]
-        );
+        const matches = loadAllVersesFlat().filter((v) => {
+            return (
+                (v.english && v.english.toLowerCase().includes(q)) ||
+                (v.summary && v.summary.toLowerCase().includes(q)) ||
+                (v.sanskrit && v.sanskrit.includes(qRaw)) ||
+                (v.hindi && v.hindi.includes(qRaw))
+            );
+        });
 
-        res.json({ success: true, data: result.rows, page, limit });
+        res.json({ success: true, data: matches.slice(offset, offset + limit), page, limit });
     } catch (err) {
         console.error('search error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -126,27 +90,35 @@ async function search(req, res) {
 }
 
 // ─── GET /api/scriptures/:slug ─────────────────────────────────────────────
-async function getScriptureBySlug(req, res) {
+function getScriptureBySlug(req, res) {
     try {
         const { slug } = req.params;
+        const scripture = loadScriptures().find((s) => s.slug === slug);
 
-        const scriptureResult = await pool.query(
-            `SELECT id, slug, title, description, category, emoji, color, language, meta_labels, source
-       FROM scriptures WHERE slug = $1 AND is_active = TRUE`,
-            [slug]
-        );
-        if (!scriptureResult.rows.length) {
+        if (!scripture) {
             return res.status(404).json({ success: false, message: 'Scripture not found' });
         }
-        const scripture = scriptureResult.rows[0];
 
-        const chaptersResult = await pool.query(
-            `SELECT id, chapter_number, title, verse_count
-       FROM chapters WHERE scripture_id = $1 ORDER BY chapter_number ASC`,
-            [scripture.id]
-        );
-
-        res.json({ success: true, data: { ...scripture, chapters: chaptersResult.rows } });
+        res.json({
+            success: true,
+            data: {
+                id: scripture.id,
+                slug: scripture.slug,
+                title: scripture.title,
+                description: scripture.description,
+                category: scripture.category,
+                emoji: scripture.emoji,
+                color: scripture.color,
+                language: scripture.language,
+                meta_labels: scripture.meta_labels,
+                source: scripture.source,
+                chapters: scripture.chapters.map((c) => ({
+                    chapter_number: c.chapter_number,
+                    title: c.title,
+                    verse_count: c.verse_count,
+                })),
+            },
+        });
     } catch (err) {
         console.error('getScriptureBySlug error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -154,54 +126,37 @@ async function getScriptureBySlug(req, res) {
 }
 
 // ─── GET /api/scriptures/:slug/chapters/:chapter ───────────────────────────
-// Returns chapter info + paginated verses
-async function getChapterVerses(req, res) {
+function getChapterVerses(req, res) {
     try {
         const { slug, chapter } = req.params;
+        const chapterNumber = parseInt(chapter, 10);
         const page = Math.max(parseInt(req.query.page) || 1, 1);
         const limit = Math.min(parseInt(req.query.limit) || 50, 100);
         const offset = (page - 1) * limit;
 
-        const scriptureResult = await pool.query(
-            `SELECT id, slug, title FROM scriptures WHERE slug = $1 AND is_active = TRUE`,
-            [slug]
-        );
-        if (!scriptureResult.rows.length) {
+        const scripture = loadScriptures().find((s) => s.slug === slug);
+        if (!scripture) {
             return res.status(404).json({ success: false, message: 'Scripture not found' });
         }
-        const scriptureId = scriptureResult.rows[0].id;
 
-        const chapterResult = await pool.query(
-            `SELECT id, chapter_number, title, verse_count
-       FROM chapters WHERE scripture_id = $1 AND chapter_number = $2`,
-            [scriptureId, chapter]
-        );
-        if (!chapterResult.rows.length) {
+        const chapterRow = scripture.chapters.find((c) => c.chapter_number === chapterNumber);
+        if (!chapterRow) {
             return res.status(404).json({ success: false, message: 'Chapter not found' });
         }
-        const chapterRow = chapterResult.rows[0];
 
-        const versesResult = await pool.query(
-            `SELECT id, verse_number, sanskrit, transliteration, english, hindi, summary
-       FROM verses WHERE chapter_id = $1 ORDER BY verse_number ASC
-       LIMIT $2 OFFSET $3`,
-            [chapterRow.id, limit, offset]
-        );
-
-        // Adjacent chapter numbers, for Previous/Next navigation
-        const navResult = await pool.query(
-            `SELECT chapter_number FROM chapters WHERE scripture_id = $1 ORDER BY chapter_number ASC`,
-            [scriptureId]
-        );
-        const chapterNumbers = navResult.rows.map((r) => r.chapter_number);
-        const idx = chapterNumbers.indexOf(chapterRow.chapter_number);
+        const chapterNumbers = scripture.chapters.map((c) => c.chapter_number);
+        const idx = chapterNumbers.indexOf(chapterNumber);
 
         res.json({
             success: true,
             data: {
-                scripture: scriptureResult.rows[0],
-                chapter: chapterRow,
-                verses: versesResult.rows,
+                scripture: { id: scripture.id, slug: scripture.slug, title: scripture.title },
+                chapter: {
+                    chapter_number: chapterRow.chapter_number,
+                    title: chapterRow.title,
+                    verse_count: chapterRow.verse_count,
+                },
+                verses: chapterRow.verses.slice(offset, offset + limit),
                 prevChapter: idx > 0 ? chapterNumbers[idx - 1] : null,
                 nextChapter: idx < chapterNumbers.length - 1 ? chapterNumbers[idx + 1] : null,
             },
@@ -215,16 +170,22 @@ async function getChapterVerses(req, res) {
 }
 
 // ─── POST /api/scriptures/bookmarks (auth required) ────────────────────────
-// Body: { verseId }
+// Body: { scriptureSlug, chapterNumber, verseNumber }
 async function addBookmark(req, res) {
     try {
-        const { verseId } = req.body;
-        if (!verseId) return res.status(400).json({ success: false, message: 'verseId is required' });
+        const { scriptureSlug, chapterNumber, verseNumber } = req.body;
+        if (!scriptureSlug || !chapterNumber || !verseNumber) {
+            return res.status(400).json({
+                success: false,
+                message: 'scriptureSlug, chapterNumber and verseNumber are required',
+            });
+        }
 
         await pool.query(
-            `INSERT INTO bookmarks (user_id, verse_id) VALUES ($1, $2)
-       ON CONFLICT (user_id, verse_id) DO NOTHING`,
-            [req.user.id, verseId]
+            `INSERT INTO scripture_bookmarks (user_id, scripture_slug, chapter_number, verse_number)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (user_id, scripture_slug, chapter_number, verse_number) DO NOTHING`,
+            [req.user.id, scriptureSlug, chapterNumber, verseNumber]
         );
         res.status(201).json({ success: true, message: 'Bookmarked.' });
     } catch (err) {
@@ -233,13 +194,15 @@ async function addBookmark(req, res) {
     }
 }
 
-// ─── DELETE /api/scriptures/bookmarks/:verseId (auth required) ─────────────
+// ─── DELETE /api/scriptures/bookmarks/:scriptureSlug/:chapterNumber/:verseNumber (auth required)
 async function removeBookmark(req, res) {
     try {
-        await pool.query(`DELETE FROM bookmarks WHERE user_id = $1 AND verse_id = $2`, [
-            req.user.id,
-            req.params.verseId,
-        ]);
+        const { scriptureSlug, chapterNumber, verseNumber } = req.params;
+        await pool.query(
+            `DELETE FROM scripture_bookmarks
+       WHERE user_id = $1 AND scripture_slug = $2 AND chapter_number = $3 AND verse_number = $4`,
+            [req.user.id, scriptureSlug, chapterNumber, verseNumber]
+        );
         res.json({ success: true, message: 'Bookmark removed.' });
     } catch (err) {
         console.error('removeBookmark error:', err);
@@ -248,22 +211,35 @@ async function removeBookmark(req, res) {
 }
 
 // ─── GET /api/scriptures/bookmarks (auth required) ─────────────────────────
+// Joins each stored (slug, chapter, verse) back against the .md content so
+// the response still carries the verse text, not just the identifying keys.
 async function getBookmarks(req, res) {
     try {
         const result = await pool.query(
-            `SELECT
-         v.id, v.verse_number, v.sanskrit, v.transliteration, v.english,
-         c.chapter_number, s.slug AS scripture_slug, s.title AS scripture_title,
-         b.created_at AS bookmarked_at
-       FROM bookmarks b
-       JOIN verses v ON v.id = b.verse_id
-       JOIN chapters c ON c.id = v.chapter_id
-       JOIN scriptures s ON s.id = v.scripture_id
-       WHERE b.user_id = $1
-       ORDER BY b.created_at DESC`,
+            `SELECT scripture_slug, chapter_number, verse_number, created_at
+       FROM scripture_bookmarks WHERE user_id = $1 ORDER BY created_at DESC`,
             [req.user.id]
         );
-        res.json({ success: true, data: result.rows });
+
+        const scriptures = loadScriptures();
+        const data = result.rows.map((b) => {
+            const scripture = scriptures.find((s) => s.slug === b.scripture_slug);
+            const chapterRow = scripture?.chapters.find((c) => c.chapter_number === b.chapter_number);
+            const verse = chapterRow?.verses.find((v) => v.verse_number === b.verse_number);
+            return {
+                scripture_slug: b.scripture_slug,
+                scripture_title: scripture?.title || b.scripture_slug,
+                chapter_number: b.chapter_number,
+                chapter_title: chapterRow?.title || null,
+                verse_number: b.verse_number,
+                sanskrit: verse?.sanskrit || null,
+                transliteration: verse?.transliteration || null,
+                english: verse?.english || null,
+                bookmarked_at: b.created_at,
+            };
+        });
+
+        res.json({ success: true, data });
     } catch (err) {
         console.error('getBookmarks error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
@@ -271,16 +247,16 @@ async function getBookmarks(req, res) {
 }
 
 // ─── POST /api/scriptures/favorites (auth required) ────────────────────────
-// Body: { scriptureId }
+// Body: { scriptureSlug }
 async function addFavorite(req, res) {
     try {
-        const { scriptureId } = req.body;
-        if (!scriptureId) return res.status(400).json({ success: false, message: 'scriptureId is required' });
+        const { scriptureSlug } = req.body;
+        if (!scriptureSlug) return res.status(400).json({ success: false, message: 'scriptureSlug is required' });
 
         await pool.query(
-            `INSERT INTO favorites (user_id, scripture_id) VALUES ($1, $2)
-       ON CONFLICT (user_id, scripture_id) DO NOTHING`,
-            [req.user.id, scriptureId]
+            `INSERT INTO scripture_favorites (user_id, scripture_slug) VALUES ($1, $2)
+       ON CONFLICT (user_id, scripture_slug) DO NOTHING`,
+            [req.user.id, scriptureSlug]
         );
         res.status(201).json({ success: true, message: 'Added to favorites.' });
     } catch (err) {
@@ -289,12 +265,12 @@ async function addFavorite(req, res) {
     }
 }
 
-// ─── DELETE /api/scriptures/favorites/:scriptureId (auth required) ─────────
+// ─── DELETE /api/scriptures/favorites/:scriptureSlug (auth required) ───────
 async function removeFavorite(req, res) {
     try {
-        await pool.query(`DELETE FROM favorites WHERE user_id = $1 AND scripture_id = $2`, [
+        await pool.query(`DELETE FROM scripture_favorites WHERE user_id = $1 AND scripture_slug = $2`, [
             req.user.id,
-            req.params.scriptureId,
+            req.params.scriptureSlug,
         ]);
         res.json({ success: true, message: 'Removed from favorites.' });
     } catch (err) {
@@ -307,36 +283,43 @@ async function removeFavorite(req, res) {
 async function getFavorites(req, res) {
     try {
         const result = await pool.query(
-            `SELECT s.id, s.slug, s.title, s.emoji, s.color, f.created_at AS favorited_at
-       FROM favorites f
-       JOIN scriptures s ON s.id = f.scripture_id
-       WHERE f.user_id = $1
-       ORDER BY f.created_at DESC`,
+            `SELECT scripture_slug, created_at FROM scripture_favorites WHERE user_id = $1 ORDER BY created_at DESC`,
             [req.user.id]
         );
-        res.json({ success: true, data: result.rows });
+
+        const scriptures = loadScriptures();
+        const data = result.rows.map((f) => {
+            const scripture = scriptures.find((s) => s.slug === f.scripture_slug);
+            return {
+                slug: f.scripture_slug,
+                title: scripture?.title || f.scripture_slug,
+                emoji: scripture?.emoji || null,
+                color: scripture?.color || null,
+                favorited_at: f.created_at,
+            };
+        });
+
+        res.json({ success: true, data });
     } catch (err) {
         console.error('getFavorites error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });
     }
 }
 
-// ─── PUT /api/scriptures/progress (auth required) ──────────────────────────
-// Body: { scriptureId, chapterNumber, verseNumber }
-// Also serves as "recently read" — ordered by updated_at.
+
 async function updateProgress(req, res) {
     try {
-        const { scriptureId, chapterNumber, verseNumber } = req.body;
-        if (!scriptureId || !chapterNumber) {
-            return res.status(400).json({ success: false, message: 'scriptureId and chapterNumber are required' });
+        const { scriptureSlug, chapterNumber, verseNumber } = req.body;
+        if (!scriptureSlug || !chapterNumber) {
+            return res.status(400).json({ success: false, message: 'scriptureSlug and chapterNumber are required' });
         }
 
         await pool.query(
-            `INSERT INTO reading_progress (user_id, scripture_id, chapter_number, verse_number, updated_at)
+            `INSERT INTO scripture_reading_progress (user_id, scripture_slug, chapter_number, verse_number, updated_at)
        VALUES ($1, $2, $3, $4, NOW())
-       ON CONFLICT (user_id, scripture_id)
+       ON CONFLICT (user_id, scripture_slug)
        DO UPDATE SET chapter_number = $3, verse_number = $4, updated_at = NOW()`,
-            [req.user.id, scriptureId, chapterNumber, verseNumber || null]
+            [req.user.id, scriptureSlug, chapterNumber, verseNumber || null]
         );
         res.json({ success: true, message: 'Progress saved.' });
     } catch (err) {
@@ -349,17 +332,26 @@ async function updateProgress(req, res) {
 async function getRecentReads(req, res) {
     try {
         const result = await pool.query(
-            `SELECT
-         s.slug, s.title, s.emoji, s.color,
-         rp.chapter_number, rp.verse_number, rp.updated_at
-       FROM reading_progress rp
-       JOIN scriptures s ON s.id = rp.scripture_id
-       WHERE rp.user_id = $1
-       ORDER BY rp.updated_at DESC
-       LIMIT 10`,
+            `SELECT scripture_slug, chapter_number, verse_number, updated_at
+       FROM scripture_reading_progress WHERE user_id = $1 ORDER BY updated_at DESC LIMIT 10`,
             [req.user.id]
         );
-        res.json({ success: true, data: result.rows });
+
+        const scriptures = loadScriptures();
+        const data = result.rows.map((rp) => {
+            const scripture = scriptures.find((s) => s.slug === rp.scripture_slug);
+            return {
+                slug: rp.scripture_slug,
+                title: scripture?.title || rp.scripture_slug,
+                emoji: scripture?.emoji || null,
+                color: scripture?.color || null,
+                chapter_number: rp.chapter_number,
+                verse_number: rp.verse_number,
+                updated_at: rp.updated_at,
+            };
+        });
+
+        res.json({ success: true, data });
     } catch (err) {
         console.error('getRecentReads error:', err);
         res.status(500).json({ success: false, message: 'Internal server error' });

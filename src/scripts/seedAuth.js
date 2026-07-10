@@ -1,28 +1,7 @@
-// src/scripts/seedAuth.js
-// Creates the `users` and `otps` tables used by the auth flow (register,
-// email-verify OTP, login, forgot/reset-password OTP). JS-file equivalent
-// of seed_auth.sql — same SQL, embedded directly so no filesystem read is
-// needed at runtime, matching the initScriptures.js style.
-//
-// This replaces the old root-level seed_auth.js + seed_auth.sql combo. It
-// keeps the same safety/inspection features that file had (transaction
-// wrapping with rollback, --check) so nothing was lost in the switch —
-// just consolidated into one self-contained file.
-//
-// Note: despite the "seed" name (kept for consistency with the other
-// seedX.js scripts), this file only creates schema — it has no data rows
-// to insert, since user accounts are created through the normal signup
-// flow, not seeded.
-//
-// Usage:
-//   node src/scripts/seedAuth.js            (creates tables if they don't exist)
-//   node src/scripts/seedAuth.js --check     (just check if tables already exist)
-
 require('dotenv').config();
 const pool = require('../config/db');
 
-// The full schema SQL lives here as a single template string, so no
-// filesystem read is needed at runtime.
+
 const SEED_SQL = `
 -- ─── Users Table ──────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS users (

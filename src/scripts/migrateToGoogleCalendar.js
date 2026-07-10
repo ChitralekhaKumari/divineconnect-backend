@@ -1,9 +1,3 @@
-// src/scripts/migrateToGoogleCalendar.js
-// Run once: node src/scripts/migrateToGoogleCalendar.js
-// - Drops old festivals / calendar_reminders / calendar_favourites tables
-// - Creates google_holidays table
-// - Pre-fetches current year from Google Calendar API
-
 require('dotenv').config();
 const pool = require('../config/db');
 const { ensureTable, fetchAndCacheYear } = require('../services/googleCalendarService');

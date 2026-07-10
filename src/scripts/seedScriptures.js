@@ -1,25 +1,7 @@
-// src/scripts/seedScriptures.js
-// One-stop script for the entire Scriptures module:
-//   1. Creates all tables (scriptures, chapters, verses, bookmarks,
-//      favorites, reading_progress) — replaces initScriptures.js
-//   2. Seeds content (Bhagavad Gita, Ramayana, Mahabharata, Rigveda,
-//      Isha Upanishad with real verses; remaining texts as structural rows)
-//
-// Usage:
-//   node src/scripts/seedScriptures.js              (normal run)
-//   node src/scripts/seedScriptures.js --dry-run     (validate SQL without inserting)
-//   node src/scripts/seedScriptures.js --count       (print current row counts then exit)
-//
-// You can safely delete initScriptures.js and run-scriptures-seed.js —
-// this file replaces both.
-
 require('dotenv').config();
 const pool = require('../config/db');
 
-// ─── Step 1: Ensure tables exist ────────────────────────────────────────────
-// Run BEFORE the insert SQL, outside any transaction, so PostgreSQL can
-// resolve the table names at parse time without a "relation does not exist" error.
-// This replaces initScriptures.js — all tables, indexes and trigger are here.
+
 const CREATE_SQL = `
 -- pg_trgm powers fast ILIKE search on Sanskrit/Hindi text
 CREATE EXTENSION IF NOT EXISTS pg_trgm;

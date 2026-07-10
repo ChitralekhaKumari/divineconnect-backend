@@ -1,7 +1,4 @@
-// divineConnect/divineconnect_backend/src/scripts/initPanchangCache.js
-// Run with:  node src/scripts/initPanchangCache.js
-// Creates a cache table that stores DevDarsha API responses so we never
-// call the API twice for the same date + city.
+
 
 require('dotenv').config();
 const pool = require('../config/db');
