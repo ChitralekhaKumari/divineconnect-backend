@@ -1,27 +1,5 @@
-/**
- * ramayana-json-to-md.js
- *
- * Converts the Valmiki_Ramayan_Dataset JSON (AshuVj, GitHub, MIT license —
- * the same dataset import-ramayana.js used to pull into Postgres) into a
- * single file: scriptures/ramayana.md
- *
- * Structure: ONE scripture (slug: 'ramayana'), with chapter_number running
- * CONTINUOUSLY from 1 across all 7 Kaandas in traditional order:
- *   Bala -> Ayodhya -> Aranya -> Kishkindha -> Sundara -> Yuddha -> Uttara
- * Each chapter title carries both the Kaanda name and the Kaanda-local Sarga
- * number, e.g. "Bala Kanda · Sarga 1" — same convention as the old DB import.
- *
- * There is no Hindi text in this dataset, so the Hindi field is simply
- * omitted per verse (the reader UI already only shows Hindi when present).
- *
- * Expected input JSON shape (array of objects), one per shloka:
- *   { kanda, sarga, shloka, shloka_text, transliteration, explanation, translation, comments }
- *
- * Usage:
- *   node ramayana-json-to-md.js /path/to/Valmiki_Ramayan_Shlokas.json
- *
- * (If no path is given, looks for ./data/ramayana.json)
- */
+//  * Usage: node ramayana-json-to-md.js /path/to/Valmiki_Ramayan_Shlokas.json
+//  * (If no path is given, looks for ./data/ramayana.json)
 
 const fs = require('fs');
 const path = require('path');

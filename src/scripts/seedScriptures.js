@@ -1,18 +1,4 @@
-// src/scripts/seedScriptures.js
-// One-stop script for the entire Scriptures module:
-//   1. Creates all tables (scriptures, chapters, verses, bookmarks,
-//      favorites, reading_progress) — replaces initScriptures.js
-//   2. Seeds content (Bhagavad Gita, Ramayana, Mahabharata, Rigveda,
-//      Isha Upanishad with real verses; remaining texts as structural rows)
-//
-// Usage:
-//   node src/scripts/seedScriptures.js              (normal run)
-//   node src/scripts/seedScriptures.js --dry-run     (validate SQL without inserting)
-//   node src/scripts/seedScriptures.js --count       (print current row counts then exit)
-//
-// You can safely delete initScriptures.js and run-scriptures-seed.js —
-// this file replaces both.
-
+// Usage: node src/scripts/seedScriptures.js              (normal run)
 require('dotenv').config();
 const pool = require('../config/db');
 

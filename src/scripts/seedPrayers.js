@@ -1,16 +1,4 @@
-// src/scripts/seedPrayers.js
-// One-stop script for the Prayers module:
-//   1. Creates the `prayers` table if it doesn't exist
-//   2. Seeds all mantra texts (Sanskrit + transliteration + meaning + benefits)
-//
-// Hanuman Chalisa is formatted with its traditional structure, each verse on
-// its own line with a blank line between verses for readability:
-//   2 opening dohas -> 40 individually numbered chaupais (1-40) -> 1 closing doha
-//
-// Usage:
-//   node src/scripts/seedPrayers.js              (normal run — upserts all prayers)
-//   node src/scripts/seedPrayers.js --dry-run     (validate SQL without inserting)
-//   node src/scripts/seedPrayers.js --count       (print current prayer count then exit)
+// Usage: node src/scripts/seedPrayers.js              (normal run — upserts all prayers)
 
 require('dotenv').config();
 const pool = require('../config/db');

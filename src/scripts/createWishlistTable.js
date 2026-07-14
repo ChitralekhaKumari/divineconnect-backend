@@ -1,23 +1,4 @@
-// src/scripts/createWishlistTable.js
-//
-// Creates the generic, cross-module `wishlist_items` table used by the
-// Wishlist (heart icon) feature on Prayers, Scriptures, Temples, and any
-// future module.
-//
-// One row = one user has wishlisted one item.
-//   item_type -> 'prayer' | 'scripture' | 'temple' | ... (free text, extensible)
-//   item_id   -> the id/slug of that item inside its own module
-//
-// We snapshot title/subtitle/image at add-time so the Wishlist page can
-// render instantly without having to reach into 3 different data sources
-// (prayers = .md files, scriptures = .md files, temples = Postgres) just
-// to show a list. Existing per-module favorite tables (e.g.
-// scripture_favorites) are left untouched — this is a separate, additive
-// feature.
-//
-// Run once:
-//   node src/scripts/createWishlistTable.js
-//
+// Run once: node src/scripts/createWishlistTable.js
 require('dotenv').config();
 const pool = require('../config/db');
 

@@ -1,5 +1,3 @@
-// divineConnect/divineconnect_backend/src/server.js
-// REPLACE your entire existing server.js with this file
 
 require('dotenv').config();
 const express = require('express');
