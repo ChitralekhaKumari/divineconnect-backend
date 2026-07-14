@@ -1,3 +1,27 @@
+/**
+ * fetch-gita-to-md.js
+ *
+ * Pulls the COMPLETE Bhagavad Gita (all 18 chapters, ~700 verses —
+ * Sanskrit, transliteration, English, and Hindi where available) from
+ * RapidAPI, and writes it to a single file: scriptures/bhagavad-gita.md
+ *
+ * This replaces import-gita.js + import-gita-hindi.js — instead of writing
+ * to Postgres, it writes directly to the .md file the app now reads from.
+ *
+ * IMPORTANT: this must be run from a machine that can reach RapidAPI —
+ * it is NOT run automatically as part of deploys. Run it once (or whenever
+ * you want to refresh/re-pull the text), then commit the resulting .md file.
+ * Safe to re-run — it fully regenerates scriptures/bhagavad-gita.md each time.
+ *
+ * Setup (same as before):
+ *   1. Sign up free at https://rapidapi.com/bhagavad-gita-bhagavad-gita-default/api/bhagavad-gita3
+ *      AND subscribe (free tier) to "Shreemad Bhagvad Geeta" (by rkgcode) for Hindi text
+ *   2. Your .env already has RAPIDAPI_KEY set — same key works for both APIs
+ *
+ * Usage:
+ *   node fetch-gita-to-md.js
+ */
+
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');

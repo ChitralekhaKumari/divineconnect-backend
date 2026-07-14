@@ -5,9 +5,6 @@ const pool = require('./src/config/db');
 const DATASET_URL =
     'https://raw.githubusercontent.com/AshuVj/Valmiki_Ramayan_Dataset/main/data/Valmiki_Ramayan_Shlokas.json';
 
-// Traditional reading order. (Uttara Kanda is included for completeness —
-// note it's widely considered a later addition, not part of the original
-// text, but it's included here since the dataset provides it.)
 const KANDA_ORDER = [
     'Bala Kanda',
     'Ayodhya Kanda',
@@ -21,12 +18,6 @@ const KANDA_ORDER = [
 const BATCH_SIZE = 500; // verses per multi-row INSERT
 
 async function upsertScripture() {
-    // IMPORTANT: this writes into the 'ramayana' slug — the same row your
-    // seed_scriptures.sql placeholder already created (with 1 sample
-    // chapter/verse). It does NOT create a separate 'valmiki-ramayana' row.
-    // ON CONFLICT (slug) DO UPDATE means this fills in / overwrites that
-    // existing placeholder in place, so there's exactly one Ramayana card,
-    // same id, same slug your frontend already links to.
     const { rows } = await pool.query(
         `INSERT INTO scriptures
        (slug, title, description, category, emoji, color, language, meta_labels, source, display_order)
@@ -86,7 +77,6 @@ async function main() {
     const client = await pool.connect();
 
     try {
-        // Group by kanda -> sarga, preserving shloka order within each sarga
         const byKanda = new Map();
         for (const s of allShlokas) {
             if (!byKanda.has(s.kanda)) byKanda.set(s.kanda, new Map());

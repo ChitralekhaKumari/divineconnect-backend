@@ -1,5 +1,15 @@
 const pool = require('../config/db');
 
+// ─── GET /api/temples ─────────────────────────────────────────────────────────
+// Query params:
+//   page     (default 1)
+//   limit    (default 12, max 50)
+//   search   (text search on name, city, state, deity)
+//   category (Shiva | Vishnu | Devi | Other)
+//   tag      (LIVE | POPULAR | FEATURED | NEW)
+//   state    (filter by state)
+//   sort     (rating | reviews | name) default: id
+// ─────────────────────────────────────────────────────────────────────────────
 async function getTemples(req, res) {
   try {
     const page     = Math.max(1, parseInt(req.query.page)  || 1);

@@ -12,6 +12,7 @@ const prayerRoutes = require('./routes/prayers');
 const calendarRoutes = require('./routes/calendar');
 const authRoutes = require('./routes/auth');
 const scriptureRoutes = require('./routes/scriptures');   // ← NEW LINE
+const wishlistRoutes = require('./routes/wishlist');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
@@ -49,6 +50,7 @@ app.use('/api/temples', templeRoutes);
 app.use('/api/prayers', prayerRoutes);
 app.use('/api/calendar', calendarRoutes);
 app.use('/api/scriptures', scriptureRoutes);   // ← NEW LINE
+app.use('/api/wishlist', wishlistRoutes);
 
 // ─── Errors ───────────────────────────────────────────────────────────────────
 app.use(notFound);

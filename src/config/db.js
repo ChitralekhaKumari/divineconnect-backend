@@ -4,6 +4,16 @@
 const { Pool, types } = require('pg');
 require('dotenv').config();
 
+// ─── Critical fix ──────────────────────────────────────────────────────────
+// By default, node-postgres converts PostgreSQL DATE columns into JS Date
+// objects. When those get serialized in res.json(), they turn into UTC
+// ISO timestamps (e.g. "2026-06-26T00:00:00.000Z"). Depending on the
+// server/browser timezone, this can shift the date backward or forward
+// by one day, and breaks any string-based date comparison like
+// f.date.startsWith("2026-06-16").
+//
+// PostgreSQL's DATE type OID is 1082. Overriding its parser to return
+// the raw string (e.g. "2026-06-26") avoids all timezone conversion.
 types.setTypeParser(1082, (val) => val);
 
 const pool = new Pool({

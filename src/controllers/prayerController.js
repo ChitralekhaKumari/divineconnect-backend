@@ -2,6 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
+// ─── Data source ────────────────────────────────────────────────────────────
+// Prayer content never changes, so instead of a database table we keep one
+// .md file per prayer inside /prayers (project root). Each file has YAML
+// frontmatter (id, title, deity, frequency, slug) followed by four markdown
+// sections: ## Sanskrit / ## Transliteration / ## Meaning / ## Benefits.
+// ─────────────────────────────────────────────────────────────────────────
+
 const CWD_PRAYERS_DIR = path.join(process.cwd(), 'prayers');
 const DIRNAME_PRAYERS_DIR = path.join(__dirname, '..', '..', 'prayers');
 const PRAYERS_DIR = fs.existsSync(CWD_PRAYERS_DIR) ? CWD_PRAYERS_DIR : DIRNAME_PRAYERS_DIR;
@@ -51,7 +58,10 @@ function loadPrayers() {
   return cache;
 }
 
-
+// ─── GET /api/prayers ──────────────────────────────────────────────────────
+// Query params:
+//   category (Savitri | Shiva | Hanuman | Vishnu | Lakshmi | Ganesha | ...)
+// ─────────────────────────────────────────────────────────────────────────
 async function getPrayers(req, res) {
   try {
     const category = (req.query.category || '').trim();

@@ -1,4 +1,12 @@
-
+// One-off generator: writes the initial /scriptures/*.md files using the
+// same content that used to live in src/scripts/seedScriptures.js.
+//
+// NOTE: bhagavad-gita.md and ramayana.md written here are placeholders
+// (a couple of sample verses each, same as the old DB seed had) — they get
+// fully replaced by fetch-gita-to-md.js and ramayana-json-to-md.js.
+//
+// This script is a one-time tool, not part of the running app — safe to
+// delete after running once.
 
 const fs = require('fs');
 const path = require('path');

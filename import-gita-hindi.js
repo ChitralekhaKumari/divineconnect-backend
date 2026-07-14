@@ -1,3 +1,32 @@
+/**
+ * import-gita-hindi.js
+ *
+ * Backfills the `hindi` column on your already-imported Bhagavad Gita
+ * verses, using the "Shreemad Bhagvad Geeta" API (by rkgcode) on RapidAPI —
+ * a different API from the one import-gita.js used, because that one
+ * doesn't return Hindi text.
+ *
+ * Run import-gita.js FIRST (it creates the scripture/chapters/verses rows).
+ * This script only UPDATEs the hindi column on rows that already exist —
+ * it does not create new verses.
+ *
+ * This API is verse-by-verse (no bulk "get all" endpoint), so this makes
+ * one request per verse — 701 requests total, with a short delay between
+ * each to stay well under free-tier rate limits. Expect this to take a
+ * few minutes.
+ *
+ * Setup:
+ *   1. On RapidAPI, open "Shreemad Bhagvad Geeta" (by rkgcode)
+ *   2. Click "Subscribe to Test" and pick the free tier
+ *      (this is a SEPARATE subscription from the bhagavad-gita3 API,
+ *      even though you use the same account/key)
+ *   3. Your .env RAPIDAPI_KEY from before works — same account, so no
+ *      new env var needed
+ *
+ * Usage:
+ *   node import-gita-hindi.js
+ */
+
 require('dotenv').config();
 const axios = require('axios');
 const pool = require('./src/config/db');

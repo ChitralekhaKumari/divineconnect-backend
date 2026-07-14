@@ -2,6 +2,44 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
+// ─── Data source ────────────────────────────────────────────────────────────
+// Scripture content is static — it never changes — so instead of a database
+// (scriptures / chapters / verses tables) we keep ONE .md file per scripture
+// inside /scriptures (project root), same pattern as /prayers.
+//
+// File format:
+//
+//   ---
+//   id: 1
+//   slug: bhagavad-gita
+//   title: Bhagavad Gita
+//   description: The song of God — ...
+//   category: Smriti
+//   emoji: 📖
+//   color: "#e8f0fe"
+//   language: Sanskrit
+//   meta_labels: [18 Chapters, Sanskrit]
+//   source: Public domain (traditional text)
+//   display_order: 1
+//   ---
+//   ## Chapter 1: Arjuna Vishada Yoga
+//
+//   ### Verse 1
+//   **Sanskrit:** ...
+//   **Transliteration:** ...
+//   **English:** ...
+//   **Hindi:** ...
+//   **Summary:** ...
+//
+//   ### Verse 2
+//   ...
+//
+//   ## Chapter 2: ...
+//
+// A scripture with no chapters yet (verses "pending") is just the
+// frontmatter block with an empty body — it still shows up in the list,
+// with an empty `chapters` array.
+// ─────────────────────────────────────────────────────────────────────────
 
 const CWD_SCRIPTURES_DIR = path.join(process.cwd(), 'scriptures');
 const DIRNAME_SCRIPTURES_DIR = path.join(__dirname, '..', '..', 'scriptures');

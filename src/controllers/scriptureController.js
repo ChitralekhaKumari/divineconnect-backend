@@ -1,7 +1,16 @@
 const pool = require('../config/db');
 const { loadScriptures, loadAllVersesFlat } = require('../utils/scriptureLoader');
 
+// ─── Content (scriptures/chapters/verses) now comes from /scriptures/*.md ──
+// See src/utils/scriptureLoader.js for the file format and parsing.
+// Only user-generated data (favorites, reading progress) still
+// lives in Postgres — keyed by scripture slug / chapter number / verse
+// number instead of a foreign key into a `verses` table, since verses are
+// no longer rows in the database.
+// ─────────────────────────────────────────────────────────────────────────
 
+// ─── GET /api/scriptures ────────────────────────────────────────────────────
+// Query params: category
 function getScriptures(req, res) {
     try {
         const category = (req.query.category || '').trim();
@@ -169,83 +178,6 @@ function getChapterVerses(req, res) {
     }
 }
 
-// ─── POST /api/scriptures/bookmarks (auth required) ────────────────────────
-// Body: { scriptureSlug, chapterNumber, verseNumber }
-async function addBookmark(req, res) {
-    try {
-        const { scriptureSlug, chapterNumber, verseNumber } = req.body;
-        if (!scriptureSlug || !chapterNumber || !verseNumber) {
-            return res.status(400).json({
-                success: false,
-                message: 'scriptureSlug, chapterNumber and verseNumber are required',
-            });
-        }
-
-        await pool.query(
-            `INSERT INTO scripture_bookmarks (user_id, scripture_slug, chapter_number, verse_number)
-       VALUES ($1, $2, $3, $4)
-       ON CONFLICT (user_id, scripture_slug, chapter_number, verse_number) DO NOTHING`,
-            [req.user.id, scriptureSlug, chapterNumber, verseNumber]
-        );
-        res.status(201).json({ success: true, message: 'Bookmarked.' });
-    } catch (err) {
-        console.error('addBookmark error:', err);
-        res.status(500).json({ success: false, message: 'Internal server error' });
-    }
-}
-
-// ─── DELETE /api/scriptures/bookmarks/:scriptureSlug/:chapterNumber/:verseNumber (auth required)
-async function removeBookmark(req, res) {
-    try {
-        const { scriptureSlug, chapterNumber, verseNumber } = req.params;
-        await pool.query(
-            `DELETE FROM scripture_bookmarks
-       WHERE user_id = $1 AND scripture_slug = $2 AND chapter_number = $3 AND verse_number = $4`,
-            [req.user.id, scriptureSlug, chapterNumber, verseNumber]
-        );
-        res.json({ success: true, message: 'Bookmark removed.' });
-    } catch (err) {
-        console.error('removeBookmark error:', err);
-        res.status(500).json({ success: false, message: 'Internal server error' });
-    }
-}
-
-// ─── GET /api/scriptures/bookmarks (auth required) ─────────────────────────
-// Joins each stored (slug, chapter, verse) back against the .md content so
-// the response still carries the verse text, not just the identifying keys.
-async function getBookmarks(req, res) {
-    try {
-        const result = await pool.query(
-            `SELECT scripture_slug, chapter_number, verse_number, created_at
-       FROM scripture_bookmarks WHERE user_id = $1 ORDER BY created_at DESC`,
-            [req.user.id]
-        );
-
-        const scriptures = loadScriptures();
-        const data = result.rows.map((b) => {
-            const scripture = scriptures.find((s) => s.slug === b.scripture_slug);
-            const chapterRow = scripture?.chapters.find((c) => c.chapter_number === b.chapter_number);
-            const verse = chapterRow?.verses.find((v) => v.verse_number === b.verse_number);
-            return {
-                scripture_slug: b.scripture_slug,
-                scripture_title: scripture?.title || b.scripture_slug,
-                chapter_number: b.chapter_number,
-                chapter_title: chapterRow?.title || null,
-                verse_number: b.verse_number,
-                sanskrit: verse?.sanskrit || null,
-                transliteration: verse?.transliteration || null,
-                english: verse?.english || null,
-                bookmarked_at: b.created_at,
-            };
-        });
-
-        res.json({ success: true, data });
-    } catch (err) {
-        console.error('getBookmarks error:', err);
-        res.status(500).json({ success: false, message: 'Internal server error' });
-    }
-}
-
 // ─── POST /api/scriptures/favorites (auth required) ────────────────────────
 // Body: { scriptureSlug }
 async function addFavorite(req, res) {
@@ -306,7 +238,9 @@ async function getFavorites(req, res) {
     }
 }
 
-
+// ─── PUT /api/scriptures/progress (auth required) ──────────────────────────
+// Body: { scriptureSlug, chapterNumber, verseNumber }
+// Also serves as "recently read" — ordered by updated_at.
 async function updateProgress(req, res) {
     try {
         const { scriptureSlug, chapterNumber, verseNumber } = req.body;
@@ -365,9 +299,6 @@ module.exports = {
     search,
     getScriptureBySlug,
     getChapterVerses,
-    addBookmark,
-    removeBookmark,
-    getBookmarks,
     addFavorite,
     removeFavorite,
     getFavorites,

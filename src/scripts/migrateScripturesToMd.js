@@ -1,3 +1,26 @@
+// src/scripts/migrateScripturesToMd.js
+//
+// One-time migration for the switch from DB-backed scriptures to
+// /scriptures/*.md files (same pattern as /prayers).
+//
+//   1. Creates the new, slug-keyed user tables:
+//        scripture_bookmarks        (user_id, scripture_slug, chapter_number, verse_number)
+//        scripture_favorites        (user_id, scripture_slug)
+//        scripture_reading_progress (user_id, scripture_slug, chapter_number, verse_number)
+//   2. Drops the old content tables (scriptures, chapters, verses) and the
+//      old id-keyed user tables (bookmarks, favorites, reading_progress) —
+//      their data can't carry over 1:1 since verse identity has changed
+//      from a numeric DB id to (slug, chapter, verse).
+//
+// Run once:
+//   node src/scripts/migrateScripturesToMd.js
+//
+// If you have existing bookmarks/favorites you want to preserve, export them
+// BEFORE running this (e.g. `SELECT * FROM bookmarks`, `SELECT * FROM favorites`)
+// and re-insert manually against the new schema — this script does not
+// attempt an automatic data migration since old verse rows may already be
+// mid-flight to removal.
+
 require('dotenv').config();
 const pool = require('../config/db');
 

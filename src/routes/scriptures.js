@@ -7,9 +7,6 @@ const {
     search,
     getScriptureBySlug,
     getChapterVerses,
-    addBookmark,
-    removeBookmark,
-    getBookmarks,
     addFavorite,
     removeFavorite,
     getFavorites,
@@ -24,10 +21,6 @@ router.get('/random-verse', getRandomVerse);
 router.get('/search', search);
 
 // User-specific (auth required) — also static, must precede /:slug
-router.get('/bookmarks', requireAuth, getBookmarks);
-router.post('/bookmarks', requireAuth, addBookmark);
-router.delete('/bookmarks/:scriptureSlug/:chapterNumber/:verseNumber', requireAuth, removeBookmark);
-
 router.get('/favorites', requireAuth, getFavorites);
 router.post('/favorites', requireAuth, addFavorite);
 router.delete('/favorites/:scriptureSlug', requireAuth, removeFavorite);

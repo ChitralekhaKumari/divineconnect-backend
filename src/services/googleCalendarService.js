@@ -1,3 +1,6 @@
+// src/services/googleCalendarService.js
+// Fetches Indian public holidays from Google Calendar API with PostgreSQL cache.
+
 const pool = require('../config/db');
 
 const GOOGLE_API_KEY = process.env.GOOGLE_CALENDAR_API_KEY;

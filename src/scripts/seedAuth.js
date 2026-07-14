@@ -1,7 +1,6 @@
 require('dotenv').config();
 const pool = require('../config/db');
 
-
 const SEED_SQL = `
 -- ─── Users Table ──────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS users (

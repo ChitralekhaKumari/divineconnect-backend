@@ -1,3 +1,7 @@
+// divineConnect/divineconnect_backend/src/services/devdarshaService.js
+// Wraps every call to the DevDarsha Panchang API with a PostgreSQL cache,
+// so the same date+city is never fetched from the API more than once.
+
 const pool = require('../config/db');
 
 const API_URL = 'https://panchang.devdarsha.com/v1/panchang/daily';
