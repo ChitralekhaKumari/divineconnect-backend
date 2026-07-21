@@ -5,7 +5,7 @@
             "src": "src/server.js",
             "use": "@vercel/node",
             "config": {
-                "includeFiles": "prayers/**"
+                "includeFiles": "{prayers,scriptures}/**"
             }
         }
     ],

@@ -7,6 +7,7 @@ slug: hanuman-chalisa
 ---
 ## Sanskrit
 
+दोहा:
 श्री गुरु चरन सरोज रज, निज मन मुकुर सुधारि।
 बरनऊं रघुबर बिमल जसु, जो दायक फल चारि॥
 बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार।
@@ -59,6 +60,7 @@ slug: hanuman-chalisa
 ## Transliteration
 
 :
+Doha:
 Shri Guru Charan Saroj Raj, Nij Man Mukur Sudhari
 Baranau Raghubar Bimal Jasu, Jo Dayaku Phal Chari
 Buddhiheen Tanu Janike, Sumirau Pavan-Kumar
