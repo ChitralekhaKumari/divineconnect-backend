@@ -1,8 +1,3 @@
-// src/controllers/calendarController.js
-// Holiday data comes from Google Calendar API (cached in google_holidays table).
-// Panchang (Tithi/Nakshatra/Yoga/Karana/Muhurtas/etc.) is computed locally via
-// panchangEngine.js — no external API, no cost, works fully offline.
-
 const {
     getHolidaysForMonth,
     getHolidaysForDate,
