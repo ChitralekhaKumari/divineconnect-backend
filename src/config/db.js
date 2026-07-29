@@ -1,7 +1,10 @@
+// divineConnect/divineconnect_backend/src/config/db.js
+// REPLACE your existing file with this version
+
 const { Pool, types } = require('pg');
 require('dotenv').config();
 
-
+// ─── Critical fix ────────────────────────────────────────────
 types.setTypeParser(1082, (val) => val);
 
 const pool = new Pool({
@@ -19,7 +22,8 @@ const pool = new Pool({
 });
 
 pool.on('error', (err) => {
-  console.error('Unexpected error on idle client:', err.message);
+  console.error('Unexpected error on idle client', err);
+  process.exit(-1);
 });
 
 // Test the connection on startup

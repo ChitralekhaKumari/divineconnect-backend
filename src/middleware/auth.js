@@ -18,8 +18,6 @@ function requireAuth(req, res, next) {
 }
 
 // ─── Optional auth — attaches req.user if a valid token is present, ───────
-// otherwise continues as a guest. Used on read endpoints that personalize
-// (e.g. showing bookmarked=true) but shouldn't require login.
 function optionalAuth(req, res, next) {
     const header = req.headers.authorization || '';
     const token = header.startsWith('Bearer ') ? header.slice(7) : null;

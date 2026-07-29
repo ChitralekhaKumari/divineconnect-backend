@@ -1,6 +1,6 @@
 const pool = require('../config/db');
 
-const ALLOWED_TYPES = ['prayer', 'scripture', 'temple'];
+const ALLOWED_TYPES = ['prayer', 'scripture', 'temple', 'bhajan'];
 
 function isValidType(t) {
   return typeof t === 'string' && ALLOWED_TYPES.includes(t);

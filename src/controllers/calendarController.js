@@ -9,7 +9,7 @@ const {
     getUpcomingHolidays,
 } = require('../services/googleCalendarService');
 
-const { getPanchang, getMonthTithiEvents } = require('../utils/Panchangengine');
+const { getPanchang, getMonthTithiEvents } = require('../utils/panchangEngine');
 
 // Default location: New Delhi. Frontend can pass ?lat=&lon= for other cities.
 const DEFAULT_LAT = 28.6139;

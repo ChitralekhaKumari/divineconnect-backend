@@ -1,20 +1,3 @@
-// src/utils/panchangEngine.js
-//
-// Full Vedic Panchang engine — computes real astronomical positions using
-// "astronomy-engine" (pure JavaScript, NASA JPL-grade precision, MIT license,
-// NO native compilation — safe for Vercel serverless).
-//
-// Sidereal (Lahiri ayanamsa) positions of Sun & Moon drive every core element:
-// Tithi, Nakshatra, Yoga, Karana, Paksha, Maas, Samvatsara, Sankranti.
-// Sunrise/sunset/moonrise/moonset are real rise/set searches for the given
-// lat/lon — not approximations.
-//
-// Rahu Kaal / Yamaganda / Gulika Kaal / Abhijit / Brahma Muhurta / Hora /
-// Choghadiya use the standard weekday + day-segment formulas that every
-// traditional Panchang (DrikPanchang, ProKerala, etc.) also uses.
-//
-// npm install astronomy-engine   (pure JS — no build step, no data files)
-
 const Astronomy = require('astronomy-engine');
 
 // ── Reference tables ────────────────────────────────────────────────────────
@@ -70,15 +53,10 @@ const SAMVATSARA_NAMES = [
   'Kalayukti', 'Siddharthi', 'Raudra', 'Durmati', 'Dundubhi', 'Rudhirodgari', 'Raktakshi',
   'Krodhana', 'Kshaya',
 ];
-// Vikram Samvat year for a given Gregorian year (approx, Chaitra Shukla Pratipada start)
-// Samvatsara index cycles independently; anchor: Vikram Samvat 1987 (1930-31 CE) = "Vibhava"? --
-// We anchor using a well-known modern reference instead (safer): 2023-24 CE = "Shobhakrit" per
-// most Panchang publications (Vikram Samvat 2080). Index of 'Shobhakrit' in table = 36.
+
 const SAMVATSARA_ANCHOR_YEAR = 2023; // CE year in which this samvatsara begins (~April)
 const SAMVATSARA_ANCHOR_INDEX = SAMVATSARA_NAMES.indexOf('Shobhakrit');
 
-// Weekday segment index (0=Sun..6=Sat) for Rahu Kaal, Yamaganda, Gulika Kaal
-// (day divided sunrise→sunset into 8 equal parts, this is segment number 0-7)
 const RAHU_SEGMENT_BY_DAY = [7, 1, 6, 4, 5, 3, 2];
 const YAMAGANDA_SEGMENT_BY_DAY = [4, 3, 2, 1, 0, 6, 5];
 const GULIKA_SEGMENT_BY_DAY = [6, 5, 4, 3, 2, 1, 0];
@@ -268,7 +246,6 @@ function getPanchang(dateInput, lat = 28.6139, lon = 77.2090) {
     yamaganda = seg(YAMAGANDA_SEGMENT_BY_DAY[dayOfWeek]);
     gulika_kalam = seg(GULIKA_SEGMENT_BY_DAY[dayOfWeek]);
 
-    // Abhijit Muhurta: 8th muhurta of the day (middle ~48min around solar noon).
     // Traditionally skipped/considered inapplicable on Wednesdays (Smarta convention).
     const dayLenMs = sunset.getTime() - sunrise.getTime();
     if (dayOfWeek !== 3) {
