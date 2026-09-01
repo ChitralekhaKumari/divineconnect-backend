@@ -1,9 +1,5 @@
-// Usage: node src/scripts/seedTemples.js              (normal run — upserts all temples)
 require('dotenv').config();
 const pool = require('../config/db');
-
-// The full seed SQL (table create + upsert of all temples) lives here as a
-// single template string, so no filesystem read is needed at runtime.
 const CREATE_SQL = `
 CREATE TABLE IF NOT EXISTS temples (
     id                    SERIAL PRIMARY KEY,
@@ -57,10 +53,7 @@ INSERT INTO temples (
     pincode, nearest_railway, nearest_airport
 ) VALUES
 
-
--- ===========================
--- UTTAR PRADESH
--- ===========================
+------------------ UTTAR PRADESH
 (
   'Kashi Vishwanath Temple','Vishwanath Mandir',
   'Lord Shiva', ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
@@ -264,10 +257,6 @@ INSERT INTO temples (
   'https://thetempleguru.com/wp-content/uploads/2023/11/iskcon-temple-vrindavan.jpg',
   '',4.7,45200,'','Mathura Junction','Agra Airport'
 ),
-
-
-
-
 (
   'Mankameshwar Temple','Mankameshwar Mandir',
   'Lord Shiva',ARRAY['Parvati'],
@@ -354,9 +343,7 @@ INSERT INTO temples (
   '',4.5,16700,'','Prayagraj Junction','Prayagraj Airport'
 ),
 
--- ===========================
--- TAMIL NADU
--- ===========================
+------------------  TAMIL NADU
 (
   'Brihadeeswarar Temple','Peruvudaiyar Kovil / Big Temple',
   'Lord Shiva',ARRAY['Goddess Parvati','Nandi','Vinayaka'],
@@ -476,18 +463,6 @@ INSERT INTO temples (
   'https://www.tamilnadutourism.com/images/chennai/card/kapaleeshwarar-temple.webp',
   '',4.7,98000,'','Chennai Central','Chennai International Airport'
 ),
-
-
-
-
-
-
-
-
-
-
-
-
 (
   'Ranganathaswamy Temple Srirangam','Shri Ranganathaswamy Temple',
   'Lord Vishnu',ARRAY['Goddess Ranganayaki','Lord Ganesha'],
@@ -659,9 +634,7 @@ INSERT INTO temples (
   '',4.7,72000,'','Madurai Junction','Madurai Airport'
 ),
 
--- ===========================
--- ANDHRA PRADESH & TELANGANA
--- ===========================
+--------------------  ANDHRA PRADESH & TELANGANA
 (
   'Kanaka Durga Temple','Vijayawada Durga Temple',
   'Goddess Kanaka Durga',ARRAY['Lord Malleswara Swamy (Shiva)','Lord Ganesha'],
@@ -903,9 +876,7 @@ INSERT INTO temples (
   '',4.6,72000,'','Nampally Station','Rajiv Gandhi International Airport'
 ),
 
--- ===========================
--- KARNATAKA
--- ===========================
+-------------------- KARNATAKA
 (
   'Virupaksha Temple Hampi','Pampapathi Temple',
   'Lord Shiva',ARRAY['Goddess Pampa (Parvati)','Lord Ganesha','Nandi'],
@@ -1060,9 +1031,7 @@ INSERT INTO temples (
   '',4.6,19500,'581326','Gokarna Road Railway Station','Goa International Airport'
 ),
 
--- ===========================
--- MAHARASHTRA
--- ===========================
+--------------------  MAHARASHTRA
 (
   'Shirdi Sai Baba Temple','Shri Saibaba Sansthan Temple',
   'Shri Sai Baba',ARRAY['Lord Ganesha','Lord Rama','Lord Shiva'],
@@ -1286,9 +1255,7 @@ INSERT INTO temples (
   '',4.5,12900,'415616','Ratnagiri Railway Station','Pune Airport'
 ),
 
--- ===========================
--- GUJARAT
--- ===========================
+-------------------- GUJARAT
 (
   'Somnath Temple','Shree Somnath Jyotirlinga Mandir',
   'Lord Shiva (Somnath)',ARRAY['Goddess Parvati','Nandi','Lord Ganesha'],
@@ -1482,9 +1449,7 @@ INSERT INTO temples (
   '',4.8,178000,'752111','Puri Station','Bhubaneswar Airport'
 ),
 
--- ===========================
--- UTTARAKHAND
--- ===========================
+-------------------- UTTARAKHAND
 (
   'Kedarnath Temple','Kedarnath Jyotirlinga',
   'Lord Shiva',ARRAY['Goddess Parvati','Nandi','Lord Ganesha'],
@@ -1623,9 +1588,7 @@ INSERT INTO temples (
   '',4.5,9200,'249175','Rishikesh Railway Station','Jolly Grant Airport Dehradun'
 ),
 
--- ===========================
--- RAJASTHAN
--- ===========================
+-------------------- RAJASTHAN
 (
   'Brahma Temple Pushkar','Brahma Mandir Pushkar',
   'Lord Brahma',ARRAY['Goddess Saraswati','Savitri','Gayatri'],
@@ -1745,17 +1708,6 @@ INSERT INTO temples (
   'https://upload.wikimedia.org/wikipedia/commons/7/72/Le_temple_de_Karni_Mata_%28Deshnoke%29_%288423353617%29.jpg',
   '',4.5,19400,'','Deshnoke Railway Station','Nal Airport Bikaner'
 ),
-
-
-
-
-
-
-
-
-
-
-
 (
   'Mehandipur Balaji Temple','Mehandipur Hanuman Mandir',
   'Lord Hanuman',ARRAY[]::TEXT[],
@@ -1774,9 +1726,7 @@ INSERT INTO temples (
   '',4.4,28900,'322746','Hindaun City Railway Station','Jaipur International Airport'
 ),
 
--- ===========================
--- KERALA
--- ===========================
+-------------------- KERALA
 (
   'Padmanabhaswamy Temple','Shri Padmanabhaswamy Temple',
   'Lord Vishnu',ARRAY['Goddess Lakshmi','Lord Ganesha'],
@@ -1912,9 +1862,7 @@ INSERT INTO temples (
   '',4.5,9700,'','Ettumanoor Railway Station','Cochin International Airport'
 ),
 
--- ===========================
--- WEST BENGAL
--- ===========================
+-------------------- WEST BENGAL
 (
   'Dakshineswar Kali Temple','Dakshineswar Kali Mandir',
   'Goddess Kali',ARRAY['Radha Krishna','Lord Shiva'],
@@ -1984,20 +1932,7 @@ INSERT INTO temples (
   '',4.7,31700,'711202','Belur Math Railway Station','Netaji Subhash Chandra Bose Airport'
 ),
 
-
-
-
-
-
-
-
-
-
-
-
--- ===========================
--- MADHYA PRADESH
--- ===========================
+-------------------- MADHYA PRADESH
 (
   'Mahakaleshwar Temple Ujjain','Mahakaleshwar Jyotirlinga',
   'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
@@ -2101,9 +2036,7 @@ INSERT INTO temples (
   '',4.4,9800,'462011','Bhopal Junction','Raja Bhoj Airport Bhopal'
 ),
 
--- ===========================
--- BIHAR
--- ===========================
+-------------------- BIHAR
 (
   'Mahabodhi Temple Bodh Gaya','Mahabodhi Mahavihar',
   'Lord Buddha',ARRAY['N/A'],
@@ -2173,9 +2106,7 @@ INSERT INTO temples (
   '',4.7,19600,'800008','Patna Junction','Jay Prakash Narayan Airport Patna'
 ),
 
--- ===========================
--- JAMMU & KASHMIR
--- ===========================
+-------------------- JAMMU & KASHMIR
 (
   'Vaishno Devi Temple','Shri Mata Vaishno Devi Mandir',
   'Goddess Vaishno Devi',ARRAY['Goddess Saraswati','Goddess Lakshmi','Goddess Kali'],
@@ -2210,16 +2141,6 @@ INSERT INTO temples (
   'https://www.trawell.in/admin/images/upload/309708465Shankaracharya_Hill_Main.jpg',
   '',4.7,48000,'190001','Srinagar Bus Stand','Sheikh ul Alam International Airport'
 ),
-
-
-
-
-
-
-
-
-
-
 (
   'Kheer Bhawani Temple','Ragnya Devi Temple',
   'Goddess Ragnya Devi (Durga)',ARRAY[]::TEXT[],
@@ -2255,9 +2176,7 @@ INSERT INTO temples (
   '',4.5,14600,'180001','Jammu Tawi Railway Station','Jammu Airport'
 ),
 
--- ===========================
--- ASSAM
--- ===========================
+-------------------- ASSAM
 (
   'Kamakhya Temple','Kamakhya Devi Mandir',
   'Goddess Kamakhya',ARRAY['Lord Shiva','Lord Ganesha','Brahmaputra Dev'],
@@ -2310,9 +2229,7 @@ INSERT INTO temples (
   '',4.3,5400,'781001','Guwahati Railway Station','Lokpriya Gopinath Bordoloi Airport'
 ),
 
--- ===========================
--- PUNJAB
--- ===========================
+-------------------- PUNJAB
 (
   'Golden Temple Amritsar','Harmandir Sahib',
   'Waheguru',ARRAY['N/A'],
@@ -2365,9 +2282,7 @@ INSERT INTO temples (
   '',4.7,26400,'140118','Anandpur Sahib Railway Station','Sri Guru Ram Dass Jee International Airport'
 ),
 
--- ===========================
--- HIMACHAL PRADESH
--- ===========================
+-------------------- HIMACHAL PRADESH
 (
   'Shri Jwalamukhi Mata Shaktipeeth','Jwala Devi Mandir',
   'Goddess Jwala Devi',ARRAY['Lord Ganesha','Goddess Durga'],
@@ -2436,19 +2351,6 @@ INSERT INTO temples (
   'https://upload.wikimedia.org/wikipedia/commons/7/79/Shiva_temple_baijnath_HP.jpg',
   '',4.5,32000,'176125','Baijnath-Paprola Station','Gaggal Airport Kangra'
 ),
-
-
-
-
-
-
-
-
-
-
-
-
-
 (
   'Chintpurni Temple','Maa Chintpurni Mandir',
   'Goddess Chintpurni',ARRAY[]::TEXT[],
@@ -2484,9 +2386,7 @@ INSERT INTO temples (
   '',4.6,8400,'172033','Shimla Railway Station','Shimla Airport'
 ),
 
--- ===========================
--- GOA
--- ===========================
+-------------------- GOA
 (
   'Shanta Durga Temple','Shantadurga Temple Kavalem',
   'Goddess Shantadurga',ARRAY[]::TEXT[],
@@ -2522,9 +2422,7 @@ INSERT INTO temples (
   '',4.6,16400,'403104','Madgaon Railway Station','Goa International Airport'
 ),
 
--- ===========================
--- DELHI & NCR
--- ===========================
+-------------------- DELHI & NCR
 (
   'Kali Bari Temple New Delhi','Mandir Marg Kali Mandir',
   'Goddess Kali',ARRAY['Lord Shiva','Lord Ganesha','Lord Hanuman'],
@@ -2559,9 +2457,7 @@ INSERT INTO temples (
   '',4.9,67400,'110092','Akshardham Metro','Indira Gandhi International Airport'
 ),
 
--- ===========================
--- MUKTINATH (NEPAL)
--- ===========================
+-------------------MUKTINATH (NEPAL)
 (
   'Muktinath Temple','Muktinath – Chumig Gyatsa',
   'Lord Vishnu',ARRAY['Goddess Lakshmi','Lord Ganesha'],
@@ -2580,9 +2476,7 @@ INSERT INTO temples (
   '',4.6,35000,'','Pokhara','Jomsom Airport'
 ),
 
--- ===========================
--- JHARKHAND
--- ===========================
+-------------------- JHARKHAND
 (
   'Baidyanath Temple Deoghar','Vaidyanath Jyotirlinga',
   'Lord Shiva',ARRAY['Goddess Parvati','Lord Ganesha','Nandi'],
@@ -2601,7 +2495,6 @@ INSERT INTO temples (
   '',4.8,115000,'814112','Deoghar Station','Deoghar Airport    '
 )
 
--- ============================================================
 ON CONFLICT (name, location_city) DO UPDATE SET
     alternate_name        = EXCLUDED.alternate_name,
     deity                 = EXCLUDED.deity,
@@ -2646,33 +2539,25 @@ async function getCount(client) {
 async function seedTemples() {
   const client = await pool.connect();
   try {
-    // ── Count only ──────────────────────────────────────────────────
     if (COUNT_ONLY) {
       const n = await getCount(client);
       console.log(`\n✅  temples table currently has ${n} rows.\n`);
       return;
     }
 
-    // ── Dry run — parse & report without touching the database ────────
     if (DRY_RUN) {
-      // Count temple entries by looking for the pattern ('TempleName', in INSERT_SQL
       const matches = INSERT_SQL.match(/^\s*\(\s*\n?\s*'/gm) || [];
       console.log(`\n🔎  Dry run — SQL parsed OK.`);
       console.log(`    Temple entries found in INSERT_SQL: ${matches.length}`);
       console.log('    No changes made to the database.\n');
       return;
     }
-
-    // ── Real seed, wrapped in a transaction so a bad row rolls back ──
-    // everything instead of leaving the table half-updated.
-    // Step 1: Create table OUTSIDE any transaction so it's visible immediately
     console.log(`\n🕌  Ensuring table exists…`);
     await client.query(CREATE_SQL);
 
     const before = await getCount(client);
     console.log(`    Table ready. Current count: ${before} temples`);
 
-    // Step 2: Insert data inside a transaction
     await client.query('BEGIN');
     await client.query(INSERT_SQL);
     await client.query('COMMIT');
@@ -2690,8 +2575,6 @@ async function seedTemples() {
     console.error('\n❌  Seed failed – rolled back.\n');
     console.error(err.message);
     if (err.position) {
-      // Show a snippet of the SQL near the error position — same
-      // diagnostic the original seed.js gave you.
       const pos = parseInt(err.position, 10);
       console.error('\nSQL snippet near error:');
       console.error('...' + CREATE_SQL.substring(Math.max(0, pos - 120), pos + 120) + '...');

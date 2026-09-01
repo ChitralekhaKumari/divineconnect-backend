@@ -8,7 +8,6 @@ const {
   getDeities,
 } = require('../controllers/bhajanController');
 
-// Public — bhajans are viewable/playable without login (wishlist still needs login)
 router.get('/', getBhajans);
 router.get('/meta/deities', getDeities);
 router.get('/:id', getBhajanById);

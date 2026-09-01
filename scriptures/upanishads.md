@@ -10,6 +10,7 @@ language: "Sanskrit"
 meta_labels: ["3 of 108 Texts", "Sanskrit + English"]
 source: "atmabodha/Vedanta_Datasets (GitHub) - Isha, Katha, Mandukya only; remaining 105 Upanishads pending a verified free source"
 display_order: 4
+image_url: "https://i.pinimg.com/736x/3b/c4/b7/3bc4b71fb4c6f0210b4c86614ec5d497.jpg"
 ---
 
 

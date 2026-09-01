@@ -1,16 +1,7 @@
 const pool = require('../config/db');
 const { loadScriptures, loadAllVersesFlat } = require('../utils/scriptureLoader');
 
-// ─── Content (scriptures/chapters/verses) now comes from /scriptures/*.md ──
-// See src/utils/scriptureLoader.js for the file format and parsing.
-// Only user-generated data (favorites, reading progress) still
-// lives in Postgres — keyed by scripture slug / chapter number / verse
-// number instead of a foreign key into a `verses` table, since verses are
-// no longer rows in the database.
-// ─────────────────────────────────────────────────────────────────────────
-
-// ─── GET /api/scriptures ────────────────────────────────────────────────────
-// Query params: category
+// ─── GET /api/scriptures
 function getScriptures(req, res) {
     try {
         const category = (req.query.category || '').trim();
@@ -30,6 +21,7 @@ function getScriptures(req, res) {
             color: s.color,
             language: s.language,
             meta_labels: s.meta_labels,
+            image_url: s.image_url,
             chapter_count: s.chapters.length,
             verse_count: s.chapters.reduce((sum, c) => sum + c.verses.length, 0),
         }));
@@ -41,7 +33,7 @@ function getScriptures(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/categories ────────────────────────────────────────
+// ─── GET /api/scriptures/categories
 function getCategories(req, res) {
     try {
         const scriptures = loadScriptures();
@@ -53,7 +45,7 @@ function getCategories(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/random-verse ──────────────────────────────────────
+// ─── GET /api/scriptures/random-verse
 function getRandomVerse(req, res) {
     try {
         const verses = loadAllVersesFlat().filter((v) => v.english);
@@ -68,10 +60,7 @@ function getRandomVerse(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/search?q= ─────────────────────────────────────────
-// Simple in-memory, case-insensitive substring search across english,
-// sanskrit, hindi, and summary — content set is small enough (no verses
-// table, no DB round-trip) that this doesn't need Postgres full-text search.
+// ─── GET /api/scriptures/search?q=
 function search(req, res) {
     try {
         const qRaw = (req.query.q || '').trim();
@@ -98,7 +87,7 @@ function search(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/:slug ─────────────────────────────────────────────
+// ─── GET /api/scriptures/:slug
 function getScriptureBySlug(req, res) {
     try {
         const { slug } = req.params;
@@ -120,6 +109,7 @@ function getScriptureBySlug(req, res) {
                 color: scripture.color,
                 language: scripture.language,
                 meta_labels: scripture.meta_labels,
+                image_url: scripture.image_url,
                 source: scripture.source,
                 chapters: scripture.chapters.map((c) => ({
                     chapter_number: c.chapter_number,
@@ -134,7 +124,7 @@ function getScriptureBySlug(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/:slug/chapters/:chapter ───────────────────────────
+// ─── GET /api/scriptures/:slug/chapters/:chapter
 function getChapterVerses(req, res) {
     try {
         const { slug, chapter } = req.params;
@@ -178,8 +168,7 @@ function getChapterVerses(req, res) {
     }
 }
 
-// ─── POST /api/scriptures/favorites (auth required) ────────────────────────
-// Body: { scriptureSlug }
+// ─── POST /api/scriptures/favorites (auth required)
 async function addFavorite(req, res) {
     try {
         const { scriptureSlug } = req.body;
@@ -197,7 +186,7 @@ async function addFavorite(req, res) {
     }
 }
 
-// ─── DELETE /api/scriptures/favorites/:scriptureSlug (auth required) ───────
+// ─── DELETE /api/scriptures/favorites/:scriptureSlug (auth required)
 async function removeFavorite(req, res) {
     try {
         await pool.query(`DELETE FROM scripture_favorites WHERE user_id = $1 AND scripture_slug = $2`, [
@@ -211,7 +200,7 @@ async function removeFavorite(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/favorites (auth required) ─────────────────────────
+// ─── GET /api/scriptures/favorites (auth required)
 async function getFavorites(req, res) {
     try {
         const result = await pool.query(
@@ -227,6 +216,7 @@ async function getFavorites(req, res) {
                 title: scripture?.title || f.scripture_slug,
                 emoji: scripture?.emoji || null,
                 color: scripture?.color || null,
+                image_url: scripture?.image_url || null,
                 favorited_at: f.created_at,
             };
         });
@@ -238,9 +228,7 @@ async function getFavorites(req, res) {
     }
 }
 
-// ─── PUT /api/scriptures/progress (auth required) ──────────────────────────
-// Body: { scriptureSlug, chapterNumber, verseNumber }
-// Also serves as "recently read" — ordered by updated_at.
+// ─── PUT /api/scriptures/progress (auth required)
 async function updateProgress(req, res) {
     try {
         const { scriptureSlug, chapterNumber, verseNumber } = req.body;
@@ -262,7 +250,7 @@ async function updateProgress(req, res) {
     }
 }
 
-// ─── GET /api/scriptures/recent (auth required) ────────────────────────────
+// ─── GET /api/scriptures/recent (auth required)
 async function getRecentReads(req, res) {
     try {
         const result = await pool.query(

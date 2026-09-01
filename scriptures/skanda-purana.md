@@ -10,5 +10,6 @@ language: "Sanskrit"
 meta_labels: ["Sanskrit"]
 source: "Public domain (traditional text) — verses pending"
 display_order: 22
+image_url: "https://i.pinimg.com/1200x/15/96/51/159651bb6712c34be17b28ea4923de56.jpg"
 ---
 

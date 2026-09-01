@@ -6,7 +6,7 @@ const {
 
 const { getPanchang, getMonthTithiEvents } = require('../utils/panchangEngine');
 
-// Default location: New Delhi. Frontend can pass ?lat=&lon= for other cities.
+// Default location: New Delhi. 
 const DEFAULT_LAT = 28.6139;
 const DEFAULT_LON = 77.2090;
 
@@ -59,9 +59,6 @@ async function getByDate(req, res) {
 }
 
 // GET /api/calendar/panchang/:date?lat=&lon=
-// Full Panchang for a single day — Tithi, Nakshatra, Yoga, Karana, Paksha,
-// Maas, Samvatsara, sunrise/sunset, moonrise/moonset, Rahu Kaal, Yamaganda,
-// Gulika Kaal, Abhijit & Brahma Muhurta, full Hora + Choghadiya tables.
 async function getPanchangForDate(req, res) {
     try {
         const { date } = req.params;
@@ -75,9 +72,6 @@ async function getPanchangForDate(req, res) {
 }
 
 // GET /api/calendar/panchang/month?year=2026&month=7&lat=&lon=
-// Lightweight per-day flags for the whole month — used to put Ekadashi /
-// Amavasya / Purnima / Sankranti dots on the calendar grid without computing
-// the full Panchang (hora/choghadiya/muhurtas) for every single day.
 async function getPanchangMonthEvents(req, res) {
     try {
         const { year, month } = req.query;

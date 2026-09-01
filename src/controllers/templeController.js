@@ -1,15 +1,6 @@
 const pool = require('../config/db');
 
-// ─── GET /api/temples ─────────────────────────────────────────────────────────
-// Query params:
-//   page     (default 1)
-//   limit    (default 12, max 50)
-//   search   (text search on name, city, state, deity)
-//   category (Shiva | Vishnu | Devi | Other)
-//   tag      (LIVE | POPULAR | FEATURED | NEW)
-//   state    (filter by state)
-//   sort     (rating | reviews | name) default: id
-// ─────────────────────────────────────────────────────────────────────────────
+// ─── GET /api/temples 
 async function getTemples(req, res) {
   try {
     const page     = Math.max(1, parseInt(req.query.page)  || 1);
@@ -96,7 +87,7 @@ async function getTemples(req, res) {
   }
 }
 
-// ─── GET /api/temples/:id ─────────────────────────────────────────────────────
+// ─── GET /api/temples/:id
 async function getTempleById(req, res) {
   try {
     const { id } = req.params;
@@ -120,7 +111,7 @@ async function getTempleById(req, res) {
   }
 }
 
-// ─── GET /api/temples/categories ─────────────────────────────────────────────
+// ─── GET /api/temples/categories
 async function getCategories(req, res) {
   try {
     const result = await pool.query(
@@ -134,7 +125,7 @@ async function getCategories(req, res) {
   }
 }
 
-// ─── GET /api/temples/states ──────────────────────────────────────────────────
+// ─── GET /api/temples/states
 async function getStates(req, res) {
   try {
     const result = await pool.query(
@@ -148,7 +139,7 @@ async function getStates(req, res) {
   }
 }
 
-// ─── GET /api/temples/featured ───────────────────────────────────────────────
+// ─── GET /api/temples/featured
 async function getFeatured(req, res) {
   try {
     const result = await pool.query(

@@ -82,12 +82,29 @@ function verseBlock(v, hindi) {
 
 async function fetchHindiForChapter(chapter, verseCount) {
     const hindiByVerse = {};
+    let loggedDebugForThisChapter = false;
     for (let verse = 1; verse <= verseCount; verse++) {
         try {
             const { data } = await hindiClient.get(`/shlokas/${chapter}/${verse}`);
-            if (data?.data?.hindi) hindiByVerse[verse] = data.data.hindi;
-        } catch {
-            // Hindi is best-effort — missing hindi for a verse isn't fatal
+            // The API returns hindi directly on the response object (data.hindi),
+            // not nested under data.data — keep the nested check too just in case
+            // the API's shape ever changes back.
+            const hindi = data?.hindi || data?.data?.hindi;
+            if (hindi) {
+                hindiByVerse[verse] = hindi;
+            } else if (!loggedDebugForThisChapter) {
+                console.log(`\n  🔍 DEBUG ${chapter}/${verse} — no hindi field found. Raw response:`);
+                console.log('     ' + JSON.stringify(data));
+                loggedDebugForThisChapter = true;
+            }
+        } catch (err) {
+            if (!loggedDebugForThisChapter) {
+                console.log(`\n  🔍 DEBUG ${chapter}/${verse} — request failed.`);
+                console.log(`     Status: ${err.response?.status}`);
+                console.log(`     Body: ${JSON.stringify(err.response?.data)}`);
+                console.log(`     Message: ${err.message}`);
+                loggedDebugForThisChapter = true;
+            }
         }
         await sleep(120);
     }
@@ -126,6 +143,26 @@ async function main() {
             console.error(`  ❌ Chapter ${chapter} failed:`, err.response?.data?.message || err.message);
         }
         await sleep(300);
+    }
+
+    // Safety guard: never overwrite the existing file with a partial/empty
+    // result. If any chapter failed, bail out without touching OUT_PATH —
+    // fix the API subscription/rate-limit issue and re-run instead.
+    if (chapterBlocks.length < 18) {
+        console.error(
+            `\n❌ Only ${chapterBlocks.length}/18 chapters fetched successfully. ` +
+            `Not writing ${OUT_PATH} to avoid overwriting good data with a partial result. ` +
+            `Fix the errors above (subscription/rate-limit) and re-run.`
+        );
+        process.exitCode = 1;
+        return;
+    }
+
+    // Back up whatever is currently at OUT_PATH before overwriting it.
+    if (fs.existsSync(OUT_PATH)) {
+        const backupPath = OUT_PATH.replace(/\.md$/, `.backup-${Date.now()}.md`);
+        fs.copyFileSync(OUT_PATH, backupPath);
+        console.log(`  🗄️  Backed up existing file to ${backupPath}`);
     }
 
     const fullMd = fmHeader() + '\n' + chapterBlocks.join('\n\n') + '\n';

@@ -2,18 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// ─── Data source ────────────────────────────────────────────────────────────
-// Prayer content never changes, so instead of a database table we keep one
-// .md file per prayer inside /prayers (project root). Each file has YAML
-// frontmatter (id, title, deity, frequency, slug) followed by four markdown
-// sections: ## Sanskrit / ## Transliteration / ## Meaning / ## Benefits.
-// ─────────────────────────────────────────────────────────────────────────
-
+// ─── Data source
 const CWD_PRAYERS_DIR = path.join(process.cwd(), 'prayers');
 const DIRNAME_PRAYERS_DIR = path.join(__dirname, '..', '..', 'prayers');
 const PRAYERS_DIR = fs.existsSync(CWD_PRAYERS_DIR) ? CWD_PRAYERS_DIR : DIRNAME_PRAYERS_DIR;
 
-// Pull the text under a "## Heading" until the next "## " or end of string.
 function extractSection(body, heading) {
   const re = new RegExp(`##\\s*${heading}\\s*\\n+([\\s\\S]*?)(?=\\n##\\s|$)`, 'i');
   const match = body.match(re);
@@ -39,7 +32,6 @@ function parsePrayerFile(filePath) {
 
 // Loaded once per process and cached — see note above on why this is safe.
 let cache = null;
-
 function loadPrayers() {
   if (cache) return cache;
 
@@ -58,10 +50,7 @@ function loadPrayers() {
   return cache;
 }
 
-// ─── GET /api/prayers ──────────────────────────────────────────────────────
-// Query params:
-//   category (Savitri | Shiva | Hanuman | Vishnu | Lakshmi | Ganesha | ...)
-// ─────────────────────────────────────────────────────────────────────────
+// ─── GET /api/prayers
 async function getPrayers(req, res) {
   try {
     const category = (req.query.category || '').trim();
@@ -80,7 +69,7 @@ async function getPrayers(req, res) {
   }
 }
 
-// ─── GET /api/prayers/categories ───────────────────────────────────────────
+// ─── GET /api/prayers/categories
 async function getPrayerCategories(req, res) {
   try {
     const prayers = loadPrayers();
@@ -92,9 +81,7 @@ async function getPrayerCategories(req, res) {
   }
 }
 
-// ─── GET /api/prayers/:slug ─────────────────────────────────────────────────
-// Single prayer by slug or numeric id — handy for direct-linking a prayer.
-// ─────────────────────────────────────────────────────────────────────────
+// ─── GET /api/prayers/:slug 
 async function getPrayerBySlug(req, res) {
   try {
     const { slug } = req.params;

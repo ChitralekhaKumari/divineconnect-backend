@@ -10,5 +10,6 @@ language: "Sanskrit"
 meta_labels: ["12 Skandhas", "Sanskrit"]
 source: "Public domain (traditional text) — verses pending"
 display_order: 10
+image_url: "https://i.pinimg.com/736x/f6/ae/b9/f6aeb9419b198cf8fedc7201d473e349.jpg"
 ---
 

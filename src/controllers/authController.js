@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const pool = require('../config/db');
 const { sendOtpEmail } = require('../services/emailService');
+const { validatePassword } = require('../utils/passwordValidator');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'divineconnect_secret_2026';
 const JWT_EXPIRES = process.env.JWT_EXPIRES || '7d';
@@ -18,7 +19,7 @@ function signToken(user) {
     );
 }
 
-// ─── POST /api/auth/register ──────────────────────────────────────────────────
+// ─── POST /api/auth/register
 async function register(req, res) {
     try {
         const { full_name, email, password } = req.body;
@@ -26,8 +27,9 @@ async function register(req, res) {
         if (!full_name || !email || !password)
             return res.status(400).json({ error: 'All fields are required.' });
 
-        if (password.length < 6)
-            return res.status(400).json({ error: 'Password must be at least 6 characters.' });
+        const passwordCheck = validatePassword(password);
+        if (!passwordCheck.valid)
+            return res.status(400).json({ error: passwordCheck.message });
 
         const exists = await pool.query('SELECT id FROM users WHERE email = $1', [email.toLowerCase()]);
         if (exists.rows.length > 0)
@@ -75,7 +77,7 @@ async function register(req, res) {
     }
 }
 
-// ─── POST /api/auth/verify-email ──────────────────────────────────────────────
+// ─── POST /api/auth/verify-email
 async function verifyEmail(req, res) {
     try {
         const { email, otp } = req.body;
@@ -103,7 +105,7 @@ async function verifyEmail(req, res) {
     }
 }
 
-// ─── POST /api/auth/login ─────────────────────────────────────────────────────
+// ─── POST /api/auth/login
 async function login(req, res) {
     try {
         const { email, password } = req.body;
@@ -134,7 +136,7 @@ async function login(req, res) {
     }
 }
 
-// ─── POST /api/auth/forgot-password ──────────────────────────────────────────
+// ─── POST /api/auth/forgot-password
 async function forgotPassword(req, res) {
     try {
         const { email } = req.body;
@@ -164,7 +166,7 @@ async function forgotPassword(req, res) {
     }
 }
 
-// ─── POST /api/auth/verify-reset-otp ─────────────────────────────────────────
+// ─── POST /api/auth/verify-reset-otp
 async function verifyResetOtp(req, res) {
     try {
         const { email, otp } = req.body;
@@ -194,14 +196,15 @@ async function verifyResetOtp(req, res) {
     }
 }
 
-// ─── POST /api/auth/reset-password ───────────────────────────────────────────
+// ─── POST /api/auth/reset-password
 async function resetPassword(req, res) {
     try {
         const { resetToken, password } = req.body;
         if (!resetToken || !password)
             return res.status(400).json({ error: 'Reset token and new password are required.' });
-        if (password.length < 6)
-            return res.status(400).json({ error: 'Password must be at least 6 characters.' });
+        const passwordCheck = validatePassword(password);
+        if (!passwordCheck.valid)
+            return res.status(400).json({ error: passwordCheck.message });
 
         let decoded;
         try {
@@ -222,7 +225,7 @@ async function resetPassword(req, res) {
     }
 }
 
-// ─── POST /api/auth/resend-otp ────────────────────────────────────────────────
+// ─── POST /api/auth/resend-otp
 async function resendOtp(req, res) {
     try {
         const { email, type } = req.body;

@@ -1,11 +1,5 @@
 const pool = require('../config/db');
 
-// ─── GET /api/bhajans ───────────────────────────────────────────────────────
-// Query params:
-//   deity   - filter by deity (e.g. Rama, Krishna...) — omit or 'All' for all
-//   search  - matches title / singer / deity / language (case-insensitive)
-//   sort    - 'az' | 'recent' | 'mostplayed' | 'duration'  (default: 'recent')
-// ─────────────────────────────────────────────────────────────────────────
 async function getBhajans(req, res) {
   try {
     const deity = (req.query.deity || '').trim();
@@ -50,7 +44,7 @@ async function getBhajans(req, res) {
   }
 }
 
-// ─── GET /api/bhajans/:id ───────────────────────────────────────────────────
+// ─── GET /api/bhajans/:id
 async function getBhajanById(req, res) {
   try {
     const { id } = req.params;
@@ -65,8 +59,7 @@ async function getBhajanById(req, res) {
   }
 }
 
-// ─── POST /api/bhajans/:id/play ─────────────────────────────────────────────
-// Bumps the global play counter. Called once per playback start.
+// ─── POST /api/bhajans/:id/play
 async function recordPlay(req, res) {
   try {
     const { id } = req.params;
@@ -84,8 +77,7 @@ async function recordPlay(req, res) {
   }
 }
 
-// ─── GET /api/bhajans/:id/recommended ───────────────────────────────────────
-// Same deity or same singer first, then fills up with most-played overall.
+// ─── GET /api/bhajans/:id/recommended
 async function getRecommended(req, res) {
   try {
     const { id } = req.params;
@@ -117,7 +109,7 @@ async function getRecommended(req, res) {
   }
 }
 
-// ─── GET /api/bhajans/meta/deities ──────────────────────────────────────────
+// ─── GET /api/bhajans/meta/deities
 async function getDeities(req, res) {
   try {
     const result = await pool.query('SELECT DISTINCT deity FROM bhajans ORDER BY deity ASC');

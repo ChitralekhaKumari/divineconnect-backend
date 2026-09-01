@@ -1,10 +1,6 @@
-// divineConnect/divineconnect_backend/src/config/db.js
-// REPLACE your existing file with this version
-
 const { Pool, types } = require('pg');
 require('dotenv').config();
 
-// ─── Critical fix ────────────────────────────────────────────
 types.setTypeParser(1082, (val) => val);
 
 const pool = new Pool({

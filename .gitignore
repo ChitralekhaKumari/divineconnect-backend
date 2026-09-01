@@ -1,3 +1,19 @@
+# Dependencies
 node_modules/
+
+# Environment variables — contains DB password, JWT secret, GitHub token
 .env
-data/*.csv
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/

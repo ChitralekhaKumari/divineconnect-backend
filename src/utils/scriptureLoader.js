@@ -72,18 +72,51 @@ function splitChapters(body) {
 function splitVerses(chapterBody) {
     const re = /^###\s*Verse\s+(\d+)\s*$/gim;
     const matches = [...chapterBody.matchAll(re)];
-    const verses = [];
 
-    matches.forEach((m, i) => {
-        const start = m.index + m[0].length;
-        const end = i + 1 < matches.length ? matches[i + 1].index : chapterBody.length;
-        verses.push({
-            verseNumber: parseInt(m[1], 10),
-            fields: parseFields(chapterBody.slice(start, end)),
+    if (matches.length > 0) {
+        return matches.map((m, i) => {
+            const start = m.index + m[0].length;
+            const end = i + 1 < matches.length ? matches[i + 1].index : chapterBody.length;
+            return {
+                verseNumber: parseInt(m[1], 10),
+                fields: parseFields(chapterBody.slice(start, end)),
+            };
         });
-    });
+    }
 
-    return verses;
+    // ── Fallback: raw "Sukta" format (currently only rigveda.md) ──────────
+    // Some source files were never converted to the "### Verse N" schema —
+    // they're a straight scrape of "--- Sukta N ---" blocks, each holding
+    // plain "M | <sanskrit line>" mantra lines. Rather than rewriting that
+    // data file, treat each Sukta as one browsable unit ("verse" in API
+    // terms) whose Sanskrit field is every mantra line joined together.
+    return splitSuktas(chapterBody);
+}
+
+function splitSuktas(chapterBody) {
+    const suktaRe = /^---\s*Sukta\s+(\d+)\s*---\s*$/gim;
+    const suktaMatches = [...chapterBody.matchAll(suktaRe)];
+    if (suktaMatches.length === 0) return [];
+
+    const mantraLineRe = /^(\d+)\s*\|\s*(.+)$/gm;
+
+    return suktaMatches.map((m, i) => {
+        const start = m.index + m[0].length;
+        const end = i + 1 < suktaMatches.length ? suktaMatches[i + 1].index : chapterBody.length;
+        const block = chapterBody.slice(start, end);
+
+        const mantraLines = [...block.matchAll(mantraLineRe)].map((mm) => mm[2].trim());
+
+        return {
+            verseNumber: parseInt(m[1], 10),
+            fields: {
+                sanskrit: mantraLines.join('\n\n'),
+                summary: `${mantraLines.length} mantra${mantraLines.length === 1 ? '' : 's'}`,
+            },
+            isSukta: true,
+            mantraCount: mantraLines.length,
+        };
+    });
 }
 
 // Pulls out **Label:** value pairs (Sanskrit / Transliteration / English /
@@ -111,6 +144,11 @@ function parseScriptureFile(filePath) {
             english: v.fields.english || null,
             hindi: v.fields.hindi || null,
             summary: v.fields.summary || null,
+            // Only set on entries parsed via the raw Sukta fallback (see
+            // splitSuktas) — lets the frontend label these "Sukta N"
+            // instead of "Verse N" and render mantra lines distinctly.
+            is_sukta: v.isSukta || false,
+            mantra_count: v.mantraCount ?? null,
         }));
         return {
             chapter_number: ch.chapterNumber,
@@ -130,6 +168,7 @@ function parseScriptureFile(filePath) {
         color: data.color || '#f5f0e8',
         language: data.language || 'Sanskrit',
         meta_labels: data.meta_labels || [],
+        image_url: data.image_url || null,
         source: data.source || '',
         display_order: data.display_order ?? 0,
         chapters,

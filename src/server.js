@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -9,15 +8,15 @@ const templeRoutes = require('./routes/temples');
 const prayerRoutes = require('./routes/prayers');
 const calendarRoutes = require('./routes/calendar');
 const authRoutes = require('./routes/auth');
-const scriptureRoutes = require('./routes/scriptures');   // ← NEW LINE
+const scriptureRoutes = require('./routes/scriptures');  
 const wishlistRoutes = require('./routes/wishlist');
-const bhajanRoutes = require('./routes/bhajans');   // ← NEW LINE (Bhajans)
+const bhajanRoutes = require('./routes/bhajans');   
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ─── Middleware ───────────────────────────────────────────────────────────────
+// Middleware 
 app.use(helmet());
 app.use(cors({
   origin: function (origin, callback) {
@@ -38,27 +37,27 @@ app.use(cors({
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express.json());
 
-// ─── Health check ─────────────────────────────────────────────────────────────
+// Health check 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// ─── Routes ───────────────────────────────────────────────────────────────────
+// Routes 
 app.use('/api/auth', authRoutes);
 app.use('/api/temples', templeRoutes);
 app.use('/api/prayers', prayerRoutes);
 app.use('/api/calendar', calendarRoutes);
-app.use('/api/scriptures', scriptureRoutes);   // ← NEW LINE
+app.use('/api/scriptures', scriptureRoutes);   
 app.use('/api/wishlist', wishlistRoutes);
-app.use('/api/bhajans', bhajanRoutes);   // ← NEW LINE (Bhajans)
+app.use('/api/bhajans', bhajanRoutes);   
 
-// ─── Errors ───────────────────────────────────────────────────────────────────
+//  Errors 
 app.use(notFound);
 app.use(errorHandler);
 
-// ─── Start ────────────────────────────────────────────────────────────────────
+// Start 
 app.listen(PORT, () => {
-  console.log(`\n🚀 DivineConnect API running on http://localhost:${PORT}`);
+  console.log(`\n DivineConnect API running on http://localhost:${PORT}`);
   console.log(`   Environment  : ${process.env.NODE_ENV || 'development'}`);
   console.log(`   Health       : http://localhost:${PORT}/health`);
   console.log(`   Temples API  : http://localhost:${PORT}/api/temples`);

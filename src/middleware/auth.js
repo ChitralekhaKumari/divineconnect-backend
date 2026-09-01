@@ -1,8 +1,9 @@
+// Verifies JWT token for protected routes.
 const jwt = require('jsonwebtoken');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'divineconnect_secret_2026';
 
-// ─── Required auth — 401s if no/invalid token ──────────────────────────────
+// ─── Required auth — 401s if no/invalid token
 function requireAuth(req, res, next) {
     const header = req.headers.authorization || '';
     const token = header.startsWith('Bearer ') ? header.slice(7) : null;

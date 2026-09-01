@@ -1,3 +1,4 @@
+// Handles invalid URLs and server errors.
 function notFound(req, res, next) {
   res.status(404).json({ success: false, message: `Route ${req.originalUrl} not found` });
 }

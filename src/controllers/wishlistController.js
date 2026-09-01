@@ -6,9 +6,7 @@ function isValidType(t) {
   return typeof t === 'string' && ALLOWED_TYPES.includes(t);
 }
 
-// ─── GET /api/wishlist (auth required) ─────────────────────────────────────
-// Returns every wishlisted item for the signed-in user, newest first.
-// Frontend groups these by item_type into Prayers / Scriptures / Temples.
+// ─── GET /api/wishlist
 async function getWishlist(req, res) {
   try {
     const result = await pool.query(
@@ -23,7 +21,7 @@ async function getWishlist(req, res) {
   }
 }
 
-// ─── POST /api/wishlist (auth required) ────────────────────────────────────
+// ─── POST /api/wishlist
 // Body: { itemType, itemId, title, subtitle, imageUrl, meta }
 async function addToWishlist(req, res) {
   try {
@@ -50,7 +48,7 @@ async function addToWishlist(req, res) {
   }
 }
 
-// ─── DELETE /api/wishlist/:itemType/:itemId (auth required) ───────────────
+// ─── DELETE /api/wishlist/:itemType/:itemId
 async function removeFromWishlist(req, res) {
   try {
     const { itemType, itemId } = req.params;
