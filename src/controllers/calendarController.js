@@ -4,7 +4,7 @@ const {
     getUpcomingHolidays,
 } = require('../services/googleCalendarService');
 
-const { getPanchang, getMonthTithiEvents } = require('../utils/panchangEngine');
+const { getPanchang, getMonthTithiEvents, getMonthPanchangDays } = require('../utils/panchangEngine');
 
 // Default location: New Delhi. 
 const DEFAULT_LAT = 28.6139;
@@ -99,4 +99,22 @@ async function getUpcoming(req, res) {
     }
 }
 
-module.exports = { getFestivals, getByDate, getUpcoming, getPanchangForDate, getPanchangMonthEvents };
+// GET /api/calendar/panchang/month-days?year=2026&month=7&lat=&lon=
+// Compact per-day Panchang (tithi/paksha/nakshatra) for every day in the
+// month — used by calendar-grid views. Lighter than /panchang/:date x N.
+async function getPanchangMonthDays(req, res) {
+    try {
+        const { year, month } = req.query;
+        if (!year || !month) {
+            return res.status(400).json({ success: false, message: 'year and month are required' });
+        }
+        const { lat, lon } = parseLatLon(req);
+        const days = getMonthPanchangDays(Number(year), Number(month), lat, lon);
+        res.json({ success: true, data: days });
+    } catch (err) {
+        console.error('getPanchangMonthDays error:', err.message);
+        res.status(500).json({ success: false, message: err.message });
+    }
+}
+
+module.exports = { getFestivals, getByDate, getUpcoming, getPanchangForDate, getPanchangMonthEvents, getPanchangMonthDays };

@@ -4,6 +4,7 @@ title: Sri Rama Raksha Stotram
 deity: Rama
 frequency: Daily
 slug: sri-rama-raksha-stotram
+image: https://i.pinimg.com/736x/b9/94/c3/b994c3992ba6f346f4bc1abe2af96158.jpg
 ---
 ## Sanskrit
 

@@ -4,6 +4,7 @@ title: Surya Gayatri Mantra
 deity: Surya
 frequency: Sunday
 slug: surya-gayatri-mantra
+image: https://i.pinimg.com/736x/62/90/21/62902158642c0a6fd854a993e20904e5.jpg
 ---
 ## Sanskrit
 

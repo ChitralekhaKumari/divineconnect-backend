@@ -4,6 +4,7 @@ title: Durga Aarti
 deity: Durga
 frequency: Evening
 slug: durga-aarti
+image: https://i.pinimg.com/736x/e5/e5/69/e5e56997e90354001ccb0117728cc2e4.jpg
 ---
 ## Sanskrit
 

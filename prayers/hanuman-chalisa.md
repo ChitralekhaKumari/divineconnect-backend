@@ -4,6 +4,7 @@ title: Hanuman Chalisa
 deity: Hanuman
 frequency: Daily
 slug: hanuman-chalisa
+image: https://i.pinimg.com/736x/04/46/8e/04468e9dcc1cb416335408f393192526.jpg
 ---
 ## Sanskrit
 

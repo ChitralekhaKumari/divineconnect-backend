@@ -4,6 +4,7 @@ title: Saraswati Vandana
 deity: Saraswati
 frequency: Daily
 slug: saraswati-vandana
+image: https://i.pinimg.com/736x/70/11/0b/70110bcbcf4758adba6ac030fd11198c.jpg
 ---
 ## Sanskrit
 

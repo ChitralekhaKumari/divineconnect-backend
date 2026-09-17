@@ -4,6 +4,7 @@ title: Sri Lakshmi Stotram
 deity: Lakshmi
 frequency: Friday
 slug: sri-lakshmi-stotram
+image: https://i.pinimg.com/736x/77/f2/b1/77f2b1ec2e9d048617ed0bd1062242c3.jpg
 ---
 ## Sanskrit
 

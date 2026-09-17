@@ -4,6 +4,7 @@ title: Lakshmi Ashtottara Shatanamavali
 deity: Lakshmi
 frequency: Friday
 slug: lakshmi-ashtottara-shatanamavali
+image: https://i.pinimg.com/1200x/12/57/31/12573109210beabcdf19025491655dd5.jpg
 ---
 ## Sanskrit
 

@@ -4,6 +4,7 @@ title: Devi Kavacham
 deity: Durga
 frequency: Daily
 slug: devi-kavacham
+image: https://i.pinimg.com/736x/cf/c1/28/cfc128d45617c69b30bd08d42ff30725.jpg
 ---
 ## Sanskrit
 

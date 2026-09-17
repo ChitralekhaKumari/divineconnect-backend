@@ -4,6 +4,7 @@ title: Hanuman Aarti
 deity: Hanuman
 frequency: Tuesday
 slug: hanuman-aarti
+image: https://i.pinimg.com/1200x/17/e7/8c/17e78ce856039652aa6d2df6a9354e74.jpg
 ---
 ## Sanskrit
 

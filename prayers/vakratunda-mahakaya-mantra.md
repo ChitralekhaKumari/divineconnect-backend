@@ -4,6 +4,7 @@ title: Vakratunda Mahakaya Mantra
 deity: Ganesha
 frequency: Daily
 slug: vakratunda-mahakaya-mantra
+image: https://i.pinimg.com/736x/f5/c8/92/f5c892620ee8b41b95c3034c98ed557e.jpg
 ---
 ## Sanskrit
 

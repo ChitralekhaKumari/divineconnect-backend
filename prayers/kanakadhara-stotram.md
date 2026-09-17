@@ -4,6 +4,7 @@ title: Kanakadhara Stotram
 deity: Lakshmi
 frequency: Friday
 slug: kanakadhara-stotram
+image: https://i.pinimg.com/1200x/4d/5b/08/4d5b08dea84aa55c0cbbe024179a303c.jpg
 ---
 ## Sanskrit
 

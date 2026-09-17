@@ -4,6 +4,7 @@ title: Ganapati Atharvashirsha
 deity: Ganesha
 frequency: Wednesday
 slug: ganapati-atharvashirsha
+image: https://i.pinimg.com/1200x/9f/f5/c8/9ff5c8734071bb27f80bb01a148e9b03.jpg
 ---
 ## Sanskrit
 

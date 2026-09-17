@@ -4,6 +4,7 @@ title: Gayatri Mantra
 deity: Savitri
 frequency: Daily
 slug: gayatri-mantra
+image: https://i.pinimg.com/736x/c7/3e/55/c73e55ab11a82694cd90647260c05d51.jpg
 ---
 ## Sanskrit
 

@@ -4,6 +4,7 @@ title: Hare Krishna Mahamantra
 deity: Vishnu
 frequency: Daily
 slug: hare-krishna-mahamantra
+image: https://i.pinimg.com/736x/e6/c6/81/e6c6812a216a81e48e1292fa07353461.jpg
 ---
 ## Sanskrit
 

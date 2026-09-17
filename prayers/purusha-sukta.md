@@ -4,6 +4,7 @@ title: Purusha Sukta
 deity: Vishnu
 frequency: Thursday
 slug: purusha-sukta
+image: https://i.pinimg.com/736x/76/66/63/7666638d2083d3e740b3e2797bac0f59.jpg
 ---
 ## Sanskrit
 

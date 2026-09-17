@@ -4,6 +4,7 @@ title: Aarti Kunj Bihari Ki
 deity: Vishnu
 frequency: Evening
 slug: aarti-kunj-bihari-ki
+image: https://i.pinimg.com/1200x/0d/71/4e/0d714e81b8370a322276c47aa027f291.jpg
 ---
 ## Sanskrit
 

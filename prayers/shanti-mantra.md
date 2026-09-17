@@ -4,6 +4,7 @@ title: Shanti Mantra
 deity: Universal
 frequency: Daily
 slug: shanti-mantra
+image: https://i.pinimg.com/736x/a6/92/ad/a692adbadebd68bd599125ebc4854e23.jpg
 ---
 ## Sanskrit
 

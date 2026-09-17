@@ -4,6 +4,7 @@ title: Argala Stotram
 deity: Durga
 frequency: Daily
 slug: argala-stotram
+image: https://i.pinimg.com/736x/d7/8c/b5/d78cb5f0ebe4507eb1e4c6f203a8de4d.jpg
 ---
 ## Sanskrit
 

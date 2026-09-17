@@ -4,6 +4,7 @@ title: Ram Naam
 deity: Rama
 frequency: Daily
 slug: ram-naam
+image: https://i.pinimg.com/1200x/bf/ca/19/bfca19edcb5f12218e9753bb935f79e4.jpg
 ---
 ## Sanskrit
 

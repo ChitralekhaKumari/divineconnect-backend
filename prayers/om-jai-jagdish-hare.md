@@ -4,6 +4,7 @@ title: Om Jai Jagdish Hare
 deity: Vishnu
 frequency: Evening
 slug: om-jai-jagdish-hare
+image: https://i.pinimg.com/736x/cf/75/89/cf758969e007aabe7ddd349bee3a4df6.jpg
 ---
 ## Sanskrit
 

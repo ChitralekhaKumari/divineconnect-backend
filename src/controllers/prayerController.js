@@ -23,6 +23,7 @@ function parsePrayerFile(filePath) {
     deity: data.deity,
     frequency: data.frequency,
     slug: data.slug || path.basename(filePath, '.md'),
+    image: data.image || '',
     sanskrit: extractSection(content, 'Sanskrit'),
     transliteration: extractSection(content, 'Transliteration'),
     meaning: extractSection(content, 'Meaning'),
@@ -81,7 +82,7 @@ async function getPrayerCategories(req, res) {
   }
 }
 
-// ─── GET /api/prayers/:slug 
+// ─── GET /api/prayers/:slug
 async function getPrayerBySlug(req, res) {
   try {
     const { slug } = req.params;

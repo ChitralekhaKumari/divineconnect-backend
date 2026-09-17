@@ -4,6 +4,7 @@ title: Narayana Kavacham
 deity: Vishnu
 frequency: Daily
 slug: narayana-kavacham
+image: https://i.pinimg.com/736x/4f/b6/18/4fb618d71b2a6e27b7d8ee9b90e10868.jpg
 ---
 ## Sanskrit
 

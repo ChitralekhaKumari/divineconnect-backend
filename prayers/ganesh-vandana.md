@@ -4,6 +4,7 @@ title: Ganesh Vandana
 deity: Ganesha
 frequency: Daily
 slug: ganesh-vandana
+image: https://i.pinimg.com/736x/4d/00/57/4d0057faaf0bfe8fee26410da6ec2a79.jpg
 ---
 ## Sanskrit
 

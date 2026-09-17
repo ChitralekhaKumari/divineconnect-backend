@@ -4,6 +4,7 @@ title: Vishnu Sahasranama
 deity: Vishnu
 frequency: Thursday
 slug: vishnu-sahasranama
+image: https://i.pinimg.com/736x/7d/a9/90/7da990bcae19e15298160bc5a20913d3.jpg
 ---
 ## Sanskrit
 

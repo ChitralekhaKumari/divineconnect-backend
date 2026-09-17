@@ -4,6 +4,7 @@ title: Rudrashtakam
 deity: Shiva
 frequency: Monday
 slug: rudrashtakam
+image: https://i.pinimg.com/736x/19/85/99/19859971906481daf9c5e1445582a365.jpg
 ---
 ## Sanskrit
 

@@ -4,6 +4,7 @@ title: Lingashtakam
 deity: Shiva
 frequency: Monday
 slug: lingashtakam
+image: https://i.pinimg.com/736x/30/70/fc/3070fc2f8bc0a5dece66164d5a3f7824.jpg
 ---
 ## Sanskrit
 

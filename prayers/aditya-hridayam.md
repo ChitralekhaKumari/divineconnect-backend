@@ -4,6 +4,7 @@ title: Aditya Hridayam
 deity: Surya
 frequency: Sunday
 slug: aditya-hridayam
+image: https://i.pinimg.com/736x/90/b9/9a/90b99afadd1ab4088ec60abe5e57c70e.jpg
 ---
 ## Sanskrit
 

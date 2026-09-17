@@ -4,6 +4,7 @@ title: Ram Raksha Stotra
 deity: Rama
 frequency: Daily
 slug: ram-raksha-stotra
+image: https://i.pinimg.com/736x/b7/3c/ef/b73cef336da628f1b8ff81b20d87deb7.jpg
 ---
 ## Sanskrit
 

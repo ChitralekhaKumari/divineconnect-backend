@@ -331,4 +331,39 @@ function getMonthTithiEvents(year, month, lat = 28.6139, lon = 77.2090) {
   return events;
 }
 
-module.exports = { getPanchang, getMonthTithiEvents, ayanamsa };
+// ── Month scan: full compact Panchang (tithi/paksha/nakshatra/maas) for every
+// day of a month, for calendar-grid views (e.g. regional calendar month page).
+// Deliberately lighter than getPanchang(): no hora/choghadiya/muhurtas, so a
+// full month is cheap to compute in one request instead of 28-31 round trips.
+function getMonthPanchangDays(year, month, lat = 28.6139, lon = 77.2090) {
+  const observer = new Astronomy.Observer(lat, lon, 0);
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const days = [];
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+    const dayOfWeek = new Date(year, month - 1, d).getDay();
+
+    const dayStartSearch = new Date(Date.UTC(year, month - 1, d, 0, 0, 0));
+    const sunriseRes = Astronomy.SearchRiseSet('Sun', observer, +1, dayStartSearch, 2);
+    const momentForDay = sunriseRes ? sunriseRes.date : new Date(Date.UTC(year, month - 1, d, 6, 30, 0));
+
+    const core = computeCoreElements(momentForDay, observer);
+
+    days.push({
+      date: dateStr,
+      day: d,
+      weekday: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek],
+      tithi: core.tithi.name,
+      paksha: core.tithi.paksha,
+      nakshatra: core.nakshatra.name,
+      maas: core.masa,
+      is_ekadashi: core.tithi.isEkadashi,
+      is_amavasya: core.tithi.isAmavasya,
+      is_purnima: core.tithi.isPurnima,
+    });
+  }
+  return days;
+}
+
+module.exports = { getPanchang, getMonthTithiEvents, getMonthPanchangDays, ayanamsa };

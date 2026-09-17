@@ -4,6 +4,7 @@ title: Om Gan Ganapataye Namah
 deity: Ganesha
 frequency: Daily
 slug: om-gan-ganapataye-namah
+image: https://i.pinimg.com/736x/94/85/11/9485115d69319892d4262b72f32bcf96.jpg
 ---
 ## Sanskrit
 

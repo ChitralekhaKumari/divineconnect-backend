@@ -4,6 +4,7 @@ title: Durga Chalisa
 deity: Durga
 frequency: Daily
 slug: durga-chalisa
+image: https://i.pinimg.com/736x/04/9f/a9/049fa92221c87447978c5ac9206526f8.jpg
 ---
 ## Sanskrit
 

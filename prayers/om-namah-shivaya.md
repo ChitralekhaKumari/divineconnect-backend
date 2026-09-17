@@ -4,6 +4,7 @@ title: Om Namah Shivaya
 deity: Shiva
 frequency: Daily
 slug: om-namah-shivaya
+image: https://i.pinimg.com/736x/20/d8/9b/20d89b10b4dc6b1c603621dd86d246d9.jpg
 ---
 ## Sanskrit
 

@@ -4,6 +4,7 @@ title: Shiva Tandava Stotram
 deity: Shiva
 frequency: Monday
 slug: shiva-tandava-stotram
+image: https://i.pinimg.com/736x/3a/53/98/3a539887f0dc3d57c93af782c1a9f6a9.jpg
 ---
 ## Sanskrit
 

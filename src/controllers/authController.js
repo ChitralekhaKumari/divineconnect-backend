@@ -13,7 +13,7 @@ function generateOtp() {
 
 function signToken(user) {
     return jwt.sign(
-        { id: user.id, email: user.email, full_name: user.full_name },
+        { id: user.id, email: user.email, full_name: user.full_name, role: user.role || 'user' },
         JWT_SECRET,
         { expiresIn: JWT_EXPIRES }
     );
@@ -128,7 +128,13 @@ async function login(req, res) {
         res.json({
             message: 'Welcome back!',
             token,
-            user: { id: user.id, full_name: user.full_name, email: user.email, is_verified: user.is_verified },
+            user: {
+                id: user.id,
+                full_name: user.full_name,
+                email: user.email,
+                is_verified: user.is_verified,
+                role: user.role || 'user',
+            },
         });
     } catch (err) {
         console.error('login error:', err);

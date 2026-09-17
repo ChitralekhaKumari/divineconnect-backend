@@ -11,6 +11,8 @@ const authRoutes = require('./routes/auth');
 const scriptureRoutes = require('./routes/scriptures');  
 const wishlistRoutes = require('./routes/wishlist');
 const bhajanRoutes = require('./routes/bhajans');   
+const homeRoutes = require('./routes/home');
+const adminRoutes = require('./routes/admin/index');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
@@ -31,7 +33,7 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   credentials: true,
 }));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
@@ -50,6 +52,8 @@ app.use('/api/calendar', calendarRoutes);
 app.use('/api/scriptures', scriptureRoutes);   
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/bhajans', bhajanRoutes);   
+app.use('/api/home', homeRoutes);
+app.use('/api/admin', adminRoutes);
 
 //  Errors 
 app.use(notFound);

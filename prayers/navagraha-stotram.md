@@ -4,6 +4,7 @@ title: Navagraha Stotram
 deity: Navagraha
 frequency: Sunday
 slug: navagraha-stotram
+image: https://i.pinimg.com/736x/45/45/6d/45456d5594c94c5a665d9a4b53d1b40f.jpg
 ---
 ## Sanskrit
 

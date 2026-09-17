@@ -4,6 +4,7 @@ title: Mahamrityunjaya Mantra
 deity: Shiva
 frequency: Healing
 slug: mahamrityunjaya-mantra
+image: https://i.pinimg.com/736x/d1/33/82/d133827d25639d94b666c160fc9d8e60.jpg
 ---
 ## Sanskrit
 

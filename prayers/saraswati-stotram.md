@@ -4,6 +4,7 @@ title: Saraswati Stotram
 deity: Saraswati
 frequency: Wednesday
 slug: saraswati-stotram
+image: https://i.pinimg.com/736x/0f/7f/e5/0f7fe584671435de44983dec5e7aade1.jpg
 ---
 ## Sanskrit
 
