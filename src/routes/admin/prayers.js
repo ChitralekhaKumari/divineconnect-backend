@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const { requireAdmin } = require('../../middleware/auth');
+const { requirePermission } = require('../../middleware/rbac');
 const {
     listPrayers, getPrayer, createPrayer, updatePrayer, deletePrayer,
 } = require('../../controllers/admin/prayersAdminController');
 
-router.use(requireAdmin);
+// requireAuth + attachRoleAndPermissions already ran — see routes/admin/index.js
 
-router.get('/', listPrayers);
-router.post('/', createPrayer);
-router.get('/:slug', getPrayer);
-router.put('/:slug', updatePrayer);
-router.delete('/:slug', deletePrayer);
+router.get('/', requirePermission('prayers.read'), listPrayers);
+router.post('/', requirePermission('prayers.create'), createPrayer);
+router.get('/:slug', requirePermission('prayers.read'), getPrayer);
+router.put('/:slug', requirePermission('prayers.update'), updatePrayer);
+router.delete('/:slug', requirePermission('prayers.delete'), deletePrayer);
 
 module.exports = router;

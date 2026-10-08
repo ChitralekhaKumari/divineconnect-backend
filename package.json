@@ -7,8 +7,13 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "seed:admin": "node src/scripts/seedAdmin.js",
-    "seed:home": "node src/scripts/createHomeContentTables.js"
+    "seed:home": "node src/scripts/createHomeContentTables.js",
+    "db:migrate:rbac": "node src/scripts/migrateRBACFoundation.js",
+    "db:migrate:temple-sidebar": "node src/scripts/migrateTempleSidebarFields.js",
+    "db:migrate:temple-tms": "node src/scripts/migrateTempleTmsFields.js",
+    "db:migrate:temple-publishing": "node src/scripts/migrateTemplePublishing.js",
+    "user:promote": "node src/scripts/promoteUser.js",
+    "admin:set-password": "node src/scripts/setAdminPassword.js"
   },
   "dependencies": {
     "astronomy-engine": "^2.1.19",

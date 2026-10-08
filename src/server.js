@@ -14,6 +14,7 @@ const bhajanRoutes = require('./routes/bhajans');
 const homeRoutes = require('./routes/home');
 const adminRoutes = require('./routes/admin/index');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
+const { startReminderScheduler } = require('./services/reminderService');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -65,7 +66,14 @@ app.listen(PORT, () => {
   console.log(`   Environment  : ${process.env.NODE_ENV || 'development'}`);
   console.log(`   Health       : http://localhost:${PORT}/health`);
   console.log(`   Temples API  : http://localhost:${PORT}/api/temples`);
-  console.log(`   Calendar API : http://localhost:${PORT}/api/calendar/festivals\n`);
+  console.log(`   Calendar API : http://localhost:${PORT}/api/calendar/festivals`);
+
+  // E-mail reminders need a long-running process. On serverless hosts (Vercel)
+  // trigger GET /api/calendar/reminders/dispatch from a scheduler instead.
+  if (!process.env.VERCEL && process.env.DISABLE_REMINDER_SCHEDULER !== 'true') {
+    startReminderScheduler();
+  }
+  console.log('');
 });
 
 module.exports = app;

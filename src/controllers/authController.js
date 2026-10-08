@@ -3,17 +3,23 @@ const jwt = require('jsonwebtoken');
 const pool = require('../config/db');
 const { sendOtpEmail } = require('../services/emailService');
 const { validatePassword } = require('../utils/passwordValidator');
+const { getJwtSecret } = require('../config/jwt');
+const { auditFromReq } = require('../services/auditLogger');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'divineconnect_secret_2026';
+const JWT_SECRET = getJwtSecret();
 const JWT_EXPIRES = process.env.JWT_EXPIRES || '7d';
 
 function generateOtp() {
     return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
+// Deliberately minimal payload — no role in the token. Role/permissions are
+// looked up fresh on every admin request via middleware/rbac.js, so a role
+// change or deactivation takes effect immediately instead of waiting for
+// this token to expire.
 function signToken(user) {
     return jwt.sign(
-        { id: user.id, email: user.email, full_name: user.full_name, role: user.role || 'user' },
+        { id: user.id, email: user.email, full_name: user.full_name },
         JWT_SECRET,
         { expiresIn: JWT_EXPIRES }
     );
@@ -112,17 +118,29 @@ async function login(req, res) {
         if (!email || !password)
             return res.status(400).json({ error: 'Email and password are required.' });
 
-        const { rows } = await pool.query('SELECT * FROM users WHERE email=$1', [email.toLowerCase()]);
+        const { rows } = await pool.query(
+            `SELECT u.*, r.name AS role_name
+             FROM users u LEFT JOIN roles r ON r.id = u.role_id
+             WHERE u.email = $1`,
+            [email.toLowerCase()]
+        );
         if (!rows.length)
             return res.status(401).json({ error: 'No account found with this email.' });
 
         const user = rows[0];
+
+        if (user.is_active === false)
+            return res.status(403).json({ error: 'This account has been deactivated. Contact support.' });
+
         const match = await bcrypt.compare(password, user.password_hash);
         if (!match)
             return res.status(401).json({ error: 'Incorrect password.' });
 
         if (!user.is_verified)
             return res.status(403).json({ error: 'EMAIL_NOT_VERIFIED', email: user.email });
+
+        await pool.query('UPDATE users SET last_login_at = NOW() WHERE id = $1', [user.id]);
+        auditFromReq(req, 'user.logged_in', 'user', user.id);
 
         const token = signToken(user);
         res.json({
@@ -133,7 +151,9 @@ async function login(req, res) {
                 full_name: user.full_name,
                 email: user.email,
                 is_verified: user.is_verified,
-                role: user.role || 'user',
+                // 'USER' is the default role for a plain signup with no role_id yet
+                // (e.g. before the RBAC migration backfill has run for this account).
+                role: user.role_name || 'USER',
             },
         });
     } catch (err) {
@@ -256,4 +276,31 @@ async function resendOtp(req, res) {
     }
 }
 
-module.exports = { register, verifyEmail, login, forgotPassword, verifyResetOtp, resetPassword, resendOtp };
+// ─── GET /api/auth/me ──────────────────────────────────────────────────────
+// Requires requireAuth + attachRoleAndPermissions to have already run (see
+// routes/auth.js). Returns the full profile the admin panel needs — role
+// name + the flat list of permission keys for this session — so the
+// frontend can gate nav items and buttons without hardcoding role names.
+async function me(req, res) {
+    try {
+        const { rows } = await pool.query(
+            'SELECT id, full_name, email, is_verified FROM users WHERE id = $1',
+            [req.user.id]
+        );
+        if (!rows.length) return res.status(404).json({ success: false, message: 'User not found.' });
+
+        res.json({
+            success: true,
+            data: {
+                ...rows[0],
+                role: req.user.role,
+                permissions: Array.from(req.user.permissions || []),
+            },
+        });
+    } catch (err) {
+        console.error('me error:', err);
+        res.status(500).json({ success: false, message: 'Server error.' });
+    }
+}
+
+module.exports = { register, verifyEmail, login, forgotPassword, verifyResetOtp, resetPassword, resendOtp, me };

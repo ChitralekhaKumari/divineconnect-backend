@@ -5,6 +5,7 @@ const {
 } = require('../services/googleCalendarService');
 
 const { getPanchang, getMonthTithiEvents, getMonthPanchangDays } = require('../utils/panchangEngine');
+const { TRADITIONS, getRegionalFestivals: lookupRegionalFestivals } = require('../data/regionalFestivals');
 
 // Default location: New Delhi. 
 const DEFAULT_LAT = 28.6139;
@@ -117,4 +118,35 @@ async function getPanchangMonthDays(req, res) {
     }
 }
 
-module.exports = { getFestivals, getByDate, getUpcoming, getPanchangForDate, getPanchangMonthEvents, getPanchangMonthDays };
+// GET /api/calendar/festivals/regional?tradition=telugu&year=2026&month=9
+// Tradition-specific festivals (Telugu, Tamil, Kannada, ...). Dates are computed
+// from lunisolar rules, so any year works. `month` is optional (omit for the full year).
+function getRegionalFestivals(req, res) {
+    try {
+        const tradition = String(req.query.tradition || '').toLowerCase();
+        if (!TRADITIONS.includes(tradition)) {
+            return res.status(400).json({
+                success: false,
+                message: `tradition must be one of: ${TRADITIONS.join(', ')}`,
+            });
+        }
+        const year = parseInt(req.query.year, 10);
+        if (isNaN(year) || year < 1950 || year > 2100) {
+            return res.status(400).json({ success: false, message: 'a valid year is required' });
+        }
+        let month = null;
+        if (req.query.month !== undefined && req.query.month !== '') {
+            month = parseInt(req.query.month, 10);
+            if (isNaN(month) || month < 1 || month > 12) {
+                return res.status(400).json({ success: false, message: 'month must be 1-12' });
+            }
+        }
+        const data = lookupRegionalFestivals(tradition, year, month);
+        res.json({ success: true, tradition, count: data.length, data });
+    } catch (err) {
+        console.error('getRegionalFestivals error:', err.message);
+        res.status(500).json({ success: false, message: err.message });
+    }
+}
+
+module.exports = { getFestivals, getRegionalFestivals, getByDate, getUpcoming, getPanchangForDate, getPanchangMonthEvents, getPanchangMonthDays };

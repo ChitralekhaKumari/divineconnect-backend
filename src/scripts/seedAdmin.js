@@ -1,7 +1,14 @@
-// Run once: node src/scripts/seedAdmin.js
-// Adds a `role` column to `users` and creates (or promotes) one admin account.
+// ⚠️  DEPRECATED as of the RBAC migration (see migrateRBACFoundation.js).
+// This script used the old flat `users.role` VARCHAR ('admin' | 'user').
+// Admin access is now granted via `users.role_id` → the `roles` table
+// instead. Use these two scripts going forward:
+//   node src/scripts/promoteUser.js <email> SUPER_ADMIN     (existing user)
+//   node src/scripts/setAdminPassword.js <email> <password> [ROLE_NAME]  (new/reset)
+// This file is kept only for reference / rollback and is no longer wired
+// into package.json's scripts. Do not run it after the RBAC migration —
+// the `role` column it writes to is not read by any auth check anymore.
 //
-// Usage:
+// Original usage:
 //   node src/scripts/seedAdmin.js
 //   node src/scripts/seedAdmin.js --check
 //   ADMIN_EMAIL=you@x.com ADMIN_PASSWORD=Something123! node src/scripts/seedAdmin.js
